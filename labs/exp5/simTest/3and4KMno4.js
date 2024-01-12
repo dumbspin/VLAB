@@ -24,6 +24,7 @@ let drops = [];
 let gif;
 let blinking = true;
 let blinkInterval = 200;
+let drop_,showDrop=false;
 
 
 class Drop {
@@ -55,6 +56,47 @@ class Drop {
   }
 }
 
+function radialGradient(x, y, radius, c1, c2) {
+  for (let r = radius; r > 0; r--) {
+    let inter = map(r, 0, radius, 0, 1);
+    let c = lerpColor(c1, c2, inter);
+    fill(c);
+    ellipse(x, y, r * 2, r);
+  }
+}
+
+class WaterDrop {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  display() {
+    noStroke();
+
+    // Base color of the water drop
+    let baseColor = color(0, 0, 255);
+
+    // Apply gradient for a more realistic effect
+    let gradientTop = color(255, 255, 255, 150);
+    let gradientBottom = color(0, 0, 255, 50);
+    if (showDrop){console.log('yes drop')
+    // Draw the flattened circular shape with gradient
+    radialGradient(this.x, this.y, 30, baseColor, gradientTop, gradientBottom);
+
+    // Add a reflection at the top
+    let reflectionColor = color(255, 255, 255, 50);
+    radialGradient(this.x, this.y - 10+7, 15, reflectionColor, color(255, 255, 255, 0));
+
+    // Simulate a slight distortion at the edge
+    let distortionColor = color(0, 0, 255, 10);
+    radialGradient(this.x, this.y + 5, 30, distortionColor, color(0, 0, 255, 0));
+  }}
+}
+
+
+
+
 function preload() {
   // Load your images
   image1 = loadImage('PotasiumChromate.png');
@@ -82,7 +124,7 @@ function preload() {
 }
 
 function setup() {
-  
+  drop_ = new WaterDrop(400, 100);
    canvos=createCanvas(canvasWidth, canvasHeight);
   canvos.parent("#container");
   gif1.parent("#container");
@@ -121,12 +163,15 @@ function setup() {
   currentPoint_3 = startPoint_3.copy();
   endPoint2_3 = currentPoint_3.copy();
   //endPoint2_3 = endPoint2_3.copy();
+      // Base color of the water drop
+
 
 
 
 }
 
 function draw() {
+ 
      x=canvos.position().x;
    y=canvos.position().y;
      gif1.position(x+600, y+260);
@@ -140,7 +185,7 @@ function draw() {
     drop.display();
   }
   // Display images
-
+  drop_.display();
   //image(image2, img2x, img2y, img2w, img2h);
   push();
   if (dropAdded) {
@@ -309,7 +354,7 @@ function draw() {
     currentPoint.y += stepY;
 
     // Draw the image at the current position
-    image(img, currentPoint.x, currentPoint.y, img2w, img2h);
+    // image(img, currentPoint.x, currentPoint.y, img2w, img2h);
 
     // Increment the step counter
     currentStep++;
@@ -330,7 +375,7 @@ function draw() {
     currentPoint.y += stepY;
 
     // Draw the image at the current position
-    image(img, currentPoint.x, currentPoint.y, img2w, img2h);
+    // image(img, currentPoint.x, currentPoint.y, img2w, img2h);
 
     // Increment the step counter
     currentStep++;
@@ -347,7 +392,7 @@ function draw() {
 
   else {
     // Draw the image at the final position when not animating
-    image(img, endPoint2.x, endPoint2.y, img2w, img2h);
+    // image(img, endPoint2.x, endPoint2.y, img2w, img2h);
 
   }
 
@@ -423,12 +468,14 @@ function droperpressed() {
     process5=0;
   }
   if(process5==0){
+
     setTimeout(showNext, 1500); // Start blinking after 1 second
     
   }
 
 }
 function showNext(){
+  showDrop=true;
 shownext=true;
 dropAdded = true;
 }
@@ -438,4 +485,3 @@ function nextpressed() {
 
 
 }
-
