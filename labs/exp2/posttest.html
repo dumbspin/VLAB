@@ -77,7 +77,7 @@
       <!-- Logo -->
       <a href="../index.html" class="logo"
         style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
-        <p align="center" style="font-size:16px;"><b>Chemistry Lab</b></p>
+        <p align="center" style="font-size:22px;"><b>Chemistry Lab</b></p>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top" style="background-color:#009dff;">
@@ -91,7 +91,7 @@
               <a href="../index.html"><i class="fa-solid fa-flask-vial"></i>&nbsp;Chemistry Lab</a>
             </li>
             <li>
-              <a href="#">Complexometric Titration</a>
+              <a href="#">Temporary and permanent hardness</a>
             </li>
             <li class="active">Post Test</li>
           </ol>
@@ -228,69 +228,80 @@
           <script>
             var show = false;
             var questions = [
-            {
-    id: 1,
-    text: "What is the primary purpose of using a chelating agent, such as EDTA, in complexometric titration?",
-    options: ["a. To measure temperature changes", "b. To precipitate hardness ions", "c. To form stable complexes with metal ions", "d. To adjust the pH of the water sample"],
-    answer: "396"
-  },
-  {
-    id: 2,
-    text: "Which type of hardness is typically affected by boiling and can be removed through this process?",
-    options: ["a. Temporary hardness", "b. Permanent hardness", "c. Both temporary and permanent hardness", "d. Neither temporary nor permanent hardness"],
-    answer: "873"
-  },
-  {
-    id: 3,
-    text: " What complexing agent is commonly used to precipitate permanent hardness before titration?",
-    options: ["a. Ethylenediaminetetraacetic acid (EDTA)", "b. Ammonia solution", "c. Sodium oxalate", "d. Brine solution"],
-    answer: "1584"
-  },
-  // Add similar structures for the other questions (Q3 to Q20)
-  {
-    id: 4,
-    text: "During complexometric titration, what is often used as an indicator for endpoint detection?",
-    options: ["a. Litmus paper", "b. Phenolphthalein", "c. Eriochrome Black T (EBT)", "d. Bromothymol blue"],
-    answer: "2475"
-  },
-  {
-    id: 5,
-    text: " Why is it important to calibrate the experimental setup in the experiment?",
-    options: ["a. To adjust water flow rates", "b. To ensure accurate titration measurements", "c. To precipitate permanent hardness", "d. To regenerate the ion exchange resin"],
-    answer: "3528"
-  },
-  {
-    id: 6,
-    text: "What term describes the hardness in water that is due to non-carbonate salts and is not affected by boiling?",
-    options: ["a. Temporary hardness", "b. Permanent hardness", "c. Total hardness", "d. Regenerable hardness"],
-    answer: "4802"
-  },
-  // Add similar structures for the other questions (Q3 to Q20)
-  {
-    id: 7,
-    text: "What is often used as an indicator for endpoint detection in complexometric titration?",
-    options: ["a. Increase the water flow rate", "b. Initiate the regeneration process", "c. Pass the brine solution through the column", "d. Bromothymol blue"],
-    answer: "6400"
-  },
-  {
-    id: 8,
-    text: " Which of the following is a suitable complexing agent for precipitating permanent hardness before titration?",
-    options: ["a. Sodium chloride", "b. Sodium carbonate", "c. Sodium oxalate", "d. Sodium hydroxide"],
-    answer: "8019"
-  },
-  {
-    id: 9,
-    text: "What information is crucial for continuous monitoring during the experiment?",
-    options: ["a. Inlet and outlet temperature", "b. Flow rates and abnormalities", "c. Precipitate color changes", "d. Resin regeneration frequency"],
-    answer: "9800"
-  },
-  // Add similar structures for the other questions (Q3 to Q20)
-  {
-    id: 10,
-    text: "What is the purpose of adding a buffer solution in complexometric titration?",
-    options: ["a. To adjust the pH of the water sample", "b. To prevent the precipitation of hardness ions", "c. To enhance the color change of the titration solution", "d. To increase the solubility of the chelating agent"],
-    answer: "11737"
-  }
+              {
+                id: 1,
+                text: "What is the primary purpose of using a chelating agent, such as EDTA, in complexometric titration?",
+                options: ["a. To precipitate hardness ions", "b. To regenerate the ion exchange resin", "c. To form stable complexes with metal ions", "d. To adjust the pH of the water sample"],
+                answer: "396"
+              },
+
+
+              {
+                id: 2,
+                text: "Which type of hardness is typically affected by boiling and can be removed through this process?",
+                options: ["a. Temporary hardness", "b. Permanent hardness", "c. Both temporary and permanent hardness", "d. Neither temporary nor permanent hardness"],
+                answer: "873"
+              },
+
+
+              {
+                id: 3,
+                text: "What complexing agent is commonly used to precipitate permanent hardness before titration?",
+                options: ["a. Ethylenediaminetetraacetic acid (EDTA)", "b. Ammonia solution", "c. Sodium oxalate", "d. Brine solution"],
+                answer: "1584"
+              },
+
+
+              {
+                id: 4,
+                text: " During complexometric titration, what is often used as an indicator for endpoint detection?",
+                options: ["a. Litmus paper", "b. Phenolphthalein", "c. Eriochrome Black T (EBT)", "d. Bromothymol blue"],
+                answer: "2475"
+              },
+              {
+                id: 5,
+                text: "What action is necessary when the ion exchange resin reaches its capacity in the column?",
+                options: ["a. Increase the water flow rate", "b. Initiate the regeneration process", "c. Pass the brine solution through the column", "d. Discard the resin and replace it"],
+                answer: "3528"
+              },
+
+
+              {
+                id: 6,
+                text: "What term describes the hardness in water that is due to non-carbonate salts and is not affected by boiling?",
+                options: ["a. Temporary hardness", "b. Permanent hardness", "c. Total hardness", "d. Regenerable hardness"],
+                answer: "4802"
+              },
+
+
+              {
+                id: 7,
+                text: " What does the term “regeneration” refer to in the context of ion exchange resin?",
+                options: ["a. The process of recalibrating the column", "b. The restoration of resin capacity", "c. The removal of temporary hardness", "d. The precipitation of permanent hardness"],
+                answer: "6272"
+              },
+
+
+              {
+                id: 8,
+                text: "Why is it important to calibrate the ion exchange column in the experiment?",
+                options: ["a. To adjust water flow rates", "b. To ensure accurate hardness measurements", "c. To precipitate permanent hardness", "d. To regenerate the resin"],
+                answer: "7938"
+              },
+              {
+                id: 9,
+                text: "Which of the following is a suitable complexing agent for precipitating permanent hardness before titration?",
+                options: ["a. Sodium chloride", "b. To Sodium carbonate", "c. Sodium oxalate", "d. Sodium hydroxide"],
+                answer: "9900"
+              },
+
+
+              {
+                id: 10,
+                text: "What information is crucial for continuous monitoring during the experiment?",
+                options: ["a. Inlet and outlet temperature", "b. Flow rates and abnormalities", "c. Precipitate color changes", "d. Resin regeneration frequency"],
+                answer: "1158"
+              }
 
 
 
@@ -345,33 +356,36 @@
             generateQuizHTML();
 
             // Function to submit the quiz and calculate the score
-            let score = 0;
             function submitQuiz() {
-              show = true;
+            show = true;
+            let score = 0;
+            let answer_ = [];
+            for (let i = 0; i < 5; i++) {
+              let ans;
+              let divShow = [];
+              
+              answer_[i] = document.getElementById(`answer${i}`);
+              divShow[i] = document.getElementById(`answer${i}`);
+              const question = questions[i];
+              const selectedOption = document.querySelector(`input[name="q${question.id}"]:checked`);
+              console.log(question.answer, selectedOption);
 
-              for (let i = 0; i < 5; i++) {
-                let ans;
-                let divShow = [];
-                divShow[i] = document.getElementById(`answer${i}`)
-                const question = questions[i];
-                const selectedOption = document.querySelector(`input[name="q${question.id}"]:checked`);
-                console.log(question.answer, selectedOption);
+              // console.log('hii',ans,' ', question.id,' ' ,question.answer);
+              if (selectedOption && selectedOption.value === decrypt(question.answer, question.id)) {
+                score++;
+                divShow[i].style.color = 'green';
 
-                // console.log('hii',ans,' ', question.id,' ' ,question.answer);
-                if (selectedOption && selectedOption.value === decrypt(question.answer, question.id)) {
-                  score++;
-                  divShow[i].style.color = 'green';
-
-                  //   console.log('hii');
-                }
-                else if (selectedOption) {
-                  divShow[i].style.color = 'red';
-                }
+                answer_[i].textContent='Correct';
+                //   console.log('hii');
               }
-              // alert(`Your score: ${score}/5`);
-              showScore.textContent = `Your score: ${score}/5`;
+              else if (selectedOption) {
+                divShow[i].style.color = 'red';
+                answer_[i].textContent='Incorrect';
+              }
             }
-
+            // alert(`Your score: ${score}/5`);
+            showScore.textContent = `Your score: ${score}/5`;
+          }
             // Function to show the correct options for all questions
             function showSolution() {
               let solution = ''; let solution2 = ''; let answer_ = [];
