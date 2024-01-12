@@ -22,7 +22,7 @@ let blinking = true;
 let blinkInterval = 200;
 let full=false;
 let vi=0;
-let recColor=(255,255,255);
+let recColor=(255,255,255,100);
 let flaskheight, flaskwidth, flaskX, flaskY, waterheight=5;
 let speed_=0.1;
 let stop=true;
@@ -33,7 +33,7 @@ class Drop {
     this.x = x;
     this.y = y;
     this.speed = 1;
-    this.radius = 2.5;
+    this.radius = 2;
     this.active = true;
   }
 
@@ -72,7 +72,7 @@ function preload() {
   bgImg = loadImage('bg3.png');
   image3 = loadImage('resinC.png');
   frontflask = loadImage('frontflask2.png');
-  liquid = loadImage('Halfwater.png');
+  // liquid = loadImage('Halfwater.png');
   nextimg = loadImage('Forward.png');
   bckflask=loadImage('backflask.png');
   water=loadImage('water.png')
@@ -143,7 +143,7 @@ water.resize(110,145);
 
     // Increase the rectangle's height in the y-axis3
     noStroke();
-    rect(img3x+20,img3y+200+20, 15, -rectHeight-35);
+    rect(img3x+20,img3y+200+20, 15, -rectHeight-55);
     fill=recColor;
 
     // Increment the rectangle's height
@@ -211,7 +211,7 @@ function droperpressed() {
 function drop(){
   for (let i = 0; i < 2; i++) {
     // if()
-    let drop = new Drop(img3x+25,240+(i*30));
+    let drop = new Drop(img3x+28,240+(i*30));
     drops.push(drop);
   }
 }
