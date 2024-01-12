@@ -1,3 +1,14 @@
+// Access the data attribute and retrieve the PHP variable
+var data1 = document.getElementById('data1');
+var var1 = data1.getAttribute('data-php-variable');//Normality of Sulphuric acid
+var data2 = document.getElementById('data2');
+var var2 = data2.getAttribute('data-php-variable');//Volume of sample water
+var data3 = document.getElementById('data3');
+var var3 = data3.getAttribute('data-php-variable');//Volume of H2SO4 used
+var data4 = document.getElementById('data4');
+var var4 = data4.getAttribute('data-php-variable');//Normality of total hardness
+
+
 let normality_titrant;// normality of the soln in burette (N)-----------------N1
 let volume_titrant; // Volume of soln added from burette determines the colour changed when vadded is equal to it(in mL)-------------------------V1
 let vadded = 0; // Volume of liquid added from burette increases with burette open(in mL)
@@ -62,6 +73,7 @@ let number=0;
 
 let waterheight;
 let ppt=true;
+let old=var3;
 let nxtx,nxty,nxtw,nxth;
 let shownext = false;
 let blinking = true;
@@ -74,7 +86,7 @@ let blinkInterval = 200;
 function preload() {
   bureteImg = loadImage('burette51.png', loaded);
   flaskImgbk = loadImage('backflask.png', loaded);
-  flaskImg = loadImage('frontflask.png', loaded);
+  flaskImg = loadImage('frontflask2.png', loaded);
   bottomImg = loadImage('water.png', loaded);
 //   gifImage = createImg('bubbler1.gif', loaded);
 nextimg = loadImage('Forward.png');
@@ -88,7 +100,7 @@ nextimg = loadImage('Forward.png');
 let loadedImages = 0;
 function loaded() {
   loadedImages++;
-  if (loadedImages === 5) {
+  if (loadedImages === 7) {
     console.log('loaded success');
   }
 }
@@ -119,18 +131,22 @@ function setup() {
   background(backgroundImage);
 
   slider1 = select('#speed_change');
-  slider2 = select('#Normality_titrate');
-  slider3 = select('#Volume_titrate');
+  // slider2 = select('#Normality_titrate');
+  // slider3 = select('#Volume_titrate');
+  
+  normality_titrate=var1;
+  // var n_titrate= 
+  volume_titrate=parseFloat(var2);
 
   slider1.removeAttribute('disabled'); // Enable the slider1
-  slider2.removeAttribute('disabled'); // Enable the slider2
-  slider3.removeAttribute('disabled'); // Enable the slider3
+  // slider2.removeAttribute('disabled'); // Enable the slider2
+  // slider3.removeAttribute('disabled'); // Enable the slider3
 
   // To call all sliders 
-  normality_titrate = slider2.value() ;
-  volume_titrate = slider3.value();
+  // normality_titrate = slider2.value() / 2;
+  // volume_titrate = slider3.value();
 
-  buretteLiquidColor = color(255, 255, 255, 80);//setting the colour of burette liquid
+  buretteLiquidColor = color(255,255,255, 100);//setting the colour of burette liquid
   liquidLevel = 8 * size;
   flaskheight = 5 * size / 1.1;
   flaskwidth = 3.9 * size / 1.1;
@@ -164,16 +180,14 @@ function setup() {
 
 
   vadded = 0;
- 
+  // aftercolour = color(228, 88, 114, darkness);//Defining the net colour after titration
 
   //pieceHeight = height / numPieces;
 
 
   canvasLocation = canvas.position();
   console.log("Canvas location:", canvasLocation);
-  
-  normality_titrate = slider2.value();
-  volume_titrate = slider3.value();
+
 
 
 }
@@ -187,19 +201,13 @@ function draw() {
   background(backgroundImage);
   
   //Display the liquid stream coming out of burette nossle
-  if (liquidLevel >= 1 && bureteTouched == true &&vadded <= volume_titrant) {
+  if (liquidLevel >= 1 && bureteTouched == true) {
     noStroke();
     fill(buretteLiquidColor);
     rect(width / 2 + .95 * size, 12.8 * size, change * size * .2 * random(.8, 1.1), random(8.7, 8.8) * size);
   }
 
   waterlevel = cropHeight;
- if(!slider3.elt.hasAttribute('disabled')){
-      volume_titrate = slider3.value();
-      cropHeight = flaskheight - volume_titrate * 0.080765 * size;
-
-      // console.log("slider3", slider3.elt.hasAttribute('disabled')); Only for developer
- }
 if (ppt){
 drawppt();
 if (showppt==true){
@@ -226,7 +234,7 @@ if (showppt==true){
   rect(width / 2 + .7 * size, 12.7 * size, size * 0.65, -liquidLevel*1.35);
   push();
 
-  image(bureteImg, width / 2 - 6.2 * size-5, .7 * size, 9.88 * size / 1, buretesize * 2.3 * size / 1);
+  image(bureteImg, width / 2 - 6.2 * size-3, .7 * size, 9.88 * size / 1, buretesize * 2.3 * size / 1);
   noStroke();
   pop();
   if (flaskTouched) {
@@ -287,6 +295,8 @@ if (showppt==true){
 
   let valueDisplayElement = document.getElementById("valueDisplay");
   valueDisplayElement.innerText = floor(vadded * 100) / 100 + ' ml';
+  let OldDisplayElement = document.getElementById("OldDisplay");
+  OldDisplayElement.innerText = floor(old * 100) / 100 + ' ml';
 
 
   if (onerun) {
@@ -338,7 +348,7 @@ function changeArrowStyleToPointer() {
 //This function keeps track of all the imcrement in flask as well as decrease in burette
 function addLiquidDrop() {
   let runonce = true;
-  if (liquidLevel >= 1 && bureteTouched == true && vadded <= volume_titrant) {
+  if (liquidLevel >= 1 && bureteTouched == true) {
     liquidLevel -=  change*size/5;
 
     cropHeight -= 2.0 * change;
@@ -426,8 +436,7 @@ function funflasktouched() {
 function start() {
 
   // Get the location of the canvas
-  normality_titrate = slider2.value();
-  volume_titrate = slider3.value();
+
   if (turnslideractive == true) {
     cropHeight = flaskheight - volume_titrate * 0.8 * size;
     turnslideractive = false;
@@ -436,17 +445,14 @@ function start() {
 
   //
   buretesize = buretesize + 0.1;
-  normality_titrant = random(0.90, .99);
- 
+  normality_titrant = (parseFloat(var4)*random(40, 60)/100);
+  console.log("Normality =",var4, normality_titrant);
   //Calculating the height for change colour
   volume_titrant = (normality_titrant * volume_titrate) / normality_titrate;
-  console.log("Normality", normality_titrant," ",normality_titrate," ",volume_titrant," ",volume_titrate);
   console.log("Volume Required", volume_titrant);
   bureteTouched = !bureteTouched;
 
   setInterval(addLiquidDrop, liquidDropInterval);
-
-
 
 }
 function shake() {
@@ -458,7 +464,7 @@ function drawppt(){
   size_vary = Math.floor(random(0.2152,0.2511)*size);
   size_vary2 = Math.floor(random(0.2152,0.2511)*size);
   frameRate(30); 
-  fill(0, 164, 180, 255); // Set the fill color to red
+  fill(0, 164, 180,255);  // Set the fill color to red
   noStroke(); 
   const upperBound = Math.floor(random(1,2)+number*1.25-5) ;
 
@@ -473,19 +479,17 @@ function drawppt(){
     }
 }
 
-function nextpressed() {
-   console.log('Hi')
-
-  // Your JavaScript code
-  //var jsVariable = "Hello, PHP!"; // Your value to be sent
-
-  // Using the Fetch API to send a POST request
-  fetch('send.php', {
+function nextpressed(){
+  // window.location.href='/AlkalinitySim/TitrationComp.php';
+  let text={data1: normality_titrant, data2: volume_titrate, data3:volume_titrant};
+  console.log(text);
+  fetch('send2.php', {
+    
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ data1: normality_titrate, data2: volume_titrate, data3: vadded, data4: normality_titrant,data5: volume_titrant }),
+    body: JSON.stringify(text),
   })
     .then(response => {
       if (response.ok) {
@@ -494,22 +498,20 @@ function nextpressed() {
         throw new Error('Network response was not ok');
       }
     })
-    .then(data => {
-      console.log('Response from server (Page 1):', data);
+    .then(new_data => {
+      console.log('Response from server (Page 1):',new_data);
 
       // Check for a success message or any other condition
-      if (data.message === 'Value received successfully (Page 2)') {
+      if (new_data.message === 'Value received successfully (Page 2)') {
         // Redirect to the second page after processing
-        window.location.href = 'index2.html';
+         window.location.href = 'TitrationComp.php';
       } else {
-        console.error('Unexpected server response:', data);
+        console.error('Unexpected server response:',new_data);
       }
     })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-
-
+    // .catch(error => {
+    //   console.error('Error:',error);
+    // });
 }
 
 

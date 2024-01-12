@@ -1,7 +1,7 @@
-let normality_titrant;// normality of the soln in burette (N)-----------------N1
+let normality_titrant;// normality of the soln in flask (N)-----------------N1
 let volume_titrant; // Volume of soln added from burette determines the colour changed when vadded is equal to it(in mL)-------------------------V1
 let vadded = 0; // Volume of liquid added from burette increases with burette open(in mL)
-let normality_titrate = 1;//normality of titrate in flask(in N) Between 0-2N for this simulation-----------------------------N2
+let normality_titrate = 1;//normality of titrate in burette(in N) Between 0-2N for this simulation-----------------------------N2
 let volume_titrate = 8;//volume of titrate present in the flask with indicator(in ml)  Between 1-15ml for this Simulation--------V2
 
 let equivalencePointVolume; // The volume of silver nitrate at the equivalence point (to be calculated)
@@ -130,7 +130,7 @@ function setup() {
   normality_titrate = slider2.value() ;
   volume_titrate = slider3.value();
 
-  buretteLiquidColor = color(255, 255, 255, 80);//setting the colour of burette liquid
+  buretteLiquidColor = color(255,255,255, 100);//setting the colour of burette liquid
   liquidLevel = 8 * size;
   flaskheight = 5 * size / 1.1;
   flaskwidth = 3.9 * size / 1.1;
@@ -164,16 +164,13 @@ function setup() {
 
 
   vadded = 0;
- 
 
   //pieceHeight = height / numPieces;
 
 
   canvasLocation = canvas.position();
   console.log("Canvas location:", canvasLocation);
-  
-  normality_titrate = slider2.value();
-  volume_titrate = slider3.value();
+
 
 
 }
@@ -187,7 +184,7 @@ function draw() {
   background(backgroundImage);
   
   //Display the liquid stream coming out of burette nossle
-  if (liquidLevel >= 1 && bureteTouched == true &&vadded <= volume_titrant) {
+  if (liquidLevel >= 1 && bureteTouched == true) {
     noStroke();
     fill(buretteLiquidColor);
     rect(width / 2 + .95 * size, 12.8 * size, change * size * .2 * random(.8, 1.1), random(8.7, 8.8) * size);
@@ -226,7 +223,7 @@ if (showppt==true){
   rect(width / 2 + .7 * size, 12.7 * size, size * 0.65, -liquidLevel*1.35);
   push();
 
-  image(bureteImg, width / 2 - 6.2 * size-5, .7 * size, 9.88 * size / 1, buretesize * 2.3 * size / 1);
+  image(bureteImg, width / 2 - 6.2 * size-3, .7 * size, 9.88 * size / 1, buretesize * 2.3 * size / 1);
   noStroke();
   pop();
   if (flaskTouched) {
@@ -338,7 +335,7 @@ function changeArrowStyleToPointer() {
 //This function keeps track of all the imcrement in flask as well as decrease in burette
 function addLiquidDrop() {
   let runonce = true;
-  if (liquidLevel >= 1 && bureteTouched == true && vadded <= volume_titrant) {
+  if (liquidLevel >= 1 && bureteTouched == true) {
     liquidLevel -=  change*size/5;
 
     cropHeight -= 2.0 * change;
@@ -426,7 +423,7 @@ function funflasktouched() {
 function start() {
 
   // Get the location of the canvas
-  normality_titrate = slider2.value();
+  normality_titrate = slider2.value() ;
   volume_titrate = slider3.value();
   if (turnslideractive == true) {
     cropHeight = flaskheight - volume_titrate * 0.8 * size;
@@ -437,15 +434,15 @@ function start() {
   //
   buretesize = buretesize + 0.1;
   normality_titrant = random(0.90, .99);
- 
+  console.log("Normality =", normality_titrant);
   //Calculating the height for change colour
   volume_titrant = (normality_titrant * volume_titrate) / normality_titrate;
-  console.log("Normality", normality_titrant," ",normality_titrate," ",volume_titrant," ",volume_titrate);
   console.log("Volume Required", volume_titrant);
   bureteTouched = !bureteTouched;
 
   setInterval(addLiquidDrop, liquidDropInterval);
-
+  slider2.attribute('disabled', true);
+  slider3.attribute('disabled', true);
 
 
 }
@@ -458,7 +455,7 @@ function drawppt(){
   size_vary = Math.floor(random(0.2152,0.2511)*size);
   size_vary2 = Math.floor(random(0.2152,0.2511)*size);
   frameRate(30); 
-  fill(0, 164, 180, 255); // Set the fill color to red
+  fill(0, 164, 180, 100); // Set the fill color to red
   noStroke(); 
   const upperBound = Math.floor(random(1,2)+number*1.25-5) ;
 
@@ -474,42 +471,43 @@ function drawppt(){
 }
 
 function nextpressed() {
-   console.log('Hi')
+  console.log('Hi')
 
-  // Your JavaScript code
-  //var jsVariable = "Hello, PHP!"; // Your value to be sent
+ // Your JavaScript code
+ //var jsVariable = "Hello, PHP!"; // Your value to be sent
 
-  // Using the Fetch API to send a POST request
-  fetch('send.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ data1: normality_titrate, data2: volume_titrate, data3: vadded, data4: normality_titrant,data5: volume_titrant }),
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    })
-    .then(data => {
-      console.log('Response from server (Page 1):', data);
+ // Using the Fetch API to send a POST request
+ fetch('send.php', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+   },
+   body: JSON.stringify({ data1: normality_titrate, data2: volume_titrate, data3: vadded, data4: normality_titrant,data5: volume_titrant }),
+ })
+   .then(response => {
+     if (response.ok) {
+       return response.json();
+     } else {
+       throw new Error('Network response was not ok');
+     }
+   })
+   .then(data => {
+     console.log('Response from server (Page 1):', data);
 
-      // Check for a success message or any other condition
-      if (data.message === 'Value received successfully (Page 2)') {
-        // Redirect to the second page after processing
-        window.location.href = 'index2.html';
-      } else {
-        console.error('Unexpected server response:', data);
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+     // Check for a success message or any other condition
+     if (data.message === 'Value received successfully (Page 2)') {
+       // Redirect to the second page after processing
+       window.location.href = 'index2.html';
+     } else {
+       console.error('Unexpected server response:', data);
+     }
+   })
+   .catch(error => {
+     console.error('Error:', error);
+   });
 
 
 }
+
 
 
