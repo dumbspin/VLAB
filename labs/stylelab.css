@@ -1,0 +1,45 @@
+footer.section.section-primary{
+    background-color: #70a9a1 !important;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f8f0;
+    background-image: url("images/back doodle2.png") !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+a{
+    color: rgb(21, 21, 21) !important;
+    text-decoration: none !important;
+    transition: transform 0.3s ease !important;
+}
+a:hover{
+    font-style: normal;
+    transform: translate(10px,10px) !important;
+}
+#chemistry{ 
+    color: #1f363d !important;
+    color: #1f363d !important;
+}
+footer{
+    top:20.8vh;
+}
+.item{
+    /* border: 2px #40798c; */
+    border-radius: 5px;
+    padding: 20px;
+    width:80vw;
+    background-color: white;
+    box-shadow: 2px 2px #70a9a1 ;
+    font-size: 16;
+    margin: 15px 0 15px 0;
+    transition: transform 0.3s !important;
+}
+.item:hover{
+    transform: translate(2px,2px) !important;
+}
+h1 {
+    font-weight: bold;
+}

@@ -1,0 +1,418 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Virtual Labs | Power Electronics Lab </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <script>
+    window.onload = function () {
+      document.getElementById("theory").className = "active treeview";
+    }
+  </script>
+  <style>
+    #toggle_nav:hover {
+      background-color: #1261A0;
+    }
+
+    #aim {
+      background-color: #009dff;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #009dff;
+    }
+  </style>
+
+  <!-- Mathjs library -->
+
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
+              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:16px;"><b>Power Electronics Lab</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Power Electronics Lab</a>
+            </li>
+            <li>
+              <a href="#">Single Phase Semi-Converter</a>
+            </li>
+            <li class="active">Theory</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color:#1261A0;">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color:#1261A0;">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" id="theory" onclick="theory()">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">Theory</span>
+            </a>
+          </li>
+          <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" id="pretest">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+            </a>
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" id="procedure">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+            </a>
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" id="simulation">
+              <i class="fa fa-laptop" style="color:white;"></i>
+              <span style="color:white;">Simulation</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+
+
+
+          <li class="treeview" id="posttest">
+            <a href=" posttest.html" id="posttest">
+              <i class=" fa fa-files-o" style="color:white;">
+              </i>
+              <span style="color:white;">Post Test</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" id="references">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">References</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          Single Phase Semi-Converter <!-- Write experiment name here -->
+        </h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <h3><b>Introduction </b></h3>
+
+        <p style="font-size:130%; margin-top:2%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          Single phase fully controlled bridge converters are two quadrant converters having unidirectional
+          current with both positive and negative voltage polarity. Thus they can be operated either as a
+          controlled rectifier or an inverter. But for some applications that do not utilize the inverter mode
+          operation, a fully controlled converter with four thyristors and their associated control and gate drive
+          circuit makes the system unnecessarily complicated. In such situations, two of the thyristors of a
+          single phase fully controlled converter has to be replaced by diodes. The resulting
+          converters are called single phase semi-converter or single phase half controlled converters. Semi-convertors
+          are single
+          quadrant converters having one polarity of voltage and current at the DC terminals.
+        </p>
+
+        <h3><b>1. Single Phase Semi-converter - R Load</b></h3>
+        <center><img src="images\R load circuit.png" alt="R load circuit" height="250" width="450"
+            style="mix-blend-mode: darken; -webkit-filter:contrast(120%)"></center>
+        <center><b style="font-size:18px;">Fig. 1 Single Phase Semi-converter with R Load</b></center><br>
+
+        <center><img src="images\R load waveform.png" alt="Input waveform" height="400" width="400"
+            style="mix-blend-mode: darken;"></center><br>
+        <center><b style="font-size:18px;">Fig. 2 Waveforms of Single Phase Semi-converter with R Load</b></center>
+
+        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          In the figure, shows the circuit diagram of single phase semiconverter bridge rectifier with R load. In this
+          rectifier two SCRs and two diodes are connected in symmetrical configuration.<br>
+          The operation of this converter mainly consists of three modes:<br><br>
+          <b>Mode 1: (&alpha; to &pi;)</b><br>
+          During positive half-cycle of AC input voltage, thyristor T<sub>1</sub> diode D<sub>1</sub> conduct and
+          thyristor T<sub>1</sub> is fired at &omega;t = &alpha;. Therefore the average output voltage is equal to the
+          instantaneous supply
+          voltage and load current flows through T<sub>1</sub>, R, D<sub>1</sub> and back supply again.<br><br>
+
+          <b>Mode 2: (&pi; to &pi; + &alpha;)</b><br>
+          At instant &omega;t = &pi;, the supply goes through zero and after &pi; supply voltage reverses its polarity. Due to
+          reverse supply across conducting devices T<sub>1</sub> and D<sub>1</sub>, they turned off at &omega;t = &pi; and this
+          type
+          of turn-off is called as "natural" or "line commutation". Therefore, the average output voltage is zero and
+          load current is also zero.<br><br>
+
+          <b>Mode 3: (&pi; + &alpha; to 2&pi;)</b><br>
+          At instant &omega;t = &pi; + &alpha;, the supply voltage becomes completely negative i.e., during negative half cycle of
+          AC input voltage, thyristor T<sub>2</sub> and diode D<sub>2</sub> are forward biased, thyristor T<sub>2</sub>
+          is fired at &omega;t = &pi; + &alpha;.
+          Thus the average output is equal to instantaneous supply voltage because due to conduction of T<sub>2</sub>
+          and D<sub>2</sub>, the load is directly connected to supply. The load current flows through T<sub>2</sub>, R,
+          D<sub>2</sub>. Thyristor T<sub>2</sub> and diode D<sub>2</sub> conduct upto
+          2&pi;, at &omega;t = 2&pi; commutation takes place due to natural zero appears across supply.<br>
+          The average and rms value of output voltage and current are,<br>
+          <center style="font-size:16px;">`V_(o) = V_(m)/&pi;(1 + cos&alpha;) .........(1)`</center><br>
+          <center style="font-size:16px;">`I_(o) = V_(o)/R = V_(m)/(&pi;R)(1 + cos&alpha;) .........(2)`</center><br>
+          <center style="font-size:16px;">`V_(o(rms)) = V_(m)/(&Sqrt;2)[1/&pi;(&pi; - &alpha; + (sin 2&alpha;)/2)]^(1/2)
+            .........(3)`</center><br>
+          <center style="font-size:16px;">`I_(o(rms)) = V_(o(rms))/R = V_(m)/(&Sqrt;2 R)[1/&pi;(&pi; - &alpha; + (sin
+            2&alpha;)/2)]^(1/2) .........(4)`</center><br>
+
+
+        <h3><b>2. Single Phase Semi-converter - RL Load</b></h3>
+
+        <center><img src="images\RL load circuit.png" alt="1 phase controlled bridge rectifier" height="250" width="500"
+            style="mix-blend-mode: darken; "></center>
+
+        <center><b style="font-size:18px;">Fig. 3 Single Phase Semi-converter with RL Load</b></center><br>
+
+        <center><img src="images\RL load waveform.png" alt="Input waveform" height="600" width="550"
+            style="mix-blend-mode: darken;"></center>
+        <center><b style="font-size:18px;">Fig. 4 Waveforms of Single Phase Semi-converter with RL Load</b></center><br>
+
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          During the positive half cycle of the supply, thyristor T<sub>1</sub> and diode D<sub>1</sub> get forward
+          biased, while thyristor T<sub>2</sub> and diode D<sub>2</sub> get reverse biased. Now, if T<sub>1</sub> is
+          triggered at a firing angle α it starts conducting. As a result, the load current iL starts flowing through
+          the path V<sub>s</sub>, T<sub>1</sub>, R, L, D<sub>1</sub>, V<sub>s</sub>. As soon as V<sub>s</sub> reaches
+          zero, V<sub>s</sub> also becomes zero.
+
+          Once V<sub>s</sub> enters into the negative cycle, T<sub>2</sub> and D<sub>2</sub> get forward biased and
+          T<sub>1</sub> and D<sub>1</sub> get reverse biased. But, the load inductance L opposes a sudden change in
+          current and hence releases the energy which is stored in the positive cycle. So, an EMF, e<sub>1</sub> is
+          induced in the inductor with opposite polarity. This EMF is responsible for maintaining the load current in
+          the negative cycle before T<sub>2</sub> is triggered.
+
+          Since T<sub>1</sub> cannot be turned OFF until i<sub>L</sub> falls below its holding current value,
+          i<sub>L</sub> continues to flow through the path L, D<sub>2</sub>, T<sub>1</sub>, R, L. Therefore,
+          V<sub>L</sub> follows the negative cycle of supply voltage till β, where the load current becomes zero.
+        </p>
+
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The average and rms of
+          bridge output voltage are,</p>
+        <center style="font-size:16px;">`V_(o) = 2/(2&pi;) &Integral;_(&alpha;)^(&pi;) V_(m) sin(&omega;t) d&omega;t =
+          (2V_(m))/(2&pi;) [- cos &omega;t]_&alpha;^&pi; = (V_(m))/&pi; (1 + cos&alpha;) .........(5)`</center><br>
+        <center style="font-size:16px;">`V_(o(rms)) = [2/(2&pi;) &Integral;_(&alpha;)^(&pi;) V_(m)^2 sin^2(&omega;t)
+          d&omega;t]^(1/2) .........(6)`</center><br>
+        <center style="font-size:16px;">`V_(o(rms)) = [(V_(m)^2)/(2&pi;) &Integral;_(&alpha;)^(&pi;) (1 - cos2&omega;t)
+          d&omega;t]^(1/2) .........(7)`</center><br>
+        <center style="font-size:16px;">`V_(o(rms)) = V_(m)/(&Sqrt;2)[1/&pi;(&pi; - &alpha; + (sin 2&alpha;)/2)]^(1/2)
+          .........(8)`</center><br>
+        </p>
+
+        <h3><b>3. Single Phase Semi-converter - RLE Load</b></h3>
+
+
+
+        <center><img src="images\RLE load circuit.png" alt="1 phase controlled bridge rectifier" height="250"
+            width="500" style="mix-blend-mode: darken; transform: rotate(-0.1deg);"></center>
+
+        <center><b style="font-size:18px;">Fig. 5 Single Phase Semi-converter with RLE Load</b></center><br>
+
+        <center><img src="images\RLE load waveform.png" alt="Input waveform" height="600" width="550"
+            style="mix-blend-mode: darken; transform: rotate(-0.7deg);"></center>
+        <center><b style="font-size:18px;">Fig. 6 Waveforms of Single Phase Semi-converter with RLE Load</b></center>
+        <br>
+
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          The circuit consists of two thyristors, two diodes, and a freewheeling diode across the load. After
+          &omega;t = 0, thyristor T<sub>1</sub> is forward biased only when source voltage V<sub>m</sub> sin &omega;t exceeds E.
+          Thus, T<sub>1</sub> is triggered at a firing angle delay &alpha; such that V<sub>m</sub>sin&alpha;>E. With
+          T<sub>1</sub> on, load gets connected to source through T<sub>1</sub> and D<sub>1</sub>. For the period
+          &omega;t = &alpha; to &pi;, load current i<sub>o</sub> flows through RLE, D<sub>1</sub>, source and T<sub>1</sub> and
+          the load terminal voltage v<sub>o</sub> is of the same waveshape as the ac source voltage v<sub>s</sub>. Soon
+          after &omega;t = &pi;, load voltage v<sub>o</sub> tends to reverse as the ac source voltage changes polarity. Just as
+          v<sub>o</sub> tends to reverse, FD is forward biased and starts conducting. The load current i<sub>o</sub> is
+          transferred from T<sub>1</sub>, D<sub>1</sub> to FD. As SCR T<sub>1</sub> is reverse biased at &omega;t>&pi; through
+          FD, therefore load voltage v<sub>o</sub> is zero during &pi; < &omega;t < (&pi; + &alpha;). After &omega;t = &pi;, during
+            the negative half cycle, T<sub>2</sub> will be forward biased only when source voltage is more than E. At &omega;t
+            = &pi; + &alpha;, source voltage exceeds E, T<sub>2</sub> is therefore triggered. Soon after (&pi;+&alpha;),
+            FD is reverse biased and is therefore turned off; load current now shifts from FD to T<sub>2</sub>,
+            D<sub>2</sub>. At &omega;t = 2&pi;, FD is again forward biased and output current i<sub>o</sub> is transferred from
+            T<sub>2</sub>, D<sub>2</sub> to FD as explained before.
+        </p>
+
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The average and rms of
+          bridge output voltage are,</p>
+        <center style="font-size:16px;">`V_(o) = 2/(2&pi;) &Integral;_(&alpha;)^(&pi;) V_(m) sin(&omega;t) d&omega;t =
+          (2V_(m))/(2&pi;) [- cos &omega;t]_&alpha;^&pi; = (V_(m))/&pi; (1 + cos&alpha;) .........(9)`</center><br>
+        <center style="font-size:16px;">`V_(o(rms)) = [2/(2&pi;) &Integral;_(&alpha;)^(&pi;) V_(m)^2 sin^2(&omega;t)
+          d&omega;t]^(1/2) .........(10)`</center><br>
+        <center style="font-size:16px;">`V_(o(rms)) = [(V_(m)^2)/(2&pi;) &Integral;_(&alpha;)^(&pi;) (1 - cos2&omega;t)
+          d&omega;t]^(1/2) .........(11)`</center><br>
+        <center style="font-size:16px;">`V_(o(rms)) = V_(m)/(&Sqrt;2)[1/&pi;(&pi; - &alpha; + (sin 2&alpha;)/2)]^(1/2)
+          .........(12)`</center><br>
+        </p>
+
+        <h3><b>Advantages of Single Phase Semi-converter</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          1. Single-phase semiconverters have a straightforward design with fewer components compared to three-phase
+          converters. This simplicity makes them cost-effective and easier to implement, particularly for low-power
+          applications.<br><br>
+
+          2. Due to their simpler design, single-phase semiconverters tend to be more compact, making them suitable for
+          space-constrained applications or when a compact form factor is essential.<br><br>
+
+          3. Controlling single-phase semiconverters is less complex compared to three-phase converters. The control
+          circuitry is simpler, leading to reduced development and maintenance costs.<br><br>
+
+          4. Single-phase semiconverters find applications in various industries, including small motor drives, battery
+          chargers, uninterruptible power supplies (UPS), and household appliances like laptops, mobile phone chargers,
+          and small electronic devices.<br><br>
+
+          5. By varying the firing angle of the semiconductor switches (such as thyristors or silicon-controlled
+          rectifiers), the output voltage can be controlled effectively. This feature allows for regulation of the
+          output DC voltage, making it suitable for applications where variable voltage control is required.<br><br>
+
+          6. In regions or applications where only single-phase AC power is available, single-phase semiconverters
+          become the obvious choice for converting AC to DC.<br>
+        </p>
+
+        <h3><b>Disadvantages of Single Phase Semi-converter</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+          1. Compared to three-phase converters, single-phase semiconverters have relatively lower efficiency due to the
+          pulsating nature of the output current. Three-phase converters offer smoother output and therefore higher
+          efficiency.<br><br>
+
+          2. Single-phase semiconverters are generally limited to lower power applications. For high-power applications,
+          three-phase converters are preferred as they distribute the power more evenly and efficiently.<br><br>
+
+          3. The pulsating nature of the output current in single-phase semiconverters can lead to higher harmonic
+          content in the AC supply, potentially causing issues with power quality and electromagnetic
+          interference.<br>
+
+
+        </p>
+
+        <h3><b>Applications of Single Phase Semi-converter</b></h3>
+        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+
+          1. High power converters<br><br>
+
+          2. Main line a.c. traction<br><br>
+
+          3. Electroplating<br><br>
+
+          4. Battery Charging Systems<br><br>
+
+          5. Static VAR systems <br></p>
+        <!--Theory of experiment -->
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by <!-- Institute Name --> </h4>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+
+  }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

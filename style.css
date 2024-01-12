@@ -1,0 +1,41 @@
+h3{
+    color:#1f363d;
+}
+.hi{
+color:black;
+background-color: #70a9a1  !important;
+
+}
+.mybutton{
+    background-color:#407986 !important;
+    border: 2px solid white;
+    box-shadow: 2px 2px #1f363d;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 15px 2px 0 2px ;
+    transition: transform 0.3s ease;
+    /* transition: background-color 0.3s ease; */
+}
+.mybutton:hover{
+    color: #cfe0c3 !important;
+    border: 2px solid white;
+    transform: scale(1.1);
+}
+.jumbotron h1.textlab{
+ color:#1f363d !important;
+}
+footer.section.section-primary{
+    background-color: #70a9a1 !important;
+}
+div.col-sm-6{
+    color: #e9edee;
+}
+div.jumbotron{
+    background-color: #f3f8f0;
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+   
+}
