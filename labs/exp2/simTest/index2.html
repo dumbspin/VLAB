@@ -54,10 +54,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   // box.style.visibility = 'hidden';
 }, 4000);
         function skip(){
-          window.location.href = 'StartHtml.html';
+          window.location.href = 'StartHtml2.html';
         }
 
-        var videos = ["introVideo.mp4", "nextVideo.mp4","3rdVideo.mp4"]; // Add your video sources here
+        var videos = ["heating.mp4","3rdVideo.mp4"]; // Add your video sources here
         var currentVideoIndex = 0;
         var video = document.getElementById('video');
         var videoContainer = document.getElementById('video-container');
@@ -80,14 +80,14 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         }
 
         function nextVideo() {
-            if (currentVideoIndex == 0 || currentVideoIndex == 1) {
+            if (currentVideoIndex == 0 || currentVideoIndex == 0) {
                 currentVideoIndex = (currentVideoIndex + 1) % videos.length;
                 video.src = videos[currentVideoIndex];
                 video.play();
                 nextButton.style.display = 'none';
             }
-            else if (currentVideoIndex == 2) {
-                window.location.href = 'StartHtml.html';
+            else if (currentVideoIndex == 1) {
+                window.location.href = 'StartHtml2.html';
             }
         }
         function toggleFullScreen() {

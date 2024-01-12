@@ -80,7 +80,7 @@
               <a href="../index.html"><i class="fa-solid fa-flask-vial"></i>&nbsp;Chemistry Lab</a>
             </li>
             <li>
-              <a href="#">Complexometric Titration</a>
+              <a href="#">Temporary and permanent hardness</a>
 
               </a>
             </li>
@@ -221,79 +221,78 @@
           var questions = [
             {
               id: 1,
-              text: "What is the primary purpose of complexometric titration in the experiment?",
-              options: ["a. To measure temperature changes", "b. To determine the color of the water", "c. To quantify the hardness of water", "d. To analyze the pH of the water"],
-              answer: "396"
+              text: "What is the primary purpose of an ion exchange column in the experiment?",
+              options: ["a. To calibrate the water sample", "b. To regenerate the resin", "c. To precipitate permanent hardness", "d. To remove temporary hardness"],
+              answer: "400"
             },
 
 
             {
               id: 2,
-              text: "What type of ions is primarily responsible for temporary hardness in water?",
-              options: ["a. Bicarbonate ions", "b. Sulfate ions", "c. Chloride ions", "d. Nitrate ions"],
-              answer: "873"
+              text: "What complexing agent is commonly used to precipitate permanent hardness before titration?",
+              options: ["a. Ethylenediaminetetraacetic acid (EDTA)", "b. Ammonia solution", "c. Sodium oxalate", "d. Brine solution"],
+              answer: "891"
             },
 
 
             {
               id: 3,
-              text: "Which indicator is commonly used for endpoint detection in complexometric titration?",
-              options: ["a. Phenolphthalein", "b. Bromothymol blue", "c. Eriochrome Black T", "d. Litmus paper"],
+              text: "What is the role of a chelating agent, such as EDTA, in complexometric titration?",
+              options: ["a. To precipitate hardness ions", "b. To regenerate the ion exchange resin", "c. To form stable complexes with metal ions", "d. To adjust the pH of the water sample"],
               answer: "1584"
             },
 
 
             {
               id: 4,
-              text: " What does the term “permanent hardness” refer to in water?",
-              options: ["a. Hardness that can be easily removed", "b. Hardness caused by bicarbonate ions", "c. Hardness unaffected by boiling", "d. Hardness due to temporary ions"],
+              text: " When is resin regeneration necessary in the experiment?",
+              options: ["a. Before water sample collection", "b. After complexometric titration", "c. When the resin reaches its capacity", "d. Only during calibration"],
               answer: "2475"
             },
             {
               id: 5,
-              text: "What is the purpose of precipitating permanent hardness in the experiment?",
-              options: ["a. To make the water clearer", "b. To enhance the taste of the water", "c. To separate ions for easier titration", "d. To remove the hardness permanently"],
-              answer: "3600"
+              text: "What is the purpose of calibrating the ion exchange column?",
+              options: ["a. To adjust water flow rates", "b. To ensure accurate hardness measurements", "c. To precipitate permanent hardness", "d. To regenerate the resin"],
+              answer: "3528"
             },
 
 
             {
               id: 6,
-              text: "In complexometric titration, what chelating agent is commonly used?",
-              options: ["a. Sodium chloride", "b. Ethylenediaminetetraacetic acid (EDTA)", "c. Sodium carbonate", "d. Ammonium hydroxide"],
-              answer: "4802"
+              text: "Which indicator is commonly used in complexometric titration for endpoint detection?",
+              options: ["a. Litmus paper", "b. Phenolphthalein", "c. Eriochrome Black T (EBT)", "d. Bromothymol blue"],
+              answer: "4851"
             },
 
 
             {
               id: 7,
-              text: " What is the role of the titration indicator in the experiment?",
-              options: ["a. To change the color of the solution", "b. To indicate the endpoint of the titration", "c. To enhance the hardness of water", "d. To regulate the pH of the water"],
+              text: " What does the term “temporary hardness” in water refer to?",
+              options: ["a. Hardness caused by non-carbonate salts", "b. Hardness due to bicarbonate ions", "c. Hardness unaffected by boiling", "d. Hardness requiring resin regeneration"],
               answer: "6272"
             },
 
 
             {
               id: 8,
-              text: "Which of the following is a characteristic of temporary hardness?",
-              options: ["a. It remains unchanged upon boiling", "b. It is caused by non-carbonate salts", "c. It is easily removed by filtration", "d. It requires resin regeneration"],
-              answer: "7857"
+              text: "What action should be taken when the resin reaches its capacity in the ion exchange column?",
+              options: ["a. Pass the brine solution through the column", "b. Increase the water flow rate", "c. Initiate the regeneration process", "d. Discard the resin and replace it"],
+              answer: "8019"
             },
             {
               id: 9,
-              text: "Why is calibration important in the experiment?",
-              options: ["a. To adjust the water flow rate", "b. To ensure accurate hardness measurements", "c. To precipitate permanent hardness", "d. To regenerate the ion exchange resin"],
-              answer: "9800"
+              text: "In the experiment, what is the purpose of passing the water sample through the ion exchange column?",
+              options: ["a. To precipitate permanent hardness", "b. To collect a representative water sample", "c. To calibrate the ion exchange resin", "d. To remove temporary hardness"],
+              answer: "1000"
             },
 
 
             {
               id: 10,
-              text: "What information is essential for continuous monitoring during the experiment?",
-              options: ["a. The color of the titration solution", "b. The temperature of the water", "c. The flow rates and any abnormalities", "d. The smell of the water"],
-              answer: "11979"
+              text: "What information is crucial for continuous monitoring during the experiment?",
+              options: ["a. Inlet and outlet temperature", "b. Flow rates and abnormalities", "c. Precipitate color changes", "d. Resin regeneration frequency"],
+              answer: "11858"
             }
-
 
 
             // Add similar structures for the other questions (Q2 to Q10)
@@ -347,14 +346,16 @@
           generateQuizHTML();
 
           // Function to submit the quiz and calculate the score
-          let score = 0;
           function submitQuiz() {
             show = true;
-
+            let score = 0;
+            let answer_ = [];
             for (let i = 0; i < 5; i++) {
               let ans;
               let divShow = [];
-              divShow[i] = document.getElementById(`answer${i}`)
+              
+              answer_[i] = document.getElementById(`answer${i}`);
+              divShow[i] = document.getElementById(`answer${i}`);
               const question = questions[i];
               const selectedOption = document.querySelector(`input[name="q${question.id}"]:checked`);
               console.log(question.answer, selectedOption);
@@ -364,16 +365,17 @@
                 score++;
                 divShow[i].style.color = 'green';
 
+                answer_[i].textContent='Correct';
                 //   console.log('hii');
               }
               else if (selectedOption) {
                 divShow[i].style.color = 'red';
+                answer_[i].textContent='Incorrect';
               }
             }
             // alert(`Your score: ${score}/5`);
             showScore.textContent = `Your score: ${score}/5`;
           }
-
           // Function to show the correct options for all questions
           function showSolution() {
             let solution = ''; let solution2 = ''; let answer_ = [];
