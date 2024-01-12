@@ -183,11 +183,11 @@ function mousePressed() {
 
 
   // Check if the mouse is over the Droper image
-  if (mouseX > img3x - img3w / 8+10 && mouseX < img3x + img3w/3 && mouseY > img3y - img3h / 16+220 && mouseY < img3y + img3h/2+30) {
+  if (mouseX > img3x - img3w / 4 && mouseX < img3x + img3w && mouseY > img3y - img3h / 4 && mouseY < img3y + img3h) {
     droperpressed();
   }
 
-  if (mouseX > nxtx - nxtw / 4 && mouseX < nxtx + nxtw && mouseY > nxty - nxth / 4 && mouseY < nxty + nxth && shownext) {
+  if (mouseX > img3x - img3w / 8+10 && mouseX < img3x + img3w/3 && mouseY > img3y - img3h / 16+220 && mouseY < img3y + img3h/2+30){
     nextpressed();
   }
 
