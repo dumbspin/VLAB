@@ -103,3 +103,6 @@ box-shadow: 2px 2px #1f363d;
     color: #cfe0c3 !important;
     transform: scale(1.1);
 }
+.main-sidebar a{
+    text-align: left;
+}
