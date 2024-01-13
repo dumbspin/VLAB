@@ -70,7 +70,7 @@ body {
     overflow: hidden; 
   }
   .box::before {
-    content: "Temporary and permanent hardness";
+    content: "Removal of Hardness of Water by Ion Exchange Column ";
     display: block;
     font-size: 18px;
     color: white;

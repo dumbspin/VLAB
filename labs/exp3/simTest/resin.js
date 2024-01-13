@@ -22,7 +22,7 @@ let blinking = true;
 let blinkInterval = 200;
 let full=false;
 let vi=0;
-let recColor=(255,255,255);
+let recColor=(255,255,255,100);
 let flaskheight, flaskwidth, flaskX, flaskY, waterheight=5;
 let speed_=0.1;
 let stop=true;
@@ -33,7 +33,7 @@ class Drop {
     this.x = x;
     this.y = y;
     this.speed = 1;
-    this.radius = 2.5;
+    this.radius = 2;
     this.active = true;
   }
 
@@ -69,10 +69,10 @@ function preload() {
   // Load your images
   // image1 = loadImage('PotasiumChromate.png');
   // img = loadImage('Cap.png');
-  bgImg = loadImage('bg3.png');
+  bgImg = loadImage('bg4.png');
   image3 = loadImage('resinC.png');
   frontflask = loadImage('frontflask2.png');
-  liquid = loadImage('Halfwater.png');
+  // liquid = loadImage('Halfwater.png');
   nextimg = loadImage('Forward.png');
   bckflask=loadImage('backflask.png');
   water=loadImage('water.png')
@@ -84,7 +84,8 @@ function setup() {
    canvos=createCanvas(canvasWidth, canvasHeight);
   canvos.parent("#container");
 
-  img3x = 370; img3y = 40, img3w = 50; img3h = 270;
+  img3x = 370+200; img3y = 80-20, img3w = 200; img3h = 500;
+  img3X=250+200, img3Y=40-20;
   nxtx = 740; nxty = 540; nxtw = 50; nxth = 50;
   flaskwidth=110, flaskheight=145, flaskX= img3x-30, flaskY=img3y+280;
   console.log(water);
@@ -142,7 +143,7 @@ water.resize(110,145);
 
     // Increase the rectangle's height in the y-axis3
     noStroke();
-    rect(img3x+11,img3y+200, 27, -rectHeight);
+    rect(img3x+20,img3y+200+20, 15, -rectHeight-55);
     fill=recColor;
 
     // Increment the rectangle's height
@@ -159,11 +160,11 @@ water.resize(110,145);
 
   // setTimeout(drop(), 2000);
 
-    image(image3, img3x, img3y, img3w, img3h);
+    image(image3, img3X, img3Y, img3w, img3h);
  
 
 
-    if (mouseX > img3x - img3w / 6 && mouseX < img3x + img3w && mouseY > img3y +210-  img3h / 4 && mouseY < img3y+210 + img3h/4) {
+    if (mouseX > img3x - img3w / 8+10 && mouseX < img3x + img3w/3 && mouseY > img3y - img3h / 16+220 && mouseY < img3y + img3h/2+30) {
       // droperpressed();
       cursor('pointer');
     }
@@ -182,7 +183,7 @@ function mousePressed() {
 
 
   // Check if the mouse is over the Droper image
-  if (mouseX > img3x - img3w / 4 && mouseX < img3x + img3w && mouseY > img3y - img3h / 4 && mouseY < img3y + img3h) {
+  if (mouseX > img3x - img3w / 8+10 && mouseX < img3x + img3w/3 && mouseY > img3y - img3h / 16+220 && mouseY < img3y + img3h/2+30) {
     droperpressed();
   }
 
@@ -210,7 +211,7 @@ function droperpressed() {
 function drop(){
   for (let i = 0; i < 2; i++) {
     // if()
-    let drop = new Drop(img3x+25,240+(i*30));
+    let drop = new Drop(img3x+28,240+(i*30));
     drops.push(drop);
   }
 }

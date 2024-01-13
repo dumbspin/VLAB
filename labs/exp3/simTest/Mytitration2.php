@@ -52,8 +52,8 @@ $data4 = $_SESSION['Result1'];
 
   ?>
 
-  <H1>To determine the constituents and amount of alkalinity of the supplied water sample.</H1>
-  <h3>Titrating to determine permanent hardness.</h3>
+  <H1>Removal of Hardness of Water by Ion Exchange Column </H1>
+  <!-- <h3>Titrating to determine permanent hardness.</h3> -->
   <div id="flexbox">
 
   </div>

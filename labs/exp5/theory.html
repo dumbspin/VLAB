@@ -1,122 +1,150 @@
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Labs | Chemistry Lab</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.onload = function () {
+        document.getElementById("theory").className = "active treeview";
+      };
+    </script>
+    <style>
+      #toggle_nav:hover {
+        background-color: #1261a0;
+      }
+      a#theory {
+        background-color: #40798c !important;
+      }
+    </style>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Virtual Labs | Power Electronics Lab </title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  <script>
-    window.onload = function () {
-      document.getElementById("theory").className = "active treeview";
-    }
-  </script>
-  <style>
-    #toggle_nav:hover {
-      background-color: #1261A0;
-    }
+    <!-- Mathjs library -->
 
-    #aim {
-      background-color: #009dff;
-    }
+    <script
+      async="true"
+      src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"
+    ></script>
+  </head>
 
-    #aim:hover,
-    #theory:hover,
-    #pretest:hover,
-    #procedure:hover,
-    #simulation:hover,
-    #result:hover,
-    #posttest:hover,
-    #references:hover {
-      background-color: #009dff;
-    }
-  </style>
-
-  <!-- Mathjs library -->
-
-  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
-
-</head>
-
-<body class="hold-transition skin-blue sidebar-mini">
-  <!--Navigation Bar-->
-  <div class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
-              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar-ex-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://iitr.ac.in"
+            ><span
+              ><img
+                src="images/iitrLogo.png"
+                style="margin-top: -15px; height: 50px; width: 400px" /></span
+          ></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse"></div>
       </div>
     </div>
-  </div>
 
-  <div class="wrapper">
-    <header class="main-header">
-      <!-- Logo -->
-      <a href="../index.html" class="logo"
-        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
-        <p align="center" style="font-size:16px;"><b>Power Electronics Lab</b></p>
-      </a>
-      <!-- Header Navbar: style can be found in header.less -->
-      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
-          <span class="sr-only">Toggle navigation</span>
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a
+          href="../index.html"
+          class="logo"
+          style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          "
+        >
+          <p align="center" style="font-size: 22px"><b>Chemistry Lab</b></p>
         </a>
-        <section class="content-header">
-          <ol class="breadcrumb">
-            <li>
-              <a href="../index.html"><i class="fa fa-dashboard"></i>Power Electronics Lab</a>
-            </li>
-            <li>
-              <a href="#">Three Phase Full Wave SCR</a>
-            </li>
-            <li class="active">Theory</li>
-          </ol>
-        </section>
-      </nav>
-    </header>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" style="background-color: #009dff">
+          <!-- Sidebar toggle button-->
+          <a
+            href="#"
+            class="sidebar-toggle"
+            data-toggle="offcanvas"
+            role="button"
+            id="toggle_nav"
+          >
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"
+                  ><i class="fa-solid fa-flask-vial"></i>&nbsp;Chemistry Lab</a
+                >
+              </li>
+              <li>
+                <a href="#">Chloride Content by Mohr's</a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
 
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar" style="background-color:#1261A0;">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-          <div class="input-group"></div>
-        </form>
-        <!-- /.sear ch form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" style="background-color:#1261A0;">
-          <li class="treeview" id="aim">
-            <a href="index.html" id="aim">
-              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
-
-            </a>
-          </li>
-          <li class="treeview" id="theory">
-            <a href="theory.html" id="theory" onclick="theory()">
-              <i class="fa fa-files-o" style="color:white;"></i>
-              <span style="color:white;">Theory</span>
-            </a>
-          </li>
-          <!--   <li class="treeview" id="numerical">
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="background-color: #70a9a1">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" style="background-color: #70a9a1">
+            <li class="treeview" id="aim">
+              <a href="index.html" id="aim">
+                <i class="fa-solid fa-crosshairs" style="color: white"></i>
+                <span style="color: white">Aim</span>
+                <!--  This is our section aim-->
+              </a>
+            </li>
+            <li class="treeview" id="theory">
+              <a href="theory.html" style="color: white" id="theory">
+                <i class="fa-solid fa-file-lines" style="color: white"></i>
+                <span>Theory</span>
+              </a>
+            </li>
+            <!--   <li class="treeview" id="numerical">
                     <a href="numerical.php">
                         <i class="fa fa-laptop"></i>
                         <span>Numerical</span>
@@ -132,333 +160,332 @@
                         </span>
                     </a>
                 </li> -->
-          <li class="treeview" id="pretest">
-            <a href="pretest.html" id="pretest">
-              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+            <li class="treeview" id="pretest">
+              <a href="pretest.html" style="color: white" id="pretest">
+                <i
+                  class="fa-solid fa-clipboard-question"
+                  style="color: white"
+                ></i>
+                <span>Pre Test</span>
+              </a>
+            </li>
 
-            </a>
-          </li>
+            <li class="treeview" id="procedure">
+              <a href="procedure.html" style="color: white" id="procedure">
+                <i
+                  class="fa-solid fa-wand-magic-sparkles"
+                  style="color: white"
+                ></i>
+                <span>Procedure</span>
+              </a>
+            </li>
+            <li class="treeview" id="simulation">
+              <a href="simulation.html" style="color: white" id="simulation">
+                <i class="fa-solid fa-gears" style="color: white"></i>
+                <span>Simulation</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
 
-          <li class="treeview" id="procedure">
-            <a href="procedure.html" id="procedure">
-              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
-            </a>
-          </li>
-          <li class="treeview" id="simulation">
-            <a href="simulation.html" id="simulation">
-              <i class="fa fa-laptop" style="color:white;"></i>
-              <span style="color:white;">Simulation</span>
-              <span class="pull-right-container">
-              </span>
-            </a>
-          </li>
+            <li class="treeview" id="posttest">
+              <a href=" posttest.html" style="color: white" id="posttest">
+                <i
+                  class="fa-solid fa-file-circle-question"
+                  style="color: white"
+                >
+                </i>
+                <span>Post Test</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+            <li class="treeview" id="ref">
+              <a href="references.html" style="color: white" id="references">
+                <i class="fa-solid fa-book" style="color: white"></i>
+                <span>References</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
 
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1 align="center">
+            Removal of Hardness of Water by Ion Exchange Column<!-- Write experiment name here -->
+          </h1>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+          <h2><b>Introduction </b></h2>
 
+          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
+            Hardness in water is primarily due to the presence of calcium and
+            magnesium ions. Ion exchange is a process where undesirable ions are
+            exchanged for more desirable ions. In this experiment, an ion
+            exchange column is used to remove calcium and magnesium ions from
+            water, replacing them with sodium ions. The resin in the column acts
+            as the exchange medium.<br />
+          </p>
 
-          <li class="treeview" id="posttest">
-            <a href=" posttest.html" id="posttest">
-              <i class=" fa fa-files-o" style="color:white;">
-              </i>
-              <span style="color:white;">Post Test</span>
-              <span class="pull-right-container">
-              </span>
-            </a>
-          </li>
-          <li class="treeview" id="ref">
-            <a href="references.html" id="references">
-              <i class="fa fa-files-o" style="color:white;"></i>
-              <span style="color:white;">References</span>
-              <span class="pull-right-container">
-              </span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
+          <h3>
+            <b
+              >Addressing Water Hardness: The Role of Ion Exchange in Practical
+              and Efficient Water Softening</b
+            >
+          </h3>
 
+          <p
+            style="
+              font-size: 130%;
+              margin-top: 1%;
+              text-align: justify;
+              font-style: 'Nunito sans', sans-serif;
+            "
+          >
+            Water hardness is a common issue arising from the presence of
+            divalent cations, predominantly calcium (Ca^2+) and magnesium
+            (Mg^2+) ions, in water. These ions can form insoluble precipitates
+            with soaps, causing scaling in pipes and appliances. The ion
+            exchange process is employed as a practical and efficient method for
+            water softening.
+          </p>
 
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1 align="center">
-          Three Phase Full Wave Silicon Controlled Rectifier (SCR) <!-- Write experiment name here -->
-        </h1>
-      </section>
-      <!-- Main content -->
-      <section class="content">
-        <h3><b>Introduction </b></h3>
+          <center>
+            <img
+              src="images\structure.jpg"
+              alt="structure"
+              height="400"
+              width="700"
+              style="mix-blend-mode: darken; -webkit-filter: contrast(120%)"
+            />
+          </center>
+          <center>
+            <b style="font-size: 18px">Fig. 1 Structure of IGBT</b>
+          </center>
+          <br />
 
-        <p style="font-size:130%; margin-top:2%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          A controlled rectifier is an electronic circuit that converts alternating current (AC) into direct current
-          (DC). It consists of power electronic devices, typically thyristors or silicon-controlled rectifiers (SCRs),
-          which are controlled to switch the flow of current in a desired manner.
-          The main function of a controlled rectifier is to control the magnitude and polarity of the output DC voltage.
-          It is commonly used in various applications where precise control over the rectification process is required
-          such as power supplies, motor drives, battery chargers, and voltage regulators.<br><br>
-          The controlled rectifier operates by using a triggering mechanism to turn on the thyristors at specific points
-          in the AC waveform. Once the thyristors are triggered, they conduct current until the AC voltage crosses zero
-          or until the thyristor is turned off. By controlling the timing of thyristor firing, the rectifier can vary
-          the average DC output voltage.<br>
+          <center>
+            <img
+              src="images\symbol.png"
+              alt="symbol"
+              height="200"
+              width="200"
+              style="mix-blend-mode: darken; -webkit-filter: contrast(220%)"
+            />
+          </center>
+          <center><b style="font-size: 18px">Fig. 2 Symbol of IGBT</b></center>
 
-        <h3><b>Three Phase Full Wave Controlled Bridge Rectifier</b></h3>
-        </p>
+          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
+            In the ion exchange column, a resin with negatively charged
+            functional groups, such as sulfonate or carboxyl groups, serves as
+            the exchange medium. These functional groups attract and exchange
+            the positively charged calcium and magnesium ions for sodium ions.
+            The sodium ions, being monovalent, do not contribute to water
+            hardness and, therefore, do not cause the typical scaling issues
+            associated with divalent ions. The Ion exchange reaction can be
+            represented as follows: Resin - {Na}^+ + {Ca}^2+ ⇌ Resin – {Ca}^2+
+            +{Na}^+ Similarly, for magnesium ions: Resin - {Na}^+ + {Mg}^2+ ⇌
+            Resin - {Mg}^2+ + {Na}^+
+          </p>
 
-        <center><img src="images\circuit.png" alt="1 phase controlled bridge rectifier" height="225"></center>
-        <center><b style="font-size:16px;">Fig. 1 Three Phase Full Wave Silicon Controlled Rectifier</b></center>
-        
-        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          A three-phase full-wave controlled rectifier, also known as a three-phase thyristor rectifier or six-pulse
-          rectifier, is a type of rectifier circuit used to convert alternating current (AC) into direct current (DC).
-          It utilizes six thyristors (also known as silicon-controlled rectifiers or SCR) to control the flow of
-          current. Here's how a three-phase controlled rectifier works:<br><br>
+          <h3>
+            <b>Ion Exchange Reactions and Efficiency: A Comprehensive Overview for Water Softening</b>
+          </h3>
 
-          1. Kirchhoff’s voltage law around any path shows that only one thyristor in the
-          top half of the bridge may conduct at one time (S<sub>1</sub>, S<sub>3</sub>, or S<sub>5</sub>). The thyristor
-          that is conducting will have its anode connected to the phase voltage that is
-          highest at that instant.<br><br>
-          2. Kirchhoff’s voltage law also shows that only one thyristor in the bottom half of
-          the bridge may conduct at one time (S<sub>2</sub>, S<sub>4</sub>, or S<sub>6</sub>). The thyristor that is
-          conducting will have its cathode connected to the phase voltage that is
-          lowest at that instant.<br><br>
-          3. As a consequence of points 1 and 2, S<sub>1</sub> and S<sub>4</sub> cannot conduct at the
-          same time. Similarly, S<sub>3</sub> and S<sub>6</sub> cannot conduct simultaneously, nor can S<sub>5</sub>
-          and S<sub>2</sub>.<br><br>
-          4. The output voltage across the load is one of the line-to-line voltages of the
-          source. For example, when S<sub>1</sub> and S<sub>2</sub> are on, the output voltage is V<sub>ac</sub>.
-          Furthermore, the thyristors that are on are determined by which line-to-line
-          voltage is the highest at that instant. For example, when V<sub>ac</sub> is the highest
-          line-to-line voltage, the output is V<sub>ac</sub>.<br><br>
-          5. There are six combinations of line-to-line voltages (three phases taken two
-          at a time). Considering one period of the source to be 360&deg;, a transition of
-          the highest line-to-line voltage must take place every 360&deg;/6 = 60&deg;. Because
-          of the six transitions that occur for each period of the source voltage, the
-          circuit is called a six-pulse rectifier.
-          The three-phase full-wave controlled rectifier is widely used in applications that require variable DC voltage
-          and current, such as industrial motor drives, battery charging systems, and power supplies. By adjusting the
-          firing angle of the thyristors, the rectifier can control the output voltage and power delivered to the load,
-          enabling precise control of various electrical processes.<br><br>
-        </p>
+          <center>
+            <img
+              src="images\circuit.png"
+              alt="circuit"
+              height="250"
+              width="450"
+              style="mix-blend-mode: darken; -webkit-filter: contrast(150%)"
+            />
+          </center>
+          <center>
+            <b style="font-size: 18px">Fig. 3 Circuit diagram of IGBT </b>
+          </center>
 
-        <h3><b>1. Three Phase Full Wave Controlled Rectifier - R Load</b></h3>
-        <center><img src="images\R load circuit.png" alt="R load circuit" height="250" width="450" style="-webkit-filter:contrast(180%);"></center>
-        <center><b style="font-size:16px;">Fig. 2 Three Phase Full Wave SCR with R Load</b></center><br>
+          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
+            <center>
+              <img
+                src="images\VI characteristics.png"
+                alt="V-I characteristics"
+                height="400"
+                width="500"
+                style="mix-blend-mode: darken; -webkit-filter: contrast(120%)"
+              />
+            </center>
+            <center>
+              <b style="font-size: 18px">Fig. 4 V-I characteristics of IGBT</b>
+            </center>
+          </p>
 
-        <center><img src="images\R load waveform.png" alt="Input waveform" height="400" width="400" style="-webkit-filter:contrast(180%);"></center><br>
-        <center><b style="font-size:16px;">Fig. 3 Waveforms of Three Phase Full Wave SCR with R Load</b></center>
+          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
+            The Ion exchange reaction can be represented as follows: Resin -
+            {Na}^+ + {Ca}^2+ ⇌ Resin – {Ca}^2+ +{Na}^+ Similarly, for magnesium
+            ions: Resin - {Na}^+ + {Mg}^2+ ⇌ Resin - {Mg}^2+ + {Na}^+ The
+            efficiency of Ion exchange depends on various factors, including the
+            type of resin used, resin capacity, flow rate, and the initial
+            hardness of the water. Regeneration of the resin is necessary when
+            it becomes saturated with calcium and magnesium ions. This is
+            typically achieved by flushing the column with a concentrated
+            solution of sodium chloride (brine solution), displacing the
+            captured ions and restoring the resin’s exchange capacity. The Ion
+            exchange column, therefore, acts as a sustainable and effective
+            method for mitigating the negative effects of water hardness,
+            ensuring a more desirable water quality for domestic and industrial
+            applications.
+          </p>
 
-        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          One thyristor of the conducting pair powers the positive side of load, while the other thyristor powers the
-          negative side of the load. Thyristors T<sub>1</sub>, T<sub>3</sub>, T<sub>2</sub>, and T<sub>4</sub> form a
-          bridge rectifier network between phases A and
-          B, similary thyristors T<sub>3</sub>, T<sub>5</sub>, T<sub>4</sub>, and T<sub>6</sub> between phases B and C
-          and T<sub>5</sub>, T<sub>1</sub>, T<sub>6</sub>, and T<sub>2</sub> between phases C and A.
-          Thyristors T<sub>1</sub>, T<sub>3</sub> and T<sub>5</sub> feed the positive rail. The thyristor which has a
-          more positive voltage at its anode terminal
-          conducts. Likewise, thyristors T<sub>2</sub>, T<sub>4</sub> and T<sub>6</sub> feed the negative rail and
-          whichever thyristor has a more negative voltage
-          at its cathode terminal conducts.<br>
-          Let,<br>
-          <center style="font-size:16px;">`V_(an) = V_m &ThinSpace;sinwt`</center><br>
-          <center style="font-size:16px;">`V_(bn) = V_m &ThinSpace;sin(wt - (2&pi;)/3)`</center><br>
-          <center style="font-size:16px;">`V_(cn) = V_m &ThinSpace;sin(wt - (4&pi;)/3)`</center><br>
-          <center style="font-size:16px;">`V_(ab) = &Sqrt;3 &ThinSpace;V_m &ThinSpace;sin(wt + &pi;/6)`</center><br>
-          <center style="font-size:16px;">`V_(bc) = &Sqrt;3 &ThinSpace;V_m &ThinSpace;sin(wt - &pi;/2)`</center><br>
-          <center style="font-size:16px;">`V_(ca) = &Sqrt;3 &ThinSpace;V_m &ThinSpace;sin(wt - (7&pi;)/6)`</center><br>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The average of output
-          voltage and current is,</p>
-        <center style="font-size:16px;">`V_(o) = (3&Sqrt;3)/&pi; V_(mp) cos⁡&alpha; .......(1)`</center><br>
-        <center style="font-size:16px;">`I_(o) = (3&Sqrt;3)/(&pi;R) V_(mp) cos⁡&alpha; .......(2)`</center><br>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">For &alpha;>60&deg;</p>
-        <center style="font-size:16px;">`V_(o) = 3/(&pi;)&Integral;_(&pi;/6+&alpha;)^(&pi;/2+&alpha;)` `&Sqrt;3` `V_m
-          sin⁡(wt + &pi;/6)` dwt &nbsp; = &nbsp; `(3&Sqrt;3V_m)/&pi; cos(&pi;/3+&alpha;).......(3)`</center><br>
-        <center style="font-size:16px;">`I_(o) = V_(dc)/R = (3&Sqrt;3V_m)/(&pi;R) cos(&pi;/3+&alpha;).......(4)`
-        </center><br>
+          <h3>
+            <b>
+              Advantages of Removal of Hardness of Water by Ion Exchange Column
+            </b>
+          </h3>
+          <p style="font-size: 130%; text-align: justify">
+            1. Scale Prevention: Ion exchange effectively removes hardness
+            minerals, such as calcium and magnesium ions, preventing the
+            formation of scale deposits in pipes, appliances, and water heaters.
+            This helps to maintain the efficiency of these systems.<br /><br />
 
-        </p>
-        <h3><b>2. Three Phase Full Wave Controlled Rectifier - RL Load</b></h3>
+            2. Extended Appliance Lifespan: By preventing scale buildup, ion
+            exchange contributes to the prolonged lifespan and improved
+            performance of water-using appliances like dishwashers, washing
+            machines, and water heaters.<br /><br />
 
+            3. Energy Efficiency: Reduced scale formation leads to improved heat
+            transfer efficiency in water heating systems. This, in turn, lowers
+            energy consumption, resulting in increased energy efficiency and
+            cost savings.<br /><br />
 
+            4. Improved Water Quality: Ion exchange removes not only hardness
+            ions but also other undesirable ions, leading to improved water
+            quality. This can enhance the taste, odor, and appearance of the
+            water.<br /><br />
 
-        <center><img src="images\RL load circuit.png" alt="1 phase controlled bridge rectifier" height="250" style="-webkit-filter:contrast(180%);"
-            width="500"></center>
-        
-        <center><b style="font-size:16px;">Fig. 4 Three Phase Full Wave SCR with RL Load</b></center><br>
+            5. Reduced Soap and Detergent Usage: Softened water requires less
+            soap and detergent for cleaning purposes compared to hard water.
+            This results in cost savings and more effective cleaning.<br /><br />
 
-        <center><img src="images\RL load waveform.png" alt="Input waveform" height="600" width="550" style="-webkit-filter:contrast(180%);"></center>
-        <center><b style="font-size:16px;">Fig. 5 Waveforms of Three Phase Full Wave SCR with RL Load</b></center><br>
+            6. Clothing and Fabric Care: Softened water is gentler on clothing
+            and fabrics during washing, leading to brighter colors, softer
+            textures, and extended garment lifespan.<br /><br />
 
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          The thyristors are triggered at an interval of &pi;/3 radians i.e., at an interval of 30°. The
-          frequency of output ripple voltage is 6 fs and the filtering requirement is less than that of three
-          phase semi and half wave converters.<br>
-          At ωt = &pi;/6 + α , thyristor T<sub>6</sub> is already conducting when the T<sub>1</sub> thyristor is turned
-          on by applying the
-          gating signal to the gate of T<sub>1</sub>. During the time period ωt = (&pi;/6 +α) to (&pi;/2 +α), thyristors
-          T<sub>1</sub> and T<sub>6</sub> conduct together and the line to line supply voltage v<sub>ab</sub> appears across the
-          load.
-          At ωt = &pi;/2 +α, the thyristor T<sub>2</sub> is triggered and T<sub>6</sub> is reverse biased immediately
-          and T<sub>6</sub> turns
-          off due to natural commutation. The thyristors are numbered in the circuit diagram corresponding to the order
-          in which they are
-          triggered. The trigger sequence (firing sequence) of the thyristors is 12, 23, 34, 45, 56, 61, 12,
-          23, and so on. The figure shows the waveforms of three phase input supply voltages, output
-          voltage, the thyristor current through T<sub>1</sub> and T<sub>4</sub>, the supply current through the line
-          'a'.
+            7. Reduced Maintenance Costs: With the prevention of scale deposits,
+            there is a reduction in maintenance costs associated with plumbing
+            systems, water-using appliances, and water heaters. This can lead to
+            long-term cost savings for homeowners and businesses.<br /><br />
 
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The average
-          bridge output voltage is,</p>
-        <center style="font-size:16px;">`V_(O(dc)) = V_(dc) = 6/(2&pi;)&Integral;_(&pi;/6+&alpha;)^(&pi;/2+&alpha;) V_o`
-          d&omega;t</center><br>
-        <center style="font-size:16px;">`v_o = v_(ab) = &Sqrt;3` `V_(m) sin⁡(wt + &pi;/6)`</center><br>
-        <center style="font-size:16px;">`V_(dc) = 3/(&pi;)&Integral;_(&pi;/6+&alpha;)^(&pi;/2+&alpha;)` `&Sqrt;3` `V_m
-          sin⁡(wt + &pi;/6)` d&omega;t</center><br>
+            8. Minimized Plumbing Issues: Ion exchange helps prevent the
+            accumulation of scale in pipes, reducing the likelihood of clogs and
+            corrosion. This minimizes the need for plumbing repairs and
+            maintenance.<br /><br />
 
-        <center style="font-size:16px;">`V_(out) = (3&Sqrt;3)/&pi; V_(mp) cos⁡&alpha; .......(5)`</center><br>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The maximum average dc
-          output voltage is obtained for a delay angle &alpha; = 0,</p>
-        <center style="font-size:16px;">`V_(dc(max)) = V_(dm) = (3&Sqrt;3)/&pi; V_(mp) .......(6)`</center><br>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The normalized average dc
-          output voltage is</p>
-        <center style="font-size:16px;">`V_(dcn) = V_n = V_(dc)/V_(dm) = cos&alpha; .......(7)`</center><br>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The rms value of
-          bridge output voltage is,</p>
-        <center style="font-size:16px;">`V_(o(rms)) = [6/(2&pi;)&Integral;_(&pi;/6+&alpha;)^(&pi;/2+&alpha;) V_o^2
-          &ThinSpace;dwt]^(1/2)`</center><br>
-        <center style="font-size:16px;">`V_(o(rms)) = [6/(2&pi;)&Integral;_(&pi;/6+&alpha;)^(&pi;/2+&alpha;) V_(ab)^2
-          &ThinSpace;dwt]^(1/2)`</center><br>
-        <center style="font-size:16px;">`V_(o(rms)) = [3/(2&pi;)&Integral;_(&pi;/6+&alpha;)^(&pi;/2+&alpha;) 3V_(m)^2
-          &ThinSpace; sin⁡^2(wt + &pi;/6) dwt]^(1/2)`</center><br>
-        <center style="font-size:16px;">`V_(o(rms)) = (&Sqrt;3 V_m)(1/2 + (3&Sqrt;3)/(4&pi;)cos⁡2&alpha;)^(1/2)
-          .......(8)`</center><br>
+            9. Environmental Impact: The use of softened water can contribute to
+            environmental sustainability by reducing the need for harsh cleaning
+            agents and minimizing the environmental impact of manufacturing and
+            disposing of appliances that suffer from scale-related issues.<br /><br />
+          </p>
 
+          <h3>
+            <b
+              >Disadvantages of Removal of Hardness of Water by Ion Exchange
+              Column</b
+            >
+          </h3>
+          <p style="font-size: 130%; text-align: justify">
+            1. Sodium Content in Treated Water: Ion exchange involves replacing
+            calcium and magnesium ions with sodium ions. This increases the
+            sodium content in the treated water, which may be a concern for
+            individuals on sodium-restricted diets. It's essential to consider
+            the health implications, especially for those with specific dietary
+            restrictions.<br /><br />
 
-        <h3><b>3. Three Phase Full Wave Controlled Rectifier - RLE Load</b></h3>
+            2. Environmental Impact of Brine Discharge: The regeneration process
+            of ion exchange columns involves the use of a brine solution.
+            Discharging this brine into water bodies can have environmental
+            consequences, as the increased salt concentration may adversely
+            affect aquatic ecosystems.<br /><br />
 
-        <center><img src="images\RLE load circuit.png" alt="1 phase controlled bridge rectifier" height="250" style="-webkit-filter:contrast(180%);"
-            width="450"></center>
-        <center><b style="font-size:16px;">Fig. 6 Three Phase Full Wave SCR with RLE Load</b></center><br>
+            3. Maintenance and Regeneration Requirements: Ion exchange columns
+            require regular maintenance and regeneration to continue functioning
+            effectively. This involves the use of salt for regeneration, and the
+            frequency of regeneration depends on water hardness and usage. The
+            maintenance process adds to the operational costs and may
+            inconvenience users during regeneration periods.<br /><br />
 
-        <center><img src="images\RLE load waveform.png" alt="Input waveform" height="700" width="500" style="transform: rotate(0.5deg); -webkit-filter:contrast(120%);"></center><br>
-        <center><b style="font-size:16px;">Fig. 7 Waveforms of Three Phase Full Wave SCR with RLE Load</b></center><br>
+            4. Initial Cost and Installation: The initial cost of purchasing and
+            installing an ion exchange system can be relatively high compared to
+            some other water treatment methods. This cost factor may be a
+            deterrent for some consumers, particularly in residential
+            settings.<br /><br />
 
+            5. Limited Removal of Certain Contaminants: While ion exchange is
+            effective for removing hardness minerals, it may not effectively
+            address other water contaminants such as bacteria, viruses, or
+            certain chemical pollutants. Additional water treatment methods may
+            be needed for comprehensive water purification.<br /><br />
 
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          At &alpha; = 0&deg;, T1 is triggered at &omega;t = &pi;/6, T2 at 90&deg;, T3 at 150&deg; and so on. Therefore, the load voltage
-          has
-           waveform as shown in the figure. For &alpha; = 60&deg;, the conduction sequence of thyristors T1 to
-          T6 is shown in figure.
-          Here T1 is triggered at &omega;t = 30&deg; + 60&deg; = 90&deg;, T2 at 90&deg; + 60&deg; = 150&deg; and so on. Each
-          SCR conducts for 120&deg;, when
-          T1 is triggered, reverse biased thyristor T5 is turned off and T1 is turned on. T6 is already conducting. As
-          T1 is connected to A and T6 to B,
-          voltage v<sub>ab</sub> appears across load. When T2 is turned on, T6 is commutated from the negative group. T1
-          is already conducting. As T1 and T2 are connected
-          to A and C respectively, voltage v<sub>ac</sub> appears across the load. Positive group of SCRs are fired at
-          an interval of 120&deg; and similary, negative group
-          of SCRs are fired at an interval of 120&deg;. But SCRs from both the groups are fired at an interval of
-          60&deg;.
+            6. Waste Disposal Challenges: The waste generated during the
+            regeneration process, including the spent resin and brine solution,
+            poses challenges for proper disposal. Disposal methods need to
+            adhere to environmental regulations to prevent any negative impact
+            on the surroundings.
+          </p>
 
-        </p>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The average
-          bridge output voltage is,</p>
-        <center style="font-size:16px;">`V_(out) = (3&Sqrt;3)/&pi; V_(mp) cos⁡&alpha; .......(9)`</center><br>
+          <h3>
+            <b
+              >Applications of Removal of Hardness of Water by Ion Exchange
+              Column</b
+            >
+          </h3>
+          <p style="font-size: 130%; text-align: justify">
+            1. Residential Water Softening: Ion exchange columns are widely used
+            in homes to soften water for domestic purposes. Softened water
+            reduces scale buildup in plumbing systems, water heaters, and
+            appliances, improving their efficiency and extending their
+            lifespan..<br /><br />
 
-        <center style="font-size:16px;">`V_(out) = E + I_(out)R .......(10)`</center><br>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">The
-          Power delivered to load is,</p>
-        <center style="font-size:16px;">`P = EI_(out) + I_r^2R .......(11)`</center><br>
+            2. Laundry Facilities: Softened water is beneficial for laundry as
+            it enhances the effectiveness of detergents, reduces soap
+            consumption, and helps maintain the vibrancy and softness of
+            fabrics. It also prevents mineral deposits on clothing.<br /><br />
 
-        <h3><b>Advantages of Three Phase Full Wave SCR</b></h3>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
+            3. Dishwashing: Water softening ensures spot-free and streak-free
+            dishes, as it prevents the formation of scale on glassware and
+            dishware. It also reduces the need for excessive detergent use.<br /><br />
 
-          1. A three-phase rectifier allows for higher power handling capability compared to single-phase rectifiers. It
-          utilizes three phases of AC input, enabling the conversion of a larger amount of power.<br><br>
+            4. Boiler Feedwater Treatment: In industrial settings, ion exchange
+            is employed to remove hardness from boiler feedwater. This helps
+            prevent scale formation on boiler surfaces, improving heat transfer
+            efficiency and reducing maintenance costs.<br /><br />
 
-          2. The three-phase rectifier provides a smoother output compared to single-phase rectifiers. With three phases
-          of AC input, the ripple content in the output DC waveform is significantly reduced, resulting in a more stable
-          and constant DC voltage.<br><br>
-
-          3. Due to the reduced ripple content, a three-phase rectifier has higher efficiency compared to single-phase
-          rectifiers. The smoother output waveform leads to lower power losses and improved overall efficiency.<br><br>
-
-          4. In a three-phase system, the load can be distributed more evenly among the three phases. This helps in
-          maintaining balanced current and voltage levels, reducing stress on individual components and improving the
-          system's overall reliability.<br><br>
-
-          5. By controlling the switching of the rectifier devices, it is possible to reduce the harmonic distortion in
-          the output waveform. This is particularly important in applications where harmonics can cause interference or
-          damage to other sensitive equipment connected to the system.<br><br>
-
-          6. The three-phase full-wave controlled rectifier provides flexibility in control and regulation of the output
-          DC voltage. By adjusting the firing angles of the rectifier devices, the average output voltage can be
-          controlled, allowing for precise regulation and adjustment of the DC power.<br><br>
-
-          7. Many industrial and commercial applications utilize three-phase power systems. Using a three-phase
-          rectifier ensures compatibility and seamless integration with these systems, making it a preferred choice in
-          many applications.<br></p>
-
-        <h3><b>Disadvantages of Three Phase Full Wave SCR</b></h3>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          1. Compared to simpler rectifiers, a three-phase full-wave controlled rectifier requires more complex control
-          circuitry to regulate the firing angles of the thyristors accurately. This complexity can increase the cost
-          and complexity of the overall system.<br><br>
-
-          2. The operation of the controlled rectifier introduces significant harmonic distortion in the output voltage
-          and current waveforms. These harmonics can lead to undesirable effects such as increased losses, decreased
-          power factor, and electromagnetic interference (EMI) issues. Additional filtering and power factor correction
-          measures may be required to mitigate these effects.<br><br>
-
-          3. Thyristors used in the controlled rectifier have relatively slow switching speeds compared to other power
-          electronic devices like MOSFETs or IGBTs. This results in higher switching losses, leading to decreased
-          overall efficiency of the rectifier.<br><br>
-
-          4. Unlike other rectifier topologies, such as the active power factor correction (PFC) rectifier, a
-          three-phase full-wave controlled rectifier has limited control over power factor correction. The power factor
-          of the rectifier may be low, especially at light loads, which can cause additional energy losses and potential
-          penalties from utility companies.<br><br>
-
-          5. The thyristors in the controlled rectifier experience high voltage stress during commutation due to the
-          rapid change in voltage across the device when it turns off. This stress can reduce the lifespan of the
-          thyristors and require additional protection measures such as snubber circuits.<br><br>
-
-          6. The output voltage of a three-phase full-wave controlled rectifier is typically determined by the input
-          voltage and the modulation index (the ratio of the peak amplitude of the modulating signal to the peak
-          amplitude of the carrier signal). This limited voltage control can be a disadvantage in applications where
-          precise voltage regulation is required.<br></p>
-          
-        <h3><b>Applications of Three Phase Full Wave SCR</b></h3>
-        <p style="font-size:130%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-
-          1. Variable Speed Drives<br><br>
-
-          2. Uninterruptible Power Supplies (UPS)<br><br>
-
-          3. HVDC Transmission Systems<br><br>
-
-          4. Battery Charging Systems<br><br>
-
-          5. Power Supplies for Electroplating<br></p>
-        <!--Theory of experiment -->
-
-      </section>
-      <!-- /.content -->
+            5. Cooling Tower Water Treatment: Water used in cooling towers for
+            industrial processes often contains hardness minerals. Ion exchange
+            is used to soften this water, preventing scale formation in the
+            cooling system and ensuring optimal heat exchange
+          </p>
+          <!--Theory of experiment -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <footer class="main-footer">
+        <h4 align="center">
+          Lab contributed by THDC Institute of Hydro Power Engineering and
+          Technology
+          <!-- Institute Name -->
+        </h4>
+      </footer>
     </div>
-    <footer class="main-footer">
-      <h4 align="center">Lab contributed by <!-- Institute Name --> </h4>
-    </footer>
-  </div>
-
-</body>
-
+  </body>
 </html>
 <script>
   function theory() {
     document.getElementById("theory").style.backgroundColor = "#009dff";
-
   }
-
-
 </script>
 <!-- ./wrapper -->
 <!-- jQuery 2.2.3 -->

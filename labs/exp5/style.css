@@ -1,0 +1,109 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f8f0;
+}
+div.content-wrapper{
+background-color: #f3f8f0;
+}
+.main-sidebar{
+    background-color: #70a9a1 !important;
+}
+.navbar-static-top{
+    background-color: #70a9a1 !important;
+    /* margin: 0 !important; */
+}
+a#aim{
+    background-color: #70a9a1 !important;
+}
+a.logo{
+    background: #70a9a1 !important;
+    border: 0 !important;
+    padding-bottom: 0;
+    border-radius: 4px;
+    /* margin-right: 10px; */
+    border-bottom:   2px   solid #ffffff !important;
+    border-right: 2px solid #ffffff !important;
+    box-shadow: 2px 2px #45656f !important;
+}
+.skin-blue .sidebar-form {
+    border-radius: 3px !important;
+    border: 0px solid #9ec1a3 !important
+    ;
+    margin: 0 10px !important;
+}
+a {
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+}
+ol.breadcrumb{
+    text-align: center;
+    text-decoration: none;
+}
+.skin-blue, .sidebar-form{
+
+}
+#aim:hover, #theory:hover, #pretest:hover, #procedure:hover, #simulation:hover, #result:hover, #posttest:hover, #references:hover{
+    background-color: #9ec1a3 !important; 
+}
+a#aim, a#theory, a#pretest, a#procedure, a#simulation, a#result, a#posttest, a#references{
+    background-color: #70a9a1;
+    /* border-bottom: 1px solid #40798c !important; */
+    /* box-shadow: 2px 2px #40798c;
+    border-radius: 4px;
+    margin:2px 2px 2px 0; */
+
+}
+#toggle_nav:hover {
+background-color: #9ec1a3 !important;
+}
+/* #aim:active, #theory:active, #pretest:active, #procedure:active, #simulation:active, #result:active, #posttest:active, #references:active{
+    background-color: white !important;
+} */
+.sidebar-menu>li.active>a{
+    background-color: #ffffff;
+}
+.questions{
+font-size: 18px;
+margin-top: 40px;
+padding: 2px 2px 5px 2px ;
+border-radius: 5px;
+margin-right: 10px;
+border: 2px solid white;
+box-shadow: 2px 2px #1f363d;
+}
+.options{
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 2px 2px 5px 2px ;
+}
+.questions_le{
+    font-size: 18px;
+    margin: 2px 0 10px 0;
+
+}
+.solutions{
+    color: blue;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 5px ;
+    margin-left: 10px;
+}
+
+.mybutton{
+    background-color:#407986 !important;
+    border: 2px solid white;
+    box-shadow: 2px 2px #1f363d;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 15px 2px 0 2px ;
+    transition: transform 0.3s ease;
+}
+.mybutton:hover{
+    color: #cfe0c3 !important;
+    transform: scale(1.1);
+}
+
+.main-sidebar a{
+    text-align: left;
+}
