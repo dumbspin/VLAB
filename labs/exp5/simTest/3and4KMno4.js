@@ -1,6 +1,6 @@
 let canvasWidth = 800;
 let canvasHeight = 600;
-let image1, image2, bgImg;
+let image1, image2, bgImg,rod;
 let shownext = false;
 let process1 = 0, process2 = -1, process3 = -1, process4 = -1, process5=-1;
 
@@ -56,14 +56,7 @@ class Drop {
   }
 }
 
-function radialGradient(x, y, radius, c1, c2) {
-  for (let r = radius; r > 0; r--) {
-    let inter = map(r, 0, radius, 0, 1);
-    let c = lerpColor(c1, c2, inter);
-    fill(c);
-    ellipse(x, y, r * 2, r);
-  }
-}
+
 
 class WaterDrop {
   constructor(x, y) {
@@ -80,7 +73,8 @@ class WaterDrop {
     // Apply gradient for a more realistic effect
     let gradientTop = color(255, 255, 255, 150);
     let gradientBottom = color(0, 0, 255, 50);
-    if (showDrop){console.log('yes drop')
+    if (showDrop){
+      
     // Draw the flattened circular shape with gradient
     radialGradient(this.x, this.y, 30, baseColor, gradientTop, gradientBottom);
 
@@ -100,11 +94,12 @@ class WaterDrop {
 function preload() {
   // Load your images
   image1 = loadImage('PotasiumChromate.png');
-  img = loadImage('Cap.png');
-  bgImg = loadImage('bg3.png');
+  rod = loadImage('glass rod.png');
+  bgImg = loadImage('bg.png');
   image3 = loadImage('droper.png');
   frontflask = loadImage('frontflask.png');
   liquid = loadImage('Halfwater.png');
+
   nextimg = loadImage('Forward.png');
   gif1 = createImg('gif1.gif');
   gif2 = createImg('gif1.gif');
@@ -124,7 +119,7 @@ function preload() {
 }
 
 function setup() {
-  drop_ = new WaterDrop(400, 100);
+  drop_ = new WaterDrop(width/2, width/2);
    canvos=createCanvas(canvasWidth, canvasHeight);
   canvos.parent("#container");
   gif1.parent("#container");
@@ -132,7 +127,7 @@ function setup() {
   gif3.parent("#container");
   gif4.parent("#container");
 
-  img2x = 560; img2y = 222; img2w = 55; img2h = 65;
+  img2x = 560; img2y = 222; img2w = 200; img2h = 10;
   img3x = 150; img3y = 155, img3w = 55; img3h = 160;
   nxtx = 740; nxty = 540; nxtw = 50; nxth = 50;
   //  x=canvos.position().x;
@@ -172,8 +167,8 @@ function setup() {
 
 function draw() {
  
-     x=canvos.position().x;
-   y=canvos.position().y;
+  //    x=canvos.position().x;
+  //  y=canvos.position().y;
      gif1.position(x+600, y+260);
   gif2.position(x+178, y+230);
   gif3.position(x+600, y+210);
@@ -354,7 +349,7 @@ function draw() {
     currentPoint.y += stepY;
 
     // Draw the image at the current position
-    // image(img, currentPoint.x, currentPoint.y, img2w, img2h);
+    image(rod, currentPoint.x, currentPoint.y, img2w, img2h);
 
     // Increment the step counter
     currentStep++;
@@ -375,7 +370,7 @@ function draw() {
     currentPoint.y += stepY;
 
     // Draw the image at the current position
-    // image(img, currentPoint.x, currentPoint.y, img2w, img2h);
+    image(rod, currentPoint.x, currentPoint.y, img2w, img2h);
 
     // Increment the step counter
     currentStep++;
@@ -392,7 +387,7 @@ function draw() {
 
   else {
     // Draw the image at the final position when not animating
-    // image(img, endPoint2.x, endPoint2.y, img2w, img2h);
+    image(rod, endPoint2.x, endPoint2.y, img2w, img2h);
 
   }
 
@@ -484,4 +479,12 @@ function nextpressed() {
   window.location.href = 'Mytitration.html';
 
 
+}
+function radialGradient(x, y, radius, c1, c2) {
+  for (let r = radius; r > 0; r--) {
+    let inter = map(r, 0, radius, 0, 1);
+    let c = lerpColor(c1, c2, inter);
+    fill(c);
+    ellipse(x, y, r * 2, r);
+  }
 }

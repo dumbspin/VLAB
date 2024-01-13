@@ -69,7 +69,7 @@ function preload() {
   // Load your images
   // image1 = loadImage('PotasiumChromate.png');
   // img = loadImage('Cap.png');
-  bgImg = loadImage('bg3.png');
+  bgImg = loadImage('bg4.png');
   image3 = loadImage('resinC.png');
   frontflask = loadImage('frontflask2.png');
   // liquid = loadImage('Halfwater.png');
