@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Virtual Labs | Chemistry Lab  </title>
+  <title> Virtual Labs | Chemistry Lab </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -18,8 +18,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <script>
     window.onload = function () {
       document.getElementById("posttest").className = "active treeview";
@@ -44,9 +44,10 @@
     #references:hover {
       background-color: #009dff;
     }
-    a#posttest{
-    background-color: #40798c !important;
-}
+
+    a#posttest {
+      background-color: #40798c !important;
+    }
   </style>
   <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
 </head>
@@ -76,7 +77,7 @@
       <!-- Logo -->
       <a href="../index.html" class="logo"
         style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
-        <p align="center" style="font-size:22px;"><b>Chemistry Lab</b></p>
+        <p align="center" style="font-size:21px;"><b>Chemistry Lab</b></p>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top" style="background-color:#009dff;">
@@ -90,8 +91,7 @@
               <a href="../index.html"><i class="fa-solid fa-flask-vial"></i>&nbsp;Chemistry Lab</a>
             </li>
             <li>
-              <a href="#"> TO DETERMINE THE ALKALINITY IN A SAMPLE OF
-                WATER</a>
+              <a href="#">Chloride content by MOhr's</a>
             </li>
             <li class="active">Post Test</li>
           </ol>
@@ -112,7 +112,7 @@
         <ul class="sidebar-menu" style="background-color:#70a9a1;">
           <li class="treeview" id="aim">
             <a href="index.html" id="aim">
-              <i class="fa-solid fa-crosshairs"style="color:white;"></i> <span style="color:white;">Aim</span>
+              <i class="fa-solid fa-crosshairs" style="color:white;"></i> <span style="color:white;">Aim</span>
               <!--  This is our section aim-->
 
             </a>
@@ -153,7 +153,7 @@
           </li>
           <li class="treeview" id="simulation">
             <a href="simulation.html" style="color:white;" id="simulation">
-              <i class="fa-solid fa-gears"style="color:white;"></i>
+              <i class="fa-solid fa-gears" style="color:white;"></i>
               <span>Simulation</span>
               <span class="pull-right-container">
               </span>
@@ -164,7 +164,7 @@
 
           <li class="treeview" id="posttest">
             <a href=" posttest.html" style="color:white;" id="posttest">
-              <i class="fa-solid fa-file-circle-question"style="color:white;">
+              <i class="fa-solid fa-file-circle-question" style="color:white;">
               </i>
               <span>Post Test</span>
               <span class="pull-right-container">
@@ -173,7 +173,7 @@
           </li>
           <li class="treeview" id="ref">
             <a href="references.html" style="color:white;" id="references">
-              <i class="fa-solid fa-book"style="color:white;"></i>
+              <i class="fa-solid fa-book" style="color:white;"></i>
               <span>References</span>
               <span class="pull-right-container">
               </span>
@@ -189,178 +189,239 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1 align="center">
-          TO DETERMINE THE ALKALINITY IN A SAMPLE OF
-          WATER
-        
+          Determination of chloride content of water by Mohr’s method.
+
           <!-- Write experiment name here -->
         </h1>
-      </section>
-      <!-- Main content -->
-      <section class="content">
-        <h3 style="margin-top:5%"> Post Test </h3>
-        <p style="font-size:130%; margin-top:2%">
+        <section class="content">
 
-          <!--Post Test of experiment -->
-        </p>
-      </section>
-      <!-- /.content -->
-      <div style="margin-top: -100px; margin-left: 20px; font-size: 18px;">
-        <form name="quiz">
-          <div id="question1">
-            <p style="text-align: justify;"> Q1. What is the role of Eriochrome Black T in the titration process for determining water hardness?</p>
-            <p> <input type="radio" name="question1" value="A"> a. It acts as a chelating agent.</p>
-            <p> <input type="radio" name="question1" value="B"> b. It serves a pH indicator</p>
-            <p> <input type="radio" name="question1" value="C"> c. It precipitates Mg(OH)<sub>2</sub></p>
-            <p> <input type="radio" name="question1" value="D"> d. It forms a complex with CaY<sup>2-</sup></p>
-            <p id="demo1" style="color:red"> </p> 
-          </div>
-          <div id=question2>
-            <p style="text-align: justify;"> Q2. What distinguishes temporary hardness from permanent hardness in water?</p>
-            <p> <input type="radio" name="question2" value="A"> a. Bicarbonates of calcium and magnesium</p>
-            <p> <input type="radio" name="question2" value="B"> b. Sulphates, chlorides, and nitrates</p>
-            <p> <input type="radio" name="question2" value="C"> c. Carbonates and non-carbonates</p>
-            <p> <input type="radio" name="question2" value="D"> d. Total hardness and carbonate hardness</p>
-            <p id="demo2" style="color:red"> </p>
-          </div>
-          <div id="question3">
-            <div style="display: flex;">
-              <p style="text-align: justify;"> Q3. How is non-carbonate hardness (NCH) calculated in the context of water hardness?</p></div>
-            <p> <input type="radio" name="question3" value="A"> a. NCH (mg/L) = Total hardness – Carbonate hardness</p>
-            <p> <input type="radio" name="question3" value="B"> b. NCH (mg/L) = Total hardness + Carbonate hardness</p>
-            <p> <input type="radio" name="question3" value="C"> c. NCH (mg/L) = Total hardness + Carbonate hardness</p>
-            <p> <input type="radio" name="question3" value="D"> d. NCH (mg/L) = Total hardness / Carbonate hardness</p>
-            <p id="demo3" style="color:red"> </p>
-          </div>
-          <div id="question4">
-            <p style="text-align: justify;"> Q4. What chelating agent is commonly used for titrating Ca2+(aq) and Mg2+(aq) ions in the ion exchange process?</p>
-            <p> <input type="radio" name="question4" value="A"> a. Sodium chloride</p>
-            <p> <input type="radio" name="question4" value="B"> b. Ethylene Diamine Tetra Acetic acid (EDTA)</p>
-            <p> <input type="radio" name="question4" value="C"> c. Hydrochloric acid</p>
-            <p> <input type="radio" name="question4" value="D"> d. Sulfuric acid</p>
-            <p id="demo4" style="color:red"> </p>
-          </div>
-          <div id="question5">
-            <p style="text-align: justify;"> Q5. How is the endpoint of the titration determined when using Eriochrome Black T as an indicator?</p>
-            <p> <input type="radio" name="question5" value="A"> a. Color change from blue to red</p>
-            <p> <input type="radio" name="question5" value="B"> b. No color change observed</p>
-            <p> <input type="radio" name="question5" value="C"> c. Color change from wine red to blue</p>
-            <p> <input type="radio" name="question5" value="D"> d. Color change from yellow to green</p>
-            <p id="demo5" style="color:red"> </p>
-          </div>
-        
-        </form>
-        <p id="result"></p>
-        <div Style="float:left">
-          <button value="submit" style="width:100px; height: 30px;" id="submit_answers"> Submit </button>
-      
-        </div>
-        <div Style="float:left; margin-left: 10px;">
-          <button value="Preview Answer" style="width:100px; height: 30px;" id="preview_answers" disabled="true">
-            Solution </button>
-        </div>
-        <div Style="float:left; margin-left: 10px;">
-          <button value="reset" style="width:100px; height: 30px;" id="reset" onClick="window.location.reload(true)"
-            disabled="true">
-            Reset </button>
-        </div>
-      
-        <script>
-          var q1 = document.quiz.question1;
-          var q2 = document.quiz.question2;
-          var q3 = document.quiz.question3;
-          var q4 = document.quiz.question4;
-          var q5 = document.quiz.question5;
-        
-          var submit_answers = document.getElementById("submit_answers")
-          var preview_answers = document.getElementById("preview_answers")
-      
-          var a1 = document.getElementById("demo1");
-          var a2 = document.getElementById("demo2");
-          var a3 = document.getElementById("demo3");
-          var a4 = document.getElementById("demo4");
-          var a5 = document.getElementById("demo5");
-    
-          var show = [a1, a2, a3, a4, a5]
-          var QuestionList = [q1, q2, q3, q4,q5]
+          <h2> Post Test </h2>
 
 
-          var AnswerList=[68, 268, 612, 1040, 1700]  // Ascii values
-      
-      
-          function getIndex(x) {
-            switch (x) {
-              case 'A':
-                return 0;
-              case 'B':
-                return 1;
-              case 'C':
-                return 2;
-              case 'D':
-                return 3;
-              default:
-                return 4;
-            }
-          }
-          let c=1
-          let x=67/((c+1)*(c+1));
-          function decrypt(x){
-             
-              let text = String.fromCharCode(x);
+        </section>
+        <!-- /.content -->
+        <div style="margin-left: 20px; margin-top: -150px; font-size: 18px;">
+          <form name="quiz" id="quizForm">
+
+
+            <!-- End -->
+
+          </form>
+          <div id="score"></div>
+
+          <div Style="float:left">
+            <button value="submit" class='mybutton' style="width:100px; height: 30px;" id="submit_answers"
+              onclick="submitQuiz()"> Submit </button>
+
+          </div>
+          <div Style="float:left; margin-left: 10px;">
+            <button value="Preview Answer" class='mybutton' style="width:100px; height: 30px;" id="preview_answers"
+              onclick="showSolution()">
+              Solution </button>
+          </div>
+          <div Style="float:left; margin-left: 10px;">
+            <button value="reset" class='mybutton' style="width:100px; height: 30px;" id="reset" onclick="resetQuiz()">
+              Reset </button>
+          </div>
+
+
+          <script>
+            var show = false;
+            var questions = [
+              {
+                id: 1,
+                text: "What is the role of dilute nitric acid in the experiment, and how does it contribute to the accuracy of results?",
+                options: ["a. Enhances color changes", "b. Prevents interference from other ions", "c. Accelerates the titration process", "d. Neutralizes the sample"],
+                answer: "392"
+              },
+
+
+              {
+                id: 2,
+                text: "Describe the visual indication of the endpoint in Mohr’s method. How does it aid in determining the completion of the titration?",
+                options: ["a. Color change to green", "b. Formation of a red-brown precipitate", "c. When the solution becomes colorless", "d. No visual indication"],
+                answer: "882"
+              },
+
+
+              {
+                id: 3,
+                text: "Explain the potential sources of error in the titration process and suggest measures to overcome them?",
+                options: ["a. Over-titration", "b. Endpoint ambiguity", "c.    Precipitate formation issues", "d. All of the above"],
+                answer: "1600"
+              },
+
+
+              {
+                id: 4,
+                text: "In what scenarios might Mohr’s method not be the most suitable for chloride determination, and what alternative methods could be considered?",
+                options: ["a. High chloride concentrations", "b. Low sensitivity", "c. Interference from other ions", "d. All of the above"],
+                answer: "2500"
+              },
+              {
+                id: 5,
+                text: "How does the presence of sodium chloride in diets contribute to the higher chloride concentration in wastewater?",
+                options: ["a. Enhances water color", "b. Passes unchanged through the digestive system", "c. Accelerates the titration process", "d. Creates a colorless solution"],
+                answer: "3528"
+              },
+
+
+              {
+                id: 6,
+                text: "Explain the role of potassium chromate as an indicator in Mohr’s method?",
+                options: ["a. Enhances color changes", "b. Neutralizes the sample", "c. Precipitates chloride ions", "d. Indicates the endpoint"],
+                answer: "4900"
+              },
+
+
+              {
+                id: 7,
+                text: "Discuss the potential harm that chloride concentrations can cause to metallic pipes and structures?",
+                options: ["a. Enhances structural integrity", "b. Accelerates aging", "c. Causes corrosion", "d. Improves conductivity"],
+                answer: "6336"
+              },
+
+
+              {
+                id: 8,
+                text: "How does chloride content affect the corrosion of metallic pipes, and what preventive measures can be taken?",
+                options: ["a. Increases corrosion, use corrosion-resistant materials", "b. Decreases corrosion, increase chloride concentration", "c. No impact on corrosion", "d. Install pipes without any preventive measures"],
+                answer: "7857"
+              },
+              {
+                id: 9,
+                text: "What is the typical taste perception in waters containing 250 mg/L Cl- if sodium cation is present?",
+                options: ["a. Detectable salty taste", "b. Bitter taste", "c. No taste", "d. Sweet taste"],
+                answer: "9700"
+              },
+
+
+              {
+                id: 10,
+                text: "Discuss the potential environmental impacts of elevated chloride concentrations along the sea coast and in industrial settings?",
+                options: ["a. Impact on aquatic life", "b. Improved water quality", "c. No environmental effects", "d. Decreased industrial production"],
+                answer: "11737"
+              }
+
+
+              // Add similar structures for the other questions (Q2 to Q10)
+            ];
+
+            var showScore = document.getElementById('score');
+
+            function decrypt(x, v) {
+
+              let text = String.fromCharCode(x / ((v + 1) * (v + 1)));
               return text;
-            
-          }
-      
-          submit_answers.onclick = function score() {
-      
-            let c = 0
-            for (let i = 0; i < QuestionList.length; i++) {
-              console.log(i);
-              if (getIndex(QuestionList[i].value) == 4) {
-      
-                window.alert("Please attempt all the questions and then click on submit button");
-               
-                exit();
-                event.preventDefault();
-              }
             }
-      
-            for (let i = 0; i < QuestionList.length; i++) {
-              console.log(i);
-              if (QuestionList[i].value == decrypt(AnswerList[i]/((i+1)*(i+1)))) {
-                c++;
-              }
-      
-              else {
-                QuestionList[i][getIndex(QuestionList[i].value)].style.accentColor = "red";
-      
-              }
-            }
-      
-      
-            document.getElementById("result").innerHTML = "You scored " + c + " marks from 5";
-      
-            preview_answers.disabled = false
-            reset.disabled = false
-          }
-      
-          preview_answers.onclick = function preview() {
-      
-            for (let i = 0; i < QuestionList.length; i++) {
-      
-              show[i].innerHTML = "The correct answer is option " + decrypt(AnswerList[i]/((i+1)*(i+1)));
-              
-            } 
-      
-            submit_answers.disabled = true
-      
-          }
-        </script>
 
-      </div>
+
+            // ... (same questions as provided)
+
+            // Function to shuffle questions
+            function shuffleArray(array) {
+              for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+              }
+              return array;
+            }
+
+            // Shuffle the questions
+            questions = shuffleArray(questions);
+
+            // Function to generate HTML for questions and options
+            function generateQuizHTML() {
+              const form = document.getElementById('quizForm');
+              for (let i = 0; i < 5; i++) {
+                const question = questions[i];
+                const questionHTML = `
+              <fieldset class='questions'>
+                <legend class='questions_le'>${question.text}</legend>
+                ${question.options.map(option => `
+                  <label class='options'>
+                    <input type="radio" name="q${question.id}"  value="${option[0]}">
+                    ${option}
+                  </label>
+                `).join('')}
+                <div id='answer${i}' class='solutions'></div>
+              </fieldset>
+            `;
+                form.innerHTML += questionHTML;
+              }
+            }
+
+            // Initialize the quiz
+            generateQuizHTML();
+
+            // Function to submit the quiz and calculate the score
+            
+            function submitQuiz() {
+            show = true;
+            let score = 0;
+            let answer_ = [];
+            for (let i = 0; i < 5; i++) {
+              let ans;
+              let divShow = [];
+              
+              answer_[i] = document.getElementById(`answer${i}`);
+              divShow[i] = document.getElementById(`answer${i}`);
+              const question = questions[i];
+              const selectedOption = document.querySelector(`input[name="q${question.id}"]:checked`);
+              console.log(question.answer, selectedOption);
+
+              // console.log('hii',ans,' ', question.id,' ' ,question.answer);
+              if (selectedOption && selectedOption.value === decrypt(question.answer, question.id)) {
+                score++;
+                divShow[i].style.color = 'green';
+
+                answer_[i].textContent='Correct';
+                //   console.log('hii');
+              }
+              else if (selectedOption) {
+                divShow[i].style.color = 'red';
+                answer_[i].textContent='Incorrect';
+              }
+            }
+            // alert(`Your score: ${score}/5`);
+            showScore.textContent = `Your score: ${score}/5`;
+          }
+            // Function to show the correct options for all questions
+            function showSolution() {
+              let solution = ''; let solution2 = ''; let answer_ = [];
+
+              if (show) {
+                for (let i = 0; i < 5; i++) {
+                  answer_[i] = document.getElementById(`answer${i}`)
+                  const question = questions[i];
+                  answer_[i].textContent = `The correct option is :  ${decrypt(question.answer, question.id)}\n`;
+
+                }
+              }
+              else {
+                alert("Submit to see the answers.");
+              }
+
+            }
+
+            // Function to reset the quiz
+            function resetQuiz() {
+              document.getElementById('quizForm').reset();
+              showScore.textContent = '';
+              var solutionsElements = document.getElementsByClassName('solutions');
+
+              for (var i = 0; i < solutionsElements.length; i++) {
+                solutionsElements[i].textContent = '';
+              }
+
+              show = false;
+            }
+          </script>
+        </div>
     </div>
     <div>
       <footer class="main-footer">
-        <h4 align="center">Lab contributed by THDC Institute Of HydroPower and Engineering 
+        <h4 align="center">Lab contributed by
           <!-- Institute Name -->
         </h4>
       </footer>
