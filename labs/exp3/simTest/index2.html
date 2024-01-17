@@ -32,7 +32,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 Your browser does not support the video tag.
             </video>
         </div>
-        <img src="bg1.png" id="Thumbnail" alt="Thumbnail">
+        <img src="thumbnail2.png" id="Thumbnail" alt="Thumbnail">
         <button id="play-button" onclick="startVideo()">▶</button>
         <img src="Forward.png" alt="Forward" id="next-button" onclick="nextVideo()">
         <!-- <button id="custom-button" onclick="customFunction()">Custom Function</button> -->
@@ -48,7 +48,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   const skipB = document.getElementById('skipB');
 
   // 👇 removes element from DOM
-  skipB.style.display = 'none';
+  skipB.style.display = 'block';
 
   // 👇 hides element (still takes up space on page)
   // box.style.visibility = 'hidden';
@@ -57,7 +57,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           window.location.href = 'StartHtml2.html';
         }
 
-        var videos = ["nextVideo.mp4","3rdVideo.mp4"]; // Add your video sources here
+        var videos = ["sample2_buffer.mp4","3rdVideo.mp4"]; // Add your video sources here
         var currentVideoIndex = 0;
         var video = document.getElementById('video');
         var videoContainer = document.getElementById('video-container');
@@ -80,15 +80,16 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         }
 
         function nextVideo() {
-            if (currentVideoIndex == 0 || currentVideoIndex == 0) {
+          if (currentVideoIndex == 0) {
+                window.location.href = 'StartHtml2.html';
+            }
+            else if (currentVideoIndex == 0 || currentVideoIndex == 0) {
                 currentVideoIndex = (currentVideoIndex + 1) % videos.length;
                 video.src = videos[currentVideoIndex];
                 video.play();
                 nextButton.style.display = 'none';
             }
-            else if (currentVideoIndex == 1) {
-                window.location.href = 'StartHtml2.html';
-            }
+
         }
         function toggleFullScreen() {
       if (!document.fullscreenElement) {

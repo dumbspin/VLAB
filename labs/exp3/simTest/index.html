@@ -48,7 +48,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   const skipB = document.getElementById('skipB');
 
   // 👇 removes element from DOM
-  skipB.style.display = 'none';
+  skipB.style.display = 'block';
 
   // 👇 hides element (still takes up space on page)
   // box.style.visibility = 'hidden';
@@ -57,7 +57,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           window.location.href = 'StartHtml.html';
         }
 
-        var videos = ["introVideo.mp4", "nextVideo.mp4","3rdVideo.mp4"]; // Add your video sources here
+        var videos = ["introVideo.mp4", "nextVideo.mp4","sample1_buffer.mp4"]; // Add your video sources here
         var currentVideoIndex = 0;
         var video = document.getElementById('video');
         var videoContainer = document.getElementById('video-container');
