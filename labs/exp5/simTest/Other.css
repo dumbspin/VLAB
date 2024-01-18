@@ -86,7 +86,7 @@ body {
     overflow: hidden; 
   }
   .box::before {
-    content: "Removal of Hardness of Water by Ion Exchange Column ";
+    content: "Determination of Ferrous Content ";
     display: block;
     font-size: 18px;
     color: white;

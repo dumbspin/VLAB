@@ -83,9 +83,9 @@ $data4 = $_SESSION['v2'];
     <thead>
       <tr>
         <!-- <th>N1</th> -->
-        <th>N2</th>
-        <th>V1</th>
-        <th>V2</th>
+        <th>Normality( Potassium Dichromate in burette)</th>
+        <th>Volume Needed</th>
+        <th>Volume of Solution in Flask</th>
         <!-- <th></th> -->
       </tr>
     </thead>

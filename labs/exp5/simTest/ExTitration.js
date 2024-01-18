@@ -405,7 +405,7 @@ function draw() {
       }
       else if(touch==2 && onceA){
         showCir=false;
-        alert('Alert! This drop is already used./n First, click on dish to rinse and then add new drop.');
+        alert('Alert! This drop is already used.\n First, click on rod and then click on dish to rinse and then add new drop.');
         onceA=false;
         color1 = color(0, 0, 0, 100);
 
@@ -498,8 +498,13 @@ function draw() {
   if(showCir){ 
     // for(let i; i<10;i++)
    {
-    ellipse(currentPoint.x,currentPoint.y+137,6,3 );}
-  }
+    push();
+    fill(255,255,255,150);
+    ellipse(currentPoint.x+3,currentPoint.y+140,6,3 );
+    ellipse(currentPoint.x,currentPoint.y+137,6,3 );
+    pop();
+  }}
+
 
 
 
