@@ -178,6 +178,7 @@ function radialGradient(x, y, radius, c1, c2) {
 function preload() {
   // Load your images
   image1 = loadImage('PotasiumChromate.png');
+  image1bck = loadImage('PotasiumChromatebck.png');
   rod = loadImage('glass rod.png');
   bgImg = loadImage('bg.png');
   image3 = loadImage('droper.png');
@@ -432,7 +433,7 @@ function draw() {
 
  
  
- 
+  image(image1bck, 575, 340, 140, 120);
 
 
   //For showing water in the droper
@@ -493,7 +494,7 @@ function draw() {
 
 
   //To show indicator container
-  image(image1, 600, 320, 100, 160);
+  image(image1, 575, 340, 140, 120);
   
   if(showCir){ 
     // for(let i; i<10;i++)
