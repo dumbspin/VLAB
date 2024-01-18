@@ -6,7 +6,7 @@ let size = 7;
 let shownext = false;
 let color1, color2, color3, color4, color5;
 
-let n1=.6,n2,v1,v2=5;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
+let n1=.3,n2,v1,v2=5;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
 
 let dropHeight = 20, showDropHeight = true, increaseDH = true;
 
@@ -637,8 +637,34 @@ function drop() {
 
 
 function nextpressed() {
-  console.log('nxt');
-  window.location.href = 'index2.html';
+  let text={data1: normality_titrant, data2: volume_titrate, data3:volume_titrant};
+  console.log(text);
+  fetch('send.php', {
+    
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(text),
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .then(new_data => {
+      console.log('Response from server (Page 1):',new_data);
+
+      // Check for a success message or any other condition
+      if (new_data.message === 'Value received successfully (Page 2)') {
+        // Redirect to the second page after processing
+         window.location.href = 'TitrationComp.php';
+      } else {
+        console.error('Unexpected server response:',new_data);
+      }
+    })
 
 
 }
