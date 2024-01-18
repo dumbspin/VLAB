@@ -6,7 +6,7 @@ let size = 7;
 let shownext = false;
 let color1, color2, color3, color4, color5;
 
-let n1=.1,n2,v1,v2=5;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
+let n1=.7,n2,v1,v2=25;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
 
 let dropHeight = 20, showDropHeight = true, increaseDH = true;
 
@@ -83,7 +83,7 @@ class Raindrop {
     if (this.active) {
       noStroke();
       push();
-      fill(255, 255, 255, 200);
+      fill(255, 216, 0, 200);
       ellipse(this.x, this.y, this.radius * 2, this.radius * 2 + 2); pop();
     }
   }
@@ -214,7 +214,7 @@ function setup() {
   gif4.parent("#container");
   water.resize(100, 120);
 
-  recColor = color(255, 255, 255, 150);
+  recColor = color(255, 216, 0, 150);
 
   img2x = 560; img2y = 222; img2w = 200; img2h = 10;
   img3x = 150; img3y = 100, img3w = 55; img3h = 160;
@@ -228,6 +228,12 @@ function setup() {
   color3 = color(50, 250, 50, 100);
   color4 = color(100, 155, 100, 50);
   color5 = color(0, 255, 0, 10);
+
+  slider1 = select('#speed_change');
+  
+
+  slider1.removeAttribute('disabled'); // Enable the slider1
+
 
   angleMode(DEGREES);
   waterDroplet = new WaterDroplet(500, 490);
@@ -251,6 +257,7 @@ function setup() {
 
   currentPoint_2 = startPoint_2;
   changeColor = false;
+  speed_=0.3*slider1.value();
 
   //set the normality
   n2=random(0.15,0.2);
@@ -262,6 +269,10 @@ function setup() {
 
 function draw() {
   background(bgImg);
+
+  speed_=0.02*slider1.value();
+  let valueDisplayElement = document.getElementById("valueDisplay");
+  valueDisplayElement.innerText = (volAdded.toFixed(1))+ ' ml';
 
   if (
     rectanglesIntersect(
@@ -318,7 +329,7 @@ function draw() {
       60, // width of the second image
       140  // height of the second image
     )){
-      console.log('Touch')
+      // console.log('Touch')
       get_color=volAdded;
     }
     // setTimeout(()=>{waterheight +=.67*speed_;},1500);
@@ -389,6 +400,7 @@ function draw() {
         color3 = color(50, 250, 50, 100);
         color4 = color(100, 155, 100, 50);
         color5 = color(0, 255, 0, 10);
+        shownext=true;
         // console.log('finish')
       }
       else if(touch==2 && onceA){
@@ -538,7 +550,7 @@ function mousePressed() {
     
   }
 
-  else if (mouseX > img3x - img3w / 8 + 10 && mouseX < img3x + img3w / 3 && mouseY > img3y - img3h / 16 + 220 && mouseY < img3y + img3h / 2 + 30) {
+  if (mouseX > nxtx - nxtw / 4 && mouseX < nxtx + nxtw && mouseY > nxty - nxth / 4 && mouseY < nxty + nxth && shownext) {
     nextpressed();
   }
 
@@ -637,8 +649,7 @@ function drop() {
 
 
 function nextpressed() {
-  let text={data1: normality_titrant, data2: volume_titrate, data3:volume_titrant};
-  console.log(text);
+  let text={data1: n1, data2: n2, data3:v1, data4:v2};
   fetch('send.php', {
     
     method: 'POST',
