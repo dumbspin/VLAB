@@ -12,6 +12,7 @@ body {
 
     font-family: 'Poppins', sans-serif;
     color: #1f363d;
+    overflow-x: hidden; 
 }
 .heading{
     margin: 20px;
@@ -50,6 +51,10 @@ body {
 #next-button {
     display: none;
 }
+#center{
+    display: flex;
+    justify-content: center;
+}
 
 #next-button {
     position: absolute;
@@ -69,8 +74,19 @@ body {
     margin: 2px;
     overflow: hidden; 
   }
+  .box2 {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  
+    background-color: #70a9a1;
+    box-shadow: 2px 2px #40798c;
+    margin: 2px;
+    overflow: hidden; 
+  }
   .box::before {
-    content: "Removal of Hardness of Water by Ion Exchange Column ";
+    content: "Determination of Ferrous Content ";
     display: block;
     font-size: 18px;
     color: white;
@@ -82,6 +98,18 @@ body {
     position: absolute;
     top: 5px; /* Adjust top position as needed */
     right: 60px; /* Adjust right position as needed */
+    background-color: #e3efda;
+    color: #70a9a1;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.reset-button {
+    position: absolute;
+    top: 5px; /* Adjust top position as needed */
+    right: 110px; /* Adjust right position as needed */
     background-color: #e3efda;
     color: #70a9a1;
     border: none;

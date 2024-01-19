@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temporary and permanent hardness</title>
+    <title>Determination of Ferrous Content </title>
     <link rel="stylesheet" href="mainstyle.css">
     <link rel="stylesheet" href="Other.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
   
-   <h1 class="heading"> Removal of Hardness of Water by Ion Exchange Column </h1>
+  <h1 class="heading" style="font-size: 22px;"> To determine the Ferrous content in the supplied sample of iron ore by titrimetric analysis<br> against standard
+    K2Cr2O7 solution using K3Fe(CN)6 as external indicator.
+ </h1>
 
     <div id="thumbnail-container" class="box">
         <button class="btn btn-primary btn-sm" id="runsetup" onclick="toggleFullScreen()"><i
@@ -48,7 +50,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   const skipB = document.getElementById('skipB');
 
   // 👇 removes element from DOM
-  skipB.style.display = 'none';
+  skipB.style.display = 'block';
 
   // 👇 hides element (still takes up space on page)
   // box.style.visibility = 'hidden';
@@ -57,7 +59,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           window.location.href = 'StartHtml.html';
         }
 
-        var videos = ["introVideo.mp4", "nextVideo.mp4","3rdVideo.mp4"]; // Add your video sources here
+        var videos = ["introVideo.mp4", "2nd.mp4","3rdVideo.mp4","4th.mp4"]; // Add your video sources here
         var currentVideoIndex = 0;
         var video = document.getElementById('video');
         var videoContainer = document.getElementById('video-container');
@@ -80,15 +82,17 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         }
 
         function nextVideo() {
-            if (currentVideoIndex == 0 || currentVideoIndex == 1) {
+          // console.log(currentVideoIndex)
+            if (currentVideoIndex <3) {
                 currentVideoIndex = (currentVideoIndex + 1) % videos.length;
                 video.src = videos[currentVideoIndex];
                 video.play();
                 nextButton.style.display = 'none';
             }
-            else if (currentVideoIndex == 2) {
+            else if (currentVideoIndex == 3) {
                 window.location.href = 'StartHtml.html';
             }
+            // console.log(currentVideoIndex)
         }
         function toggleFullScreen() {
       if (!document.fullscreenElement) {

@@ -11,11 +11,11 @@ if ($data !== null) {
     // $volume_titrant = $data['data2'];
     // $Vadded = $data['data3'];
     // $Result1 = $data['data4'];
-    $_SESSION['Normality_titrate'] = $data['data1'];
-    $_SESSION['volume_titrate'] = $data['data2'];
-    $_SESSION['Vadded'] = $data['data3'];
-    $_SESSION['Result1'] = $data['data4'];
-    $_SESSION['volume_titrant']=$data['data5']
+    $_SESSION['n1'] = $data['data1'];
+    $_SESSION['n2'] = $data['data2'];
+    $_SESSION['v1'] = $data['data3'];
+    $_SESSION['v2'] = $data['data4'];
+    
 ;
     // Do something with the value (e.g., process, store in database, etc.)
     // For demonstration purposes, just echoing the value

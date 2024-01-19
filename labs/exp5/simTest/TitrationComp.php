@@ -5,14 +5,11 @@
 session_start();
 
 // Access the value stored in the session variable from page1.php
-$data1 = $_SESSION['Normality_titrate'];
-$data2 = $_SESSION['volume_titrate'];
-$data3 = $_SESSION['Vadded'];
-$data4 = $_SESSION['Result1'];
-$data5 = $_SESSION['Normality_titrate2'];
-$data6 = $_SESSION['volume_titrant2'];
-$data7= $_SESSION['volume_titrate2'];
-$data8=$_SESSION['volume_titrant']
+$data1 = $_SESSION['n1'];
+$data2 = $_SESSION['n2'];
+$data3 = $_SESSION['v1'];
+$data4 = $_SESSION['v2'];
+
 
 
 // Echo the value back to the client
@@ -85,25 +82,22 @@ $data8=$_SESSION['volume_titrant']
   <table>
     <thead>
       <tr>
-        <th>Sample In</th>
-        <th>Volume Of Solution Taken</th>
-        <th>Normality Result</th>
-        <th>Volume Result Used</th>
+        <!-- <th>N1</th> -->
+        <th>Normality( Potassium Dichromate in burette)</th>
+        <th>Volume Needed</th>
+        <th>Volume of Solution in Flask</th>
+        <!-- <th></th> -->
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Total Hardness</td>
+        <!-- <td>Total Hardness</td> -->
+       
         <td><?php echo round($data2,2) ?></td>
+        <td><?php echo round($data3,2) ?></td>
         <td><?php echo round($data4,2) ?></td>
-        <td><?php echo round($data8,2) ?></td>
       </tr>
-      <tr>
-        <td>Permanent Hardness</td>
-        <td><?php echo round($data7,2) ?></td>
-        <td><?php echo round($data5,2) ?></td>
-        <td><?php echo round($data6,2)?></td>
-      </tr>
+
       <!-- <tr>
         <td>3</td>
         <td>Colorless (pH &lt; 8.2)</td>
