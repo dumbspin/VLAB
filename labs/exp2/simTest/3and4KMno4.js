@@ -68,11 +68,13 @@ function preload() {
   gif2 = createImg('gif1.gif');
   gif3 = createImg('gif1.gif');
   gif4 = createImg('gif1.gif');
+  plantGIF = createImg('plantsCrop Op.gif')
   
   gif1.size(80,80);
   gif2.size(80,80);
   gif3.size(80,80);
   gif4.size(80,80);
+  plantGIF.size(200,200)
  
   
   gif1.hide(); // Hide the original GIF initially
@@ -89,6 +91,7 @@ function setup() {
   gif2.parent("#container");
   gif3.parent("#container");
   gif4.parent("#container");
+  plantGIF.parent("#container");
 
   img2x = 560; img2y = 222; img2w = 55; img2h = 65;
   img3x = 150; img3y = 155, img3w = 55; img3h = 160;
@@ -133,6 +136,7 @@ function draw() {
   gif2.position(x+178, y+230);
   gif3.position(x+600, y+210);
   gif4.position(x+465, y+160);
+  plantGIF.position(x+550, y);
   // Set background to image3
   background(bgImg);
   for (let drop of drops) {
