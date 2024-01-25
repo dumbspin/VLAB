@@ -114,16 +114,16 @@ function preload() {
   SOn=loadImage('switchON.png');
   SOff=loadImage('switchOF.png');
   buretteStand=loadImage('burette51.png');
-  beaker=loadImage('PotasiumChromate2.png');
+  beaker=loadImage('PotasiumChromate.png');
   screen=loadImage('screenDropC.png')
 
 
 
 }
 function setup() {
-  ranWeight=getRandomNumber(.44,.48);
-  ranDrop=getRandomNumber(.1,.2)
-  
+  ranWeight=getRandomNumber(.48,.50);
+ranDrop=getRandomNumber(0,.1)
+
 
   canvos = createCanvas(canvasWidth, canvasHeight);
   canvos.parent("#container");
@@ -179,8 +179,6 @@ let w=rectanglesIntersect(x3,y3,100,100,rectX,rectY,100,100);
       currentRaindrop.display();
       
       if (currentRaindrop.y > y3 + flaskheight - waterheight) {
-        console.log(raindrops.length)
-
        if(!stopC){
         dropCounter+=1;}
         waterheight += 1/100*125;
@@ -674,7 +672,7 @@ function mouseDragged() {
 
 function nextpressed() {
   let text = { data1: ranWeight, data2: ranDrop };
-  fetch('send.php', {
+  fetch('send2.php', {
 
     method: 'POST',
     headers: {
@@ -690,12 +688,12 @@ function nextpressed() {
       }
     })
     .then(new_data => {
-      console.log('Response from server (Page 1):', new_data);
+      // console.log('Response from server (Page 1):', new_data);
 
       // Check for a success message or any other condition
       if (new_data.message === 'Value received successfully (Page 2)') {
         // Redirect to the second page after processing
-        window.location.href = 'StartHtml2.html';
+        window.location.href = 'TitrationComp.php';
       } else {
         console.error('Unexpected server response:', new_data);
       }

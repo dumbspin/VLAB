@@ -5,10 +5,10 @@
 session_start();
 
 // Access the value stored in the session variable from page1.php
-$data1 = $_SESSION['n1'];
-$data2 = $_SESSION['n2'];
-$data3 = $_SESSION['v1'];
-$data4 = $_SESSION['v2'];
+$data1 = $_SESSION['ranWeight'];
+$data2 = $_SESSION['ranDrop'];
+$data3 = $_SESSION['ranWeight2'];
+$data4 = $_SESSION['ranDrop2'];
 
 
 
@@ -72,20 +72,21 @@ $data4 = $_SESSION['v2'];
 <body>
     
 <div style="text-align: center;">
-        <h1>Your Titration is Finished</h1>
+        <h1>Your experiment is finished.</h1>
         <!-- <p>Congratulations on completing the titration process!</p> -->
         
     </div>
-    <h2>To determine the constituents and amount of alkalinity of the supplied water sample</h2>
+    <h2>Determination of surface tension of liquid by Stalagmometer.
+</h2>
     <h3>Results</h3>
 
   <table>
     <thead>
       <tr>
         <!-- <th>N1</th> -->
-        <th>Normality( Potassium Dichromate in burette)</th>
-        <th>Volume Needed</th>
-        <th>Volume of Solution in Flask</th>
+        <th>Sample Used</th>
+        <th>Weight of liquid</th>
+        <th>Number of Drops</th>
         <!-- <th></th> -->
       </tr>
     </thead>
@@ -93,9 +94,16 @@ $data4 = $_SESSION['v2'];
       <tr>
         <!-- <td>Total Hardness</td> -->
        
-        <td><?php echo round($data2,2) ?></td>
-        <td><?php echo round($data3,2) ?></td>
-        <td><?php echo round($data4,2) ?></td>
+        <td>Water Sample</td>
+        <td><?php echo round($data1*62,2) ?> grams</td>
+        <td><?php echo round(37+($data2/3),0) ?> Drops</td>
+      </tr>
+      <tr>
+        <!-- <td>Total Hardness</td> -->
+       
+        <td>Glycerine Solution</td>
+        <td><?php echo round($data3*62,2) ?> grams</td>
+        <td><?php echo round(37+($data4/3),0) ?> Drops</td>
       </tr>
 
       <!-- <tr>
