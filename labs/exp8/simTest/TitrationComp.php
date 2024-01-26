@@ -9,6 +9,8 @@ $data1 = $_SESSION['ranWeight'];
 $data2 = $_SESSION['ranDrop'];
 $data3 = $_SESSION['ranWeight2'];
 $data4 = $_SESSION['ranDrop2'];
+$x1=$data2;
+$x2=$data4;
 
 
 
@@ -96,14 +98,15 @@ $data4 = $_SESSION['ranDrop2'];
        
         <td>Water Sample</td>
         <td><?php echo round($data1*62,2) ?> grams</td>
-        <td><?php echo round(37+($data2/3),0) ?> Drops</td>
+        <td><?php echo round((-500/3) * pow($x1, 4) + 250 * pow($x1, 3) - (215/3) * pow($x1, 2) + 33 * $x1 + 35,0) ?> Drops</td>
       </tr>
       <tr>
+        
         <!-- <td>Total Hardness</td> -->
        
         <td>Glycerine Solution</td>
         <td><?php echo round($data3*62,2) ?> grams</td>
-        <td><?php echo round(37+($data4/3),0) ?> Drops</td>
+        <td><?php echo round(((101/11250) * ($x2**3) - (29/250) * ($x2**2) + (371/2250) * $x2 + 34),0) ?> Drops</td>
       </tr>
 
       <!-- <tr>

@@ -1,122 +1,153 @@
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Labs | Chemistry Lab</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.onload = function () {
+        document.getElementById("theory").className = "active treeview";
+      };
+    </script>
+    <style>
+      #toggle_nav:hover {
+        background-color: #1261a0;
+      }
+      a#theory {
+        background-color: #40798c !important;
+      }
+    </style>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Virtual Labs | Power Electronics Lab </title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  <script>
-    window.onload = function () {
-      document.getElementById("theory").className = "active treeview";
-    }
-  </script>
-  <style>
-    #toggle_nav:hover {
-      background-color: #1261A0;
-    }
+    <!-- Mathjs library -->
 
-    #aim {
-      background-color: #009dff;
-    }
+    <script
+      async="true"
+      src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"
+    ></script>
+  </head>
 
-    #aim:hover,
-    #theory:hover,
-    #pretest:hover,
-    #procedure:hover,
-    #simulation:hover,
-    #result:hover,
-    #posttest:hover,
-    #references:hover {
-      background-color: #009dff;
-    }
-  </style>
-
-  <!-- Mathjs library -->
-
-  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
-
-</head>
-
-<body class="hold-transition skin-blue sidebar-mini">
-  <!--Navigation Bar-->
-  <div class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://iitr.ac.in"><span><img src="images/iitrLogo.png"
-              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar-ex-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://iitr.ac.in"
+            ><span
+              ><img
+                src="images/iitrLogo.png"
+                style="margin-top: -15px; height: 50px; width: 400px" /></span
+          ></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse"></div>
       </div>
     </div>
-  </div>
 
-  <div class="wrapper">
-    <header class="main-header">
-      <!-- Logo -->
-      <a href="../index.html" class="logo"
-        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
-        <p align="center" style="font-size:16px;"><b>Power Electronics Lab</b></p>
-      </a>
-      <!-- Header Navbar: style can be found in header.less -->
-      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
-          <span class="sr-only">Toggle navigation</span>
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a
+          href="../index.html"
+          class="logo"
+          style="
+            background-color: #009dff;
+            border-right: solid;
+            border-right-color: #1261a0;
+          "
+        >
+          <p align="center" style="font-size: 22px"><b>Chemistry Lab</b></p>
         </a>
-        <section class="content-header">
-          <ol class="breadcrumb">
-            <li>
-              <a href="../index.html"><i class="fa fa-dashboard"></i>Power Electronics Lab</a>
-            </li>
-            <li>
-              <a href="#">Bipolar PWM Single Phase Inverter</a>
-            </li>
-            <li class="active">Theory</li>
-          </ol>
-        </section>
-      </nav>
-    </header>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" style="background-color: #009dff">
+          <!-- Sidebar toggle button-->
+          <a
+            href="#"
+            class="sidebar-toggle"
+            data-toggle="offcanvas"
+            role="button"
+            id="toggle_nav"
+          >
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"
+                  ><i class="fa-solid fa-flask-vial"></i>&nbsp;Chemistry Lab</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Alkalinity in the
+                  supplied water sample</a
+                >
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
 
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar" style="background-color:#1261A0;">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-          <div class="input-group"></div>
-        </form>
-        <!-- /.sear ch form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" style="background-color:#1261A0;">
-          <li class="treeview" id="aim">
-            <a href="index.html" id="aim">
-              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
-
-            </a>
-          </li>
-          <li class="treeview" id="theory">
-            <a href="theory.html" id="theory" onclick="theory()">
-              <i class="fa fa-files-o" style="color:white;"></i>
-              <span style="color:white;">Theory</span>
-            </a>
-          </li>
-          <!--   <li class="treeview" id="numerical">
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="background-color: #70a9a1">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" style="background-color: #70a9a1">
+            <li class="treeview" id="aim">
+              <a href="index.html" id="aim">
+                <i class="fa-solid fa-crosshairs" style="color: white"></i>
+                <span style="color: white">Aim</span>
+                <!--  This is our section aim-->
+              </a>
+            </li>
+            <li class="treeview" id="theory">
+              <a href="theory.html" style="color: white" id="theory">
+                <i class="fa-solid fa-file-lines" style="color: white"></i>
+                <span>Theory</span>
+              </a>
+            </li>
+            <!--   <li class="treeview" id="numerical">
                     <a href="numerical.php">
                         <i class="fa fa-laptop"></i>
                         <span>Numerical</span>
@@ -132,224 +163,253 @@
                         </span>
                     </a>
                 </li> -->
-          <li class="treeview" id="pretest">
-            <a href="pretest.html" id="pretest">
-              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+            <li class="treeview" id="pretest">
+              <a href="pretest.html" style="color: white" id="pretest">
+                <i
+                  class="fa-solid fa-clipboard-question"
+                  style="color: white"
+                ></i>
+                <span>Pre Test</span>
+              </a>
+            </li>
 
-            </a>
-          </li>
+            <li class="treeview" id="procedure">
+              <a href="procedure.html" style="color: white" id="procedure">
+                <i
+                  class="fa-solid fa-wand-magic-sparkles"
+                  style="color: white"
+                ></i>
+                <span>Procedure</span>
+              </a>
+            </li>
+            <li class="treeview" id="simulation">
+              <a href="simulation.html" style="color: white" id="simulation">
+                <i class="fa-solid fa-gears" style="color: white"></i>
+                <span>Simulation</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
 
-          <li class="treeview" id="procedure">
-            <a href="procedure.html" id="procedure">
-              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
-            </a>
-          </li>
-          <li class="treeview" id="simulation">
-            <a href="simulation.html" id="simulation">
-              <i class="fa fa-laptop" style="color:white;"></i>
-              <span style="color:white;">Simulation</span>
-              <span class="pull-right-container">
-              </span>
-            </a>
-          </li>
+            <li class="treeview" id="posttest">
+              <a href=" posttest.html" style="color: white" id="posttest">
+                <i
+                  class="fa-solid fa-file-circle-question"
+                  style="color: white"
+                >
+                </i>
+                <span>Post Test</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+            <li class="treeview" id="ref">
+              <a href="references.html" style="color: white" id="references">
+                <i class="fa-solid fa-book" style="color: white"></i>
+                <span>References</span>
+                <span class="pull-right-container"> </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
 
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1 align="center">
+            To determine the constituents and amount of alkalinity in the
+            supplied water sample<!-- Write experiment name here -->
+          </h1>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+          <h2><b>Introduction </b></h2>
 
-
-          <li class="treeview" id="posttest">
-            <a href=" posttest.html" id="posttest">
-              <i class=" fa fa-files-o" style="color:white;">
-              </i>
-              <span style="color:white;">Post Test</span>
-              <span class="pull-right-container">
-              </span>
-            </a>
-          </li>
-          <li class="treeview" id="ref">
-            <a href="references.html" id="references">
-              <i class="fa fa-files-o" style="color:white;"></i>
-              <span style="color:white;">References</span>
-              <span class="pull-right-container">
-              </span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
-
-
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1 align="center">
-          Bipolar PWM Single Phase Inverter With RL Load<!-- Write experiment name here -->
-        </h1>
-      </section>
-      <!-- Main content -->
-      <section class="content">
-        <h3><b>Introduction </b></h3>
-
-        <p style="font-size:130%; margin-top:2%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          A bipolar PWM single-phase inverter is a type of power electronic device used to convert DC (direct current) power into AC (alternating current) power with a single-phase output. It utilizes a pulse width modulation (PWM) technique to control the switching of power semiconductor devices, typically insulated gate bipolar transistors (IGBTs) or MOSFETs (Metal-Oxide-Semiconductor Field-Effect Transistors).<br>
-          <center> <img src="images\Fig 1.PNG " style="height: 550px;"width="750px; -webkit-filter:contrast(220%);"></center><br>        
-          <center><b style="font-size: 18px;">Fig. 1 Bipolar PWM inverter circuit</b></center></p>
+          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
+            Alkalinity in water is a crucial parameter that reflects its
+            buffering capacity, defined as the ability to resist changes in pH.
+            The primary contributors to alkalinity are carbonate (CO₃²⁻),
+            bicarbonate (HCO₃⁻), and hydroxide (OH⁻) ions. Understanding the
+            alkalinity of a water sample is essential for assessing its
+            suitability for various applications, including drinking water,
+            industrial processes, and environmental impact.<br />
           </p>
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
 
-            The bipolar PWM inverter produces an AC output waveform by switching the DC input voltage between positive and negative polarities. It generates the desired AC output voltage by varying the width of the pulses while maintaining a fixed frequency. By adjusting the pulse width, the inverter can regulate the amplitude of the output voltage, the operation of a bipolar PWM single-phase inverter involves dividing the input DC voltage into several voltage levels and then applying suitable pulse width modulation techniques to obtain the desired AC output waveform. This is achieved by comparing a reference sinusoidal waveform with a triangular waveform generated by a carrier signal. The inverter generates the necessary pulses to approximate the reference waveform based on the comparison.
+          <h3>
+            <b>Definition of Alkalinity: </b>
+          </h3>
+
+          <p
+          style="font-size: 130%; margin-top: 1%; text-align: justify"
+          >
+            Alkalinity is a measure of water's capacity to neutralize acids. It
+            is primarily due to the presence of carbonate (CO₃²⁻), bicarbonate
+            (HCO₃⁻), and hydroxide (OH⁻) ions. These ions act as buffering
+            agents, helping to resist changes in pH. <br>
+
+              <!--<p>Alkalinity measures how well water can counteract acidity. It is commonly assessed by adding sulfuric acid to the water until a point is reached where the acid and base reactions balance, often indicated by a noticeable change, like a color shift. This process helps understand water's ability to resist pH changes and reveals important information about its overall acidity-buffering capacity.  </p>-->
+
+            <h3><b>Analysis of Alkalinity in Supplied Water Sample:</b></h3>
+
+            <p style="font-size: 130%; margin-top: 1%; text-align: justify">Alkalinity measures how well water can counteract acidity. It is commonly assessed by adding sulfuric acid to the water until a point is reached where the acid and base reactions balance, often indicated by a noticeable change, like a color shift. This process helps understand water's ability to resist pH changes and reveals important information about its overall acidity-buffering capacity.  </p>
           </p>
+
+          <center>
+            <img
+              src="images/ph.jpg"
+              alt="structure"
+              height="205"
+              width="512"
+              style="mix-blend-mode: darken; -webkit-filter: contrast(120%)"
+            />
+          </center>
+          <center>
+            <b style="font-size: 18px">Fig. 1 Phenolphthalein Indicator</b>
+          </center>
+          <br />
+
+          <center>
+            <img
+              src="images/alkalinity range.webp"
+              alt="symbol"
+              height="267"
+              width="480"
+              style="mix-blend-mode: darken; -webkit-filter: contrast(220%)"
+            />
+          </center>
+          <center><b style="font-size: 18px">Fig. 2 Alkalinity Range</b></center>
+
+          <p style="font-size:130%; margin-top: 1%; text-align: justify">
+            <h3 ><b>1. Alkalinity Constituents: </b></h3></p><p style="font-size:130%; margin-top: 1%; text-align: justify"> Carbonate (CO₃²⁻): Originating from
+            the dissolution of carbonate minerals in the water. <br>
+            Bicarbonate (HCO₃⁻): Formed through the dissolution of bicarbonate-containing
+            minerals and the conversion of carbonates in water. <br>
+            Hydroxide (OH⁻): Arises from the ionization of water and the dissociation of
+            hydroxide-containing minerals.
+          </p>
+
+          <h3>
+            <b></b>
+          </h3>
+
+          <center>
+            <img
+              src="images/Alkalinity in water.webp"
+              alt="circuit"
+              height="480"
+              width="436"
+              style="mix-blend-mode: darken; -webkit-filter: contrast(150%)"
+            />
+          </center>
+          <center>
+            <b style="font-size: 18px">Fig. 3 Alkalinity in Water</b>
+          </center>
+
+          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
+            <center>
+              <img
+                src="images\Graphcal representation of ions.jpg"
+                alt="V-I characteristics"
+                height="429"
+                width="305"
+                style="mix-blend-mode: darken; -webkit-filter: contrast(120%)"
+              />
+            </center>
+            <center>
+              <b style="font-size: 18px">Fig. 4 Graphical Representation of Ions </b>
+            </center>
+          </p>
+
+          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
+            <h3><b>2. Bromothymol Blue Indicator:</b></h3>
+            <p style="font-size:130%; margin-top: 1%; text-align: justify">Bromothymol blue serves as a pH indicator, undergoing color changes within specific pH ranges. In the context of alkalinity titrations, it transitions from blue to yellow as the pH becomes acidic. This indicator is valuable in determining the endpoint of the titration.</p>
+          <br>
+            <h3><b>3. Total Alkalinity Determination:</b></h3>
+            <p style="font-size:130%; margin-top: 1%; text-align: justify"> Total alkalinity (TA) is determined by titrating the supplied water sample with a standardized hydrochloric acid (HCl) solution. The reaction involves the neutralization of carbonate and bicarbonate ions present in the water, leading to a pH change detected by the bromothymol blue indicator.</p>
           
+          </p> <br>
+          <h3> <b>Significance of Alkalinity: </b></h3>
+          <p style="font-size:130%; margin-top: 1%; text-align: justify"> - Buffering Capacity:Alkalinity acts as a buffer, stabilizing pH levels in water and resisting abrupt changes that may impact aquatic life. <br>
+            - Water Treatment: Alkalinity influences the effectiveness of water treatment processes, including coagulation and disinfection. <br>
+            - Environmental Impact: Alkalinity levels impact the solubility of minerals, corrosion potential, and overall environmental health.</p></h3>
             
+            <b> <br>
+              <h3><b>Advantages of Analysis of Alkalinity in Supplied Water Sample:</b></h3>
+            </b>
+          </h3>
+          <p style="font-size: 130%; text-align: justify">
+            1. Water Quality Assessment: Determining alkalinity helps assess the overall quality of water, providing valuable information about its chemical composition.<br /><br />
 
-          <h3 align="left" style="margin-top:1.5%"><b> Pulse-Width Modulated Inverters </b> </h3>
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-            PWM Inverter uses PWM (Pulse Width Modulation) technique to control the output voltage of the inverter, this is done to fulfill the AC load requirements. In PWM inverter the controlled output is obtained by adjusting the ON and OFF period of the inverter components.
-            Pulse-width modulation is used in inverters for the purpose of regulating the amplitude and the frequency of the output voltage. In the inverter circuits, it is even more complex because it is required that one obtains approximately sinusoidal voltage of a preassigned frequency (usually 50 or 60 Hz) at its output.
-            The pulse-width-modulated (PWM) inverters use a harmonic control (modulating) signal, whereas the carrier signal is triangular.<br><br>
-            A PWM module consists of:<br>
-            • a sinusoidal oscillator with a frequency f<sub>1</sub> (normally 50 or 60 Hz) which generates the control signal.<br>
-            • a generator of triangular voltage (carrier signal) whose frequency fs is several times higher than f<sub>1.</sub><br>
-            • a comparator with complementary outputs as shown in Fig. 2.<br><br>
+            2. Environmental Impact: Understanding the constituents of alkalinity aids in evaluating the environmental impact of the water sample on aquatic ecosystems.<br /><br />
 
-            The pulse frequency at the comparator output is equal to the frequency of the carrier signal f<sub>s</sub>, and the duration of the pulses depends on the ratio of the instantaneous values of the voltages of the control and carrier signals.
-             Since these pulses control the states of the inverter switches,
-             the switches will also operate at the frequency f<sub>s</sub> modulated by the ratio of the turn-on and the turn-off time. Consequently, it follows that<br>
-            
-          </p>
-          <center> <img src="images\S1S2.PNG "style="height: 75px;" style="-webkit-filter:contrast(180%);"></center>
-          
-          
-          
-          <p style="font-size:130%; margin-top:0.5%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-           
-          
-            Since the output voltage varies between +VDC and –VDC and vice-versa so the PWM technique are called bipolar modulators.
-             Because the frequency of the carrier signal is much higher than the frequency of the sinusoidal control signal, i.e., f<sub>s</sub> >> f<sub>1</sub>.
+            3. Corrosion Prevention: Alkalinity measurement is crucial in preventing corrosion in water distribution systems, as it influences the corrosive nature of water.<br /><br />
 
-             
-          
-          </p>
-           <center><img src="images\Fig 3.PNG "align="center"  ></center>
-           <center><b style="font-size: 18px;">Fig. 2 Block diagram of a single-phase PWM inverter</b></center>
-           <center><img src="images\Fig 4.PNG "align="center" style="height: 350px; -webkit-filter:contrast(180%);" ></center>
-           <center><b style="font-size: 18px;">Fig. 3 Waveforms of characteristic voltage in one period of carrier signal</b></center>
-           
-           <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-            It may be assumed that the control voltage Vc during the cycle Ts is approximately constant. Then, based on Fig. 3, the average value of the output voltage is
-            </p>
+            4. Treatment Efficiency: It contributes to the efficiency of water treatment processes by guiding appropriate adjustments in pH levels and chemical dosages<br /><br />
 
-            <center style="font-size: 16px;">`V_(0av)=1/T_s[&Integral;_(t_1)^(T_s-t_1)-V_(DC)dt +&Integral;_(T_s-t_1)^(T_s+t_1)V_(DC) dt].........(1)`</b></center><br>
-            
-            <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-            Because in the interval ` 0 &le; t &le; T_s : V_(tr) = −V_(tM)+ (4V_(tM) /T_s)t`, from the condition `V_(tr)(t1) = V_c` it follows that
-          </p><br>
-          <center style="font-size: 16px;">`t_1=T_s/4(1+V_c/V_(tM)).......(2)`</center>
-          
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          From equation (1) and (2) it follows that
-          
+            5. Biological Stability: Knowledge of alkalinity assists in maintaining biological stability in water bodies, ensuring a suitable habitat for aquatic organisms.<br /><br />
 
-          <center style="font-size: 16px;">`V_(0av)=V_(c)/V_(tM)V_(DC).........(3)`</center>
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> Here V<sub>tM </sub>is maximum value of triangular wave<br><br> If </p>
-        </p>
-        <center style="font-size: 16px;">`V_c=V_(cM) sin(&omega;t).........(4)`</center>
-        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          Here V<sub>cM </sub>is maximum value of carrier wave <br><br>Then<br></p>
-        <center style="font-size: 16px;">`V_(0av)=V_(cM)/V_(tM)V_(DC)sin(&omega;t)=m_aV_(DC)sin(&omega;t).........(5)`</center>
-        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">where,</p>
+            6. Acid-Base Balance: Alkalinity data is essential for maintaining a balanced pH, which is crucial for various industrial processes and natural ecosystems.<br /><br />
 
-        <center style="font-size: 16px;">`m_a=V_(cM)/V_(tM) ..........(6)`</center><br>
-        <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          Here `m_a` is the factor of amplitude modulation, equal to the ratio of the sinusoidal control
-          signal and the triangular carrier signal. On the basis of Equation (5) one can draw a very
-          important conclusion that the average value of the output voltage is a sinusoidal
-          function having the frequency of the control signals f<sub>1</sub> (dashed line in Fig. 4 (b))
-          and the amplitude</p>
+            7. Health Considerations: Monitoring alkalinity is relevant for drinking water quality, as it can impact the taste and health-related aspects of water consumption.<br /><br />
 
-          <center style="font-size: 16px;">`V_(0M)=m_aV_(DC)&le;V_(DC)..........(7)`</center>
-          
+            8. Regulatory Compliance: Compliance with water quality regulations often requires the assessment of alkalinity levels, ensuring adherence to established standards.<br /><br />
 
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-            because the amplitude modulation factor `m_a` < 1.<br><br>
-            In addition to the factor of amplitude modulation we must remember the harmonics frequency is given by 
-            <center style="font-size: 16px;">`f_h=h*f_1 ..........(8)`</center><br>
-          </p>
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-            where f<sub>h</sub> is harmonic frequency, f<sub>1</sub> is fundamental frequency<br>
-            Here h = 3, 5, 7, 9..........<br><br>
-            
-            as far as harmonic is concern</p>
-
-            <center style="font-size: 16px;">`h=(j*m_f&plusmn;k)`</center><br>
-            
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> 
-            where m<sub>f</sub> is an carrier ratio i.e.,
+            9. Research and Development: Alkalinity analysis supports ongoing research and development efforts in water science, contributing to advancements in environmental management and sustainability.<br /><br />
           </p>
 
-          <center style="font-size: 16px;">`m_f=f_s/f_1 ..........(9)`</center><br>
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> 
-            where f<sub>s</sub> is switching frequency and f1 is fundamental frequency.
+          <h3>
+            <b
+              >Disadvantages of Analysis of Alkalinity in Supplied Water Sample:</b
+            >
+          </h3>
+          <p style="font-size: 130%; text-align: justify">
+            1. Limited Scope: Alkalinity testing may not provide a comprehensive overview of all potential contaminants, leaving some aspects of water quality unaddressed.<br /><br />
+
+            2. Resource Intensive: The process of determining alkalinity can be resource-intensive, requiring specialized equipment, reagents, and trained personnel.<br /><br />
+
+            3. Time Consuming: Alkalinity analysis may take time, leading to delays in obtaining results, especially in situations where quick assessments are crucial.<br /><br />
+
+            4. Sensitivity to Interferences: The presence of certain substances or impurities in the water sample can interfere with alkalinity measurements, potentially yielding inaccurate results.<br /><br />
+
+            5. Cost Implications: Setting up and maintaining the infrastructure for alkalinity testing can involve significant costs, particularly for smaller organizations or research projects.<br /><br />
+
+            6. Complex Interpretation: Interpreting alkalinity data requires expertise, and the results may be challenging to understand for individuals without a background in water chemistry, limiting its accessibility.
           </p>
 
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> 
-            So </p><br>
-            <center style="font-size: 16px;">`f_h=(j*m_f&plusmn;k)f_1 ..........(10)`</center><br>
+          <h3>
+            <b
+              >Applications of Analysis of Alkalinity in Supplied Water Sample:</b
+            >
+          </h3>
+          <p style="font-size: 130%; text-align: justify">
+            1. Water Treatment Optimization: The experiment aids in optimizing water treatment processes by providing insights into alkalinity levels, allowing adjustments for effective purification.<br /><br />
 
-            <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;"> 
-            <b>Note:</b>For odd value of j, k will be even and for even value of j, k will be odd value.  
-            </p>
-          <center > <img src="images\Fig 5.PNG "style="height 300px; -webkit-filter:contrast(180%);" ></center>
-          <center><b style="font-size: 18px;">Fig. 4 Voltage waveforms (a and b) and frequency spectrum of the inverter based on bipolar PWM (c)</b></center>
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          Even though mf >> 1, the control signal is not constant within one cycle Ts. For
-          this reason the output voltage will contain higher harmonics, whereas (5) gives
-          its fundamental harmonic. The higher harmonics appear around the carrier frequency as shown in Fig. 4(c) and its integer multiples, more precisely around the harmonics mf, 
-          2mf, 3mf, … For instance, if mf = 15, harmonics 15, 17, 13, …, 31, 33, 29, etc. will exist.</p>
+            2. Environmental Monitoring: It is crucial for monitoring the environmental impact of water bodies, helping assess the alkalinity's influence on ecosystems and aquatic life.<br /><br />
 
-          
+            3. Industrial Processes: The knowledge gained from the experiment is valuable in industrial settings, where controlling alkalinity is essential for various manufacturing processes.<br /><br />
 
-        <h3 align="left" style="margin-top:1.5%"><b> Advantages of Bipolar PWM single-phase inverter </b> </h3>
-          <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          1.	Better voltage waveform quality: The PWM technique allows for precise control of the output voltage waveform, resulting in lower harmonic distortion and better overall waveform quality.<br><br>
-          2.	Improved efficiency: The use of power semiconductor devices with low conduction and switching losses, such as IGBTs or MOSFETs, helps in achieving higher efficiency.<br><br>
-          3.	Enhanced voltage regulation: The pulse width modulation technique enables effective voltage regulation, allowing the inverter to maintain a stable output voltage despite changes in load conditions.<br><br>
-          4.	Flexibility: Bipolar PWM single-phase inverters can be used in a variety of applications, including motor drives, renewable energy systems, uninterruptible power supplies (UPS), and more.
+            4. Drinking Water Quality: The experiment contributes to ensuring the quality of drinking water by assessing alkalinity levels, which can impact taste and health-related aspects.<br /><br />
+
+            5.Research and Education: The results of the experiment support ongoing research in water science and provide educational opportunities, fostering a deeper understanding of water chemistry.
           </p>
-          <h3 align="left" style="margin-top:1.5%"><b> Disadvantages of Bipolar PWM single-phase inverter </b> </h3>
-            <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-            1.	Increased harmonic content: Bipolar PWM techniques generate more harmonic distortion compared to other PWM techniques. <br><br>
-            2.	Higher switching losses: Bipolar PWM requires switching between positive and negative half-cycles of the output waveform. This introduces additional switching losses compared to unipolar PWM, where switching occurs only in one polarity.<br><br>
-            3.	Complex control circuitry: Bipolar PWM inverters typically require more complex control circuitry compared to unipolar PWM inverters. <br><br>
-            4.	Increased voltage stress on components: The rapid switching between positive and negative voltages can lead to increased voltage spikes and transients, which can degrade the reliability and lifespan of the components.
-            
-          <h3 align="left" style="margin-top:1.5%"><b> Applications of Bipolar PWM single-phase inverter </b> </h3>
-            <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-              1. Bipolar PWM inverters are extensively used in motor drives for controlling the speed and torque of electric motors.<br><br>
-              2. Bipolar PWM inverters play a crucial role in renewable energy systems such as solar power and wind power. They convert the DC power generated by solar panels or wind turbines into AC power suitable for grid integration or powering local loads.<br><br>
-              3. UPS systems are used to provide backup power during utility power outages. Bipolar PWM inverters are employed in UPS systems to convert DC power from batteries into AC power to supply critical loads.<br><br>
-              4. Bipolar PWM inverters are used in power factor correction circuits to improve the power quality in electrical systems. By controlling the switching frequency and duty  cycle of the PWM signals, the inverter can shape the input current waveform, reducing harmonics and improving the overall power factor.<br><br>
-              5. Bipolar PWM inverters are employed in EV charging stations to convert AC power from the grid into DC power for charging the vehicle's battery.
-            </p>
-
-          
-      </section>
-      <!-- /.content -->
+          <!--Theory of experiment -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <footer class="main-footer">
+        <h4 align="center">
+          Lab contributed by THDC Institute of HydroPower Engineering and
+          Technology
+          <!-- Institute Name -->
+        </h4>
+      </footer>
     </div>
-    <footer class="main-footer">
-      <h4 align="center">Lab contributed by <!-- Institute Name --> </h4>
-    </footer>
-  </div>
-
-</body>
-
+  </body>
 </html>
 <script>
   function theory() {
     document.getElementById("theory").style.backgroundColor = "#009dff";
-
   }
-
-
 </script>
 <!-- ./wrapper -->
 <!-- jQuery 2.2.3 -->

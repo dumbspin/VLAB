@@ -360,7 +360,7 @@ let w=rectanglesIntersect(x3,y3,100,100,rectX,rectY,100,100);
     if (dropHeight > 0) {
       if(currentStep>5&&process==2){
       dropHeight -= 1 / 100 * 25;}
-      else if(currentStep<5&&currentStep>0&&process==2){
+      else if(currentStep<5&&currentStep!=0&&process==2){
         dropHeight -= 1 / 100 * 15;
         console.log('gh',waterheight)
       }

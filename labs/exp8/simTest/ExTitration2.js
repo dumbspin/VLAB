@@ -358,9 +358,9 @@ let w=rectanglesIntersect(x3,y3,100,100,rectX,rectY,100,100);
     if (dropHeight > 0) {
       if(currentStep>5&&process==2){
       dropHeight -= 1 / 100 * 25;}
-      else if(currentStep<5&&currentStep>0&&process==2){
+      else if(currentStep<5&&currentStep!=0&&process==2){
         dropHeight -= 1 / 100 * 15;
-        console.log('gh',waterheight)
+        // console.log('gh',waterheight)
       }
       else if(process==1){
         dropHeight -= 1 / 100 * speed;
@@ -671,6 +671,13 @@ function mouseDragged() {
 
 
 function nextpressed() {
+  // if(0.02>ranDrop){
+  //   val=33
+  // }
+  // else if(.045>ranDrop){
+  //   val=34
+  // }
+  // else
   let text = { data1: ranWeight, data2: ranDrop };
   fetch('send2.php', {
 
