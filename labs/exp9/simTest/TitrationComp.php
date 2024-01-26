@@ -1,4 +1,5 @@
 
+
 <?php
 
 
@@ -25,6 +26,8 @@ $data12=$_SESSION['V_Titrate5'];
 // session_start();
 $months = $_SESSION['logCe'];
 $salesData = $_SESSION['logxDm'];
+$k=$_SESSION['logK'];
+$m=$_SESSION['m'];
 
 
 ?>
@@ -103,7 +106,7 @@ $salesData = $_SESSION['logxDm'];
         <!-- <p>Congratulations on completing the titration process!</p> -->
         
     </div>
-    <h2>To determine the constituents and amount of alkalinity of the supplied water sample</h2>
+    <h2>Determination of adsorption of acetic acid by charcoal.</h2>
     <h3>Results</h3>
     <div id="Chart">
     <canvas id="myChart" width:"1000" height="350" ></canvas>
@@ -111,25 +114,74 @@ $salesData = $_SESSION['logxDm'];
   <table>
     <thead>
       <tr>
-        <th>Sample In</th>
-        <th>Volume Before Titration</th>
-        <th>Normality Result</th>
-        <th>Volume used</th>
+        <th>Bottle</th>
+        <th>N1</th>
+        <th>Ce=N2</th>
+        <th>Log Ce</th>
+        <th>N1-N2</th>
+        <th>w=3(N1-N2)</th>
+        <th>w/m</th>
+        <th>Log(w/m)</th>
+       
+        
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Phenolphthalein</td>
-        <td><?php echo round($data2,2) ?></td>
-        <td><?php echo round($data4,2) ?></td>
-        <td><?php echo round($data3,2)?></td>
+        <td>A</td>
+        <td>0.10</td>
+        <td><?php echo round($data3,3) ?></td>
+        <td><?php echo round(log10($data3),3) ?></td>
+        <td><?php echo round(.10-$data3,3)?></td>
+        <td><?php echo round(3*(.10-$data3),3)?></td>
+        <td><?php echo round(3*(.10-$data3)/1,3)?></td>
+        <td><?php echo round(log10(3*(.10-$data3)/1),3)?></td>
       </tr>
       <tr>
-        <td>Methylorange</td>
-        <td><?php echo round($data6,2)?></td>
-        <td><?php echo round($data8,2)?></td>
-        <td><?php echo round($data7,2) ?></td>
-      </tr>
+      <td>B</td>
+<td>0.20</td>
+<td><?php echo round($data5, 3) ?></td>
+<td><?php echo round(log10($data5), 3) ?></td>
+<td><?php echo round(0.20 - $data5, 3) ?></td>
+<td><?php echo round(3 * (0.20 - $data5), 3) ?></td>
+<td><?php echo round(3 * (0.20 - $data5) / 1, 3) ?></td>
+<td><?php echo round(log10(3 * (0.20 - $data5) / 1), 3) ?></td>
+</tr>
+
+<tr>
+<td>C</td>
+<td>0.30</td>
+<td><?php echo round($data7, 3) ?></td>
+<td><?php echo round(log10($data7), 3) ?></td>
+<td><?php echo round(0.30 - $data7, 3) ?></td>
+<td><?php echo round(3 * (0.30 - $data7), 3) ?></td>
+<td><?php echo round(3 * (0.30 - $data7) / 1, 3) ?></td>
+<td><?php echo round(log10(3 * (0.30 - $data7) / 1), 3) ?></td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>0.40</td>
+<td><?php echo round($data9, 3) ?></td>
+<td><?php echo round(log10($data9), 3) ?></td>
+<td><?php echo round(0.40 - $data9, 3) ?></td>
+<td><?php echo round(3 * (0.40 - $data9), 3) ?></td>
+<td><?php echo round(3 * (0.40 - $data9) / 1, 3) ?></td>
+<td><?php echo round(log10(3 * (0.40 - $data9) / 1), 3) ?></td>
+</tr>
+
+<tr>
+<td>E</td>
+<td>0.50</td>
+<td><?php echo round($data11, 3) ?></td>
+<td><?php echo round(log10($data11), 3) ?></td>
+<td><?php echo round(0.50 - $data11, 3) ?></td>
+<td><?php echo round(3 * (0.50 - $data11), 3) ?></td>
+<td><?php echo round(3 * (0.50 - $data11) / 1, 3) ?></td>
+<td><?php echo round(log10(3 * (0.50 - $data11) / 1), 3) ?></td>
+</tr>
+
+
       <!-- <tr>
         <td>3</td>
         <td>Colorless (pH &lt; 8.2)</td>
@@ -139,6 +191,10 @@ $salesData = $_SESSION['logxDm'];
     </tbody>
     
   </table>
+
+
+  <h5>1/n= <?php echo round($m, 3) ?></h5>
+  <h5>Log K = <?php echo round($k, 3) ?></h5>
 
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>
@@ -211,7 +267,7 @@ $salesData = $_SESSION['logxDm'];
                     x:{
                       title: {
                     display: true,
-                    text: 'Log(C)', // Label for the x-axis
+                    text: 'Log(Ce)', // Label for the x-axis
                     font: {
                         family: 'Poppins' // Font family for the axis label
                     }
@@ -247,6 +303,6 @@ $salesData = $_SESSION['logxDm'];
         document.getElementById('myChart').style.width = '600px';
 
     </script>
-
+<div></div>
 </body>
 </html>
