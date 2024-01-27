@@ -157,8 +157,8 @@ function setup() {
   flasktouchX = 10.5 * size;
   flasktouchY = 19.5 * size;
 
-  changetint = color(255, 255, 255, 200);//Defining the net at starting
-  aftercolour = color(252, 89, 190	, darkness);//Defining the net colour after titration
+  changetint = color(76, 0, 19, 200);//Defining the net at starting
+  aftercolour = color(252, 255, 255	, darkness);//Defining the net colour after titration
   
   //gifImage.hide();
 
@@ -466,7 +466,7 @@ function drawppt(){
   size_vary = Math.floor(random(0.2152,0.2511)*size);
   size_vary2 = Math.floor(random(0.2152,0.2511)*size);
   frameRate(30); 
-  fill(170, 74, 68,255);  // Set the fill color to red
+  fill(255, 255, 255,255);  // Set the fill color to red
   noStroke(); 
   const upperBound = Math.floor(random(1,2)+number*1.25-5) ;
 
