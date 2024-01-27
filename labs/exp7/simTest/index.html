@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viscosity Measurement Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('exp9 bg.png.jpg'); background-size: cover;">
+    <div id="simulation-container">
+        <div>
+            <h1>Viscosity Measurement Simulation</h1>
+            <h2>Experimental Settings</h2>
+            <label for="fluid-thickness">Fluid Thickness:</label>
+            <input type="range" id="fluid-thickness" min="0" max="100" step="1" value="50">
+            <span id="fluid-thickness-percentage">50%</span>
+
+            <label for="option-select">Select System:</label>
+            <select id="option-select" onchange="togglePolymerOptions()">
+                <option value="PolymerSolventSystem">Polymer Solvent System</option>
+                <option value="SolventSystem">Solvent System</option>
+            </select>
+
+            <label for="polymer-option">Select Polymer:</label>
+            <select id="polymer-option">
+                <option value="Polyvinylacetate">Polyvinyl acetate</option>
+                <option value="PMMA">PMMA</option>
+                <option value="Polyvinylalcohol">Polyvinyl alcohol</option>
+                <option value="Polystyrene">Polystyrene</option>
+            </select>
+
+            <label for="solvent-option">Select Solvent:</label>
+            <select id="solvent-option">
+                <option value="Acetonitrile">Acetonitrile</option>
+                <option value="Acetone">Acetone</option>
+                <option value="Water">Water</option>
+                <option value="Toluene">Toluene</option>
+                <option value="Benzene">Benzene</option>
+            </select>
+
+            <label for="concentration">Polymer Concentration (%):</label>
+            <input type="range" id="concentration" min="0" max="100" step="1" value="0" disabled>
+            <span id="concentration-value">0%</span>
+
+            <button id="start-experiment-btn" onclick="startExperiment()">Start</button>
+            <button onclick="calculateViscosityAndMolecularWeight()">Calculate Viscosity</button>
+            <button id="reset-experiment-btn" onclick="resetExperiment()">Reset</button>
+        </div>
+
+        <div class="time-container">
+            <img src="clock_exp7.jpg" alt="Clock Image">
+            <div class="block"></div>
+            <div class="square"></div>
+            <p id="timer-result">Elapsed Time: <span id="timer-display">0:00</span></p>
+        </div>
+    </div>
+
+    <div id="results">
+        <h2>Results</h2>
+        <p id="viscosity-result">Viscosity: <span></span> Pa.s</p>
+        <p id="molecular-weight-result">Molecular Weight: <span></span> g/mol</p>
+        <p id="real-viscosity-result">Real Viscosity: <span></span> Pa.s</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
