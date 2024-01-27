@@ -257,6 +257,7 @@ $m=$_SESSION['m'];
                         reverse: true,
                         beginAtZero: true,
                         ticks:{
+                          maxTicksLimit:15,
                         stepSize: 0.1 // Set the step size of the y-axis to 0.20
                         ,                  font: {
                         family: 'Poppins', // Change the font family to Poppins
