@@ -157,7 +157,7 @@ function setup() {
   flasktouchX = 10.5 * size;
   flasktouchY = 19.5 * size;
 
-  changetint = color(76, 0, 19, 200);//Defining the net at starting
+  changetint = color(200, 200, 19, 200);//Defining the net at starting
   aftercolour = color(252, 255, 255	, darkness);//Defining the net colour after titration
   
   //gifImage.hide();

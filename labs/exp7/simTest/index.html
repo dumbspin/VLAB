@@ -65,7 +65,7 @@
                 <div class="slider-box">
 
                     <label for="concentration">Polymer Concentration (%):</label>
-                    <input type="range" id="concentration" min="0" max="100" step="1" value="0" disabled>
+                    <input type="range" id="concentration" min="0" max="100" step="1" value="0" >
                     <span id="concentration-value">0%</span>
                 </div>
 
@@ -87,10 +87,12 @@
                 
                 <div class="slider-box">
                     <h2>Results</h2>
-                <p id="viscosity-result">Viscosity: <span></span> Pa.s</p>
+                    <p id="real-viscosity-result">Viscosity: <span></span> Pa.s</p>
+                
                 <p id="molecular-weight-result">Molecular Weight: <span></span> g/mol</p>
+                <p id="viscosity-result" style="display: none;">Viscosity: <span></span> Pa.s</p>
             </div>
-                <!-- <p id="real-viscosity-result">Real Viscosity: <span></span> Pa.s</p> -->
+                
             </div>
         </div>
         <div class="slider-box2" style="position: relative;left: 35vw; ">
