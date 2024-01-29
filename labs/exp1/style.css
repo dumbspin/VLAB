@@ -42,10 +42,10 @@ ol.breadcrumb{
 .skin-blue, .sidebar-form{
 
 }
-#aim:hover, #theory:hover, #pretest:hover, #procedure:hover, #simulation:hover, #result:hover, #posttest:hover, #references:hover{
+#aim:hover, #theory:hover, #pretest:hover, #procedure:hover, #simulation:hover, #result:hover, #posttest:hover, #references:hover, #cred:hover{
     background-color: #9ec1a3 !important; 
 }
-a#aim, a#theory, a#pretest, a#procedure, a#simulation, a#result, a#posttest, a#references{
+a#aim, a#theory, a#pretest, a#procedure, a#simulation, a#result, a#posttest, a#references,a#cred{
     background-color: #70a9a1;
     /* border-bottom: 1px solid #40798c !important; */
     /* box-shadow: 2px 2px #40798c;
