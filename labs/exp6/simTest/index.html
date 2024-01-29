@@ -44,7 +44,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
 
-        var videos = ["introVideo.mp4", "nextVideo.mp4"]; // Add your video sources here
+        var videos = ["introVideo.mp4", "nextVideo.mp4","3rd.mp4"]; // Add your video sources here
         var currentVideoIndex = 0;
         var video = document.getElementById('video');
         var videoContainer = document.getElementById('video-container');
@@ -79,14 +79,14 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         }
 
         function nextVideo() {
-            if (currentVideoIndex == 0) {
+            if (currentVideoIndex == 0||currentVideoIndex == 1) {
                 currentVideoIndex = (currentVideoIndex + 1) % videos.length;
                 video.src = videos[currentVideoIndex];
                 video.play();
                 nextButton.style.display = 'none';
             }
-            else if (currentVideoIndex == 1) {
-                window.location.href = 'ResinMethod.php';
+            else if (currentVideoIndex == 2) {
+                window.location.href = 'ResinMethod.html';
             }
         }
         function toggleFullScreen() {

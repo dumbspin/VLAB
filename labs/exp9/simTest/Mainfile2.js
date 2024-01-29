@@ -85,7 +85,7 @@ let blinkInterval = 200;
 function preload() {
   bureteImg = loadImage('burette51.png', loaded);
   flaskImgbk = loadImage('backflask.png', loaded);
-  flaskImg = loadImage('frontflask.png', loaded);
+  flaskImg = loadImage('frontflask2.png', loaded);
   bottomImg = loadImage('water.png', loaded);
 //   gifImage = createImg('bubbler1.gif', loaded);
 nextimg = loadImage('Forward.png');

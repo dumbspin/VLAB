@@ -86,7 +86,7 @@ body {
     overflow: hidden; 
   }
   .box::before {
-    content: "Determination of Ferrous Content ";
+    content: "Determination of surface tension of liquid by Stalagmometer";
     display: block;
     font-size: 18px;
     color: white;

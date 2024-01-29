@@ -37,42 +37,8 @@ let dragging2 = false;
 let dragging3 = false;
 let cngColor;
 
-class Drop {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.speed = 1;
-    this.radius = 2;
-    this.active = true;
-  }
 
-  update() {
-    if (this.active) {
-      this.y += this.speed;
-      
-      // Check if the drop has reached the specified y-coordinate
-      if (this.y >flaskY+flaskheight - waterheight  ) {
-        vi++;
-        if (vi==2 && rectHeight>3 && !stop){
 
-          drop();
-          vi=0;
-        }
-
-        waterheight +=25*speed_;
-        this.active = false; // Set drop as inactive
-      }
-    }
-  }
-
-  display() {
-    if (this.active) {
-      noStroke();
-      fill=recColor;
-      ellipse(this.x, this.y, this.radius * 2, this.radius * 2+2);
-    }
-  }
-}
 
 function preload() {
   // Load your images
@@ -82,9 +48,9 @@ function preload() {
   image3 = loadImage('sepratingFunnel.png');
   fullW=loadImage('water.png');
   halfW=loadImage('Halfwater.png')
-  beaker1 = loadImage('PotasiumChromate.png');
-  beaker2 = loadImage('PotasiumChromate.png');
-  beaker3 = loadImage('PotasiumChromate.png');
+  beaker1 = loadImage('PotasiumChromateAq.png');
+  beaker2 = loadImage('PotasiumChromateEx.png');
+  beaker3 = loadImage('PotasiumChromateOrg.png');
   // liquid = loadImage('Halfwater.png');
   nextimg = loadImage('Forward.png');
 //   bckflask=loadImage('backflask.png');
@@ -113,24 +79,60 @@ function setup() {
 function draw() {
 
     background(bgImg);
-    image(image3, img3X, img3Y, img3w, img3h);
+        // Increase the rectangle's height in the y-axis3
+        image(image3, img3X, img3Y, img3w, img3h);
+    // if (in)
+    if (rectHeight < 109 & increase == true & !stop) {
+      noStroke();
+      
+      if (decW>63){
+         cngColor=color(239,237,158,200);
+      }
+      push();
+      fill(cngColor);
+      rect(img3X+120+2,310, 4, 180-rectHeight*.7);
+      pop();
+      
+      rectHeight += .5;
+      decW+=.5;
+      
+      if (process==1){
+        beaker1H +=.3;
+        recColor1=cngColor;
+      }
+      else if(process==2){
+        beaker2H +=.3;
+        recColor2=cngColor;
+      }
+      else if(process==3){
+        beaker3H +=.3;
+        recColor3=cngColor;
+      }
+      else{
+        console.log('no beaker')
+      }
+      
+      // setTimeout(()=>{waterheight +=.67*speed_;},1500);
+      
+    }
+    
 
     let u=rectanglesIntersect(x1,y1,100,100,rectX,rectY,100,100);
     let v=rectanglesIntersect(x1,y1,100,100,rectX2,rectY2,100,100);
     let w=rectanglesIntersect(x1,y1,100,100,rectX3,rectY3,100,100);
 
     if (!dragging1 && u) {
-      process==1;
+      process=1;
       stop=false;
       rectX = x1+50; rectY = y1+30;
     }
     if (!dragging2 && v) {
-      process==2;     
+      process=2;     
        stop=false;
       rectX2 = x1+50; rectY2 = y1+30;
     }
     if (!dragging3 && w) {
-      process==3;
+      process=3;
       stop=false;
       rectX3 = x1+50; rectY3 = y1+30;
     }
@@ -139,7 +141,20 @@ function draw() {
       // process=0;
       stop=true;
     }
+    push();
+    fill(recColor1);
+    rect(rectX+40,rectY+120, 86, -beaker1H);
+    pop();
 
+    push();
+    fill(recColor2);
+    rect(rectX2+40,rectY2+120, 86, -beaker2H);
+    pop();
+
+    push();
+    fill(recColor3);
+    rect(rectX3+40,rectY3+120, 86, -beaker3H);
+    pop();
 
 
     
@@ -148,38 +163,23 @@ function draw() {
   image(beaker3, rectX2,rectY2, 150, 130);
   image(beaker2, rectX3,rectY3, 150, 130);
 
-    fullW.resize(80,110);
-    halfW.resize(80,50);
+    fullW.resize(80,105);
+    halfW.resize(55,70);
     if (decW>5) {
       let c = fullW.get(0, decW, 80, 110-decW);
-      // let d=halfW.get(0, decW, 80, 110-decW);
+      let d=halfW.get(0, decW, 80, 110-decW);
       image(c,img3X+85,img3Y+100+decW,80,110-decW);
+      image(d,img3X+97,img3Y+140+decW,80,110-decW);
 
-      if (decW<50){
-        // image(d,img3X+85,img3Y+150+decW,80,110-decW);
-      }
      
     } 
     else {
       // If waterheight exceeds flaskheight, draw the entire image without cropping
-      image(fullW,img3X+85,img3Y+100+decW,80,110);
-      // image(halfW,img3X+85,img3Y+150+decW,80,110);
+      image(fullW,img3X+85,img3Y+100+decW,80,105);
+      image(halfW,img3X+97,img3Y+138+decW,55,72);
     }
 
-    push();
-    fill(recColor1);
-    rect(rectX,rectY+130, 80, -beaker1H);
-    pop();
 
-    push();
-    fill(recColor2);
-    rect(rectX2,rectY2+130, 80, -beaker2H);
-    pop();
-
-    push();
-    fill(recColor3);
-    rect(rectX3,rectY3+130, 80, -beaker3H);
-    pop();
    
 
   //console.log("MouseX: " + mouseX + ", MouseY: " + mouseY);
@@ -197,41 +197,7 @@ function draw() {
 
     //console.log('process3')
 
-    // Increase the rectangle's height in the y-axis3
-    // if (in)
-    if (rectHeight < 109 & increase == true & !stop) {
-      noStroke();
-      
-      if (decW>100){
-         cngColor=color(239,237,162);
-      }
-      push();
-      fill(cngColor);
-      rect(img3X+120,310, 8, Math.random()*10+180-rectHeight);
-      pop();
-      
-      rectHeight += 1;
-      decW+=1;
-      
-      if (process==1){
-        beaker1H +=.5;
-        recColor1=cngColor;
-      }
-      else if(process==2){
-        beaker2H +=.5;
-        recColor2=cngColor;
-      }
-      else if(process==3){
-        beaker3H +=.5;
-        recColor3=cngColor;
-      }
-      else{
-        console.log('no beaker')
-      }
-      
-      // setTimeout(()=>{waterheight +=.67*speed_;},1500);
-      
-    }
+
 
 // increase=true;
 
