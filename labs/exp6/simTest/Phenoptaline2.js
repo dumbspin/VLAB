@@ -48,7 +48,7 @@ class Drop {
   display() {
     if (this.active) {
       noStroke();
-      fill(251,47,181,200);
+      fill(255,255,255,200);
       ellipse(this.x, this.y, this.radius * 2, this.radius * 2+2);
     }
   }
@@ -138,9 +138,12 @@ function draw() {console.log("MouseX: " + mouseX + ", MouseY: " + mouseY);
 
   //image(image2, img2x, img2y, img2w, img2h);
   push();
+  tint(239,237,162,200);
   if (dropAdded) {
-    tint(255,255,255,200);
+    tint(239,237,162,200);
   }
+    
+  
   image(liquid, 400, 453, 120, 20);
   pop();
   image(frontflask, 400, 320, 120, 160);
@@ -162,7 +165,7 @@ function draw() {console.log("MouseX: " + mouseX + ", MouseY: " + mouseY);
     // Increase the rectangle's height in the y-axis3
     noStroke();
     rect(currentPoint_3.x + 22, currentPoint_3.y + 150, 5, -rectHeight);
-    fill(251,47,181, 150)
+    fill(255,255,255, 150)
 
     // Increment the rectangle's height3
     if (rectHeight != 70 & increase == true) {

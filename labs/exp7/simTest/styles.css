@@ -1,100 +1,103 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #1f363d;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #f5f5f5;
+    background-color: #cfe0c3;
+
+}
+.simulation{
+    /* display: block; */
+    width: 550px;
+    height: 500px;
+    background-image: url('exp9 bg.png');
+    background-size: cover; /* Adjust to your needs */
+    background-repeat: no-repeat; /* Adjust to your needs */
+    padding-top: 15px;
+    padding-left: 50px;
+
 }
 
-/* Simulation Container Styles */
-#simulation-container {
+#Container1{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    background-color: transparent;
-}
+    align-items: center ;
+    
 
-/* Heading Styles */
-h1, h2 {
-    margin-top: 20px;
 }
-
-/* Label Styles */
-label {
-    display: block;
-    margin-top: 10px;
+#simulation-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
 }
-
-/* Input Styles */
-input, select {
-    margin-bottom: 10px;
-    padding: 8px;
+.box {
+    position: relative;
+    padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
+  
+    background-color: #70a9a1;
+    box-shadow: 2px 2px #40798c;
+    margin: 2px;
+    overflow: hidden; 
+  }
+  .box::before {
+    content: "Viscocity";
+    display: block;
+    font-size: 18px;
+    color: white;
+    /* text-align: center; */
+    padding-bottom: 5px; /* Adjust this value as needed */
+    padding: 5px 10px 5px 5px;
 }
-
-/* Button Styles */
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
+.help-button {
+    position: absolute;
+    top: 5px; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+    background-color: #e3efda;
+    color: #70a9a1;
     border: none;
-    border-radius: 4px;
+    padding: 7px;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-
-/* Results Section Styles */
-#results p {
-    margin-top: 20px;
-}
-
-/* Polymer Concentration Styles */
-#polymer-concentration {
-    width: 100%;
-}
-
-/* Timer Result Styles */
-#timer-result {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-
-.time-container img {
-    width: 30px;
-    margin-right: 10px;
-}
-
-.block, .square {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    margin-right: 10px;
-}
-
-/* Example Molecular Weight Calculation Styles */
-#molecular-weight-result {
-    margin-top: 20px;
-}
-
-/* Custom Background Styles */
-body {
-    background-size: cover;
-}
-
-#polymer-option {
-    display: none;
-}
-
 
 /* Add this to your existing styles.css file */
 .button-active {
     animation: buttonAnimation 0.5s ease-in-out;
 }
+/* Style for the label */
+label {
+    display: block;
+    /* margin-bottom: 5px; */
+  }
+  
+  /* Style for the select dropdown */
+  select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+  }
+  
+  /* Style for the select dropdown options */
+  select option {
+    padding: 8px;
+  }
+  
+  /* Style for the select dropdown when focused */
+  select:focus {
+    outline: none; /* Removes default focus outline */
+    border-color: #4CAF50; /* Example color for focus state */
+  }
+  
 
 @keyframes buttonAnimation {
     0% {
@@ -107,4 +110,47 @@ body {
         transform: scale(1);
     }
 }
- 
+.mybutton{
+    background-color:#407986 !important;
+    border: 2px solid white;
+    box-shadow: 2px 2px #1f363d;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 15px 2px 0 2px ;
+    transition: transform 0.3s ease;
+}
+.mybutton:hover{
+    color: #cfe0c3 !important;
+    transform: scale(1.1);
+}
+.rectangle {
+    position: fixed;
+    display: block;
+    font-size: small;
+    top: 90vh;
+    /* left: 24vw; */
+    /* background: linear-gradient(to right, #40798ce3, #70a9a161); */
+    background-color: #1f363de4;
+    /* Faded rectangle background color */
+    color: white;
+    padding: 10px;
+    width: 33vw;
+    /* height: 20px; */
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  .rectangle button {
+    background-color: #cbd2d719;
+    /* font-size: large; */
+    font-weight: bold;
+    color: white;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-left: 2%; */
+    margin: 3px;
+  }

@@ -40,9 +40,9 @@ function solveForN2($N1, $k, $n) {
 session_start();
 
 // Create some variables
-$Nor_titrant = 0.5; // In burette
+$Nor_titrant = 0.1; // In burette
 $Vol_titrate = 10; // Present in flask
-$m=rand(10,90)/100;
+$m=rand(30,90)/100;
 $k=rand(102,200)/100;
 // $m=.374;
 // $k=-.126;
