@@ -61,7 +61,7 @@ function preload() {
   bgImg = loadImage('bg3.png');
   image3 = loadImage('droper.png');
   frontflask = loadImage('frontflask.png');
-  liquid = loadImage('Halfwater.png');
+  liquid = loadImage('HalfwaterF.png');
   nextimg = loadImage('Forward.png');
   gif1 = createImg('gif1.gif');
   gif2 = createImg('gif1.gif');

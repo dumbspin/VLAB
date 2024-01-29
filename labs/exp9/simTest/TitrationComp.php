@@ -128,7 +128,7 @@ $m=$_SESSION['m'];
     </thead>
     <tbody>
       <tr>
-        <td>A</td>
+        <td>Sample1</td>
         <td>0.10</td>
         <td><?php echo round($data3,3) ?></td>
         <td><?php echo round(log10($data3),3) ?></td>
@@ -138,7 +138,7 @@ $m=$_SESSION['m'];
         <td><?php echo round(log10(3*(.10-$data3)/1),3)?></td>
       </tr>
       <tr>
-      <td>B</td>
+      <td>Sample2</td>
 <td>0.20</td>
 <td><?php echo round($data5, 3) ?></td>
 <td><?php echo round(log10($data5), 3) ?></td>
@@ -149,7 +149,7 @@ $m=$_SESSION['m'];
 </tr>
 
 <tr>
-<td>C</td>
+<td>Sample3</td>
 <td>0.30</td>
 <td><?php echo round($data7, 3) ?></td>
 <td><?php echo round(log10($data7), 3) ?></td>
@@ -160,7 +160,7 @@ $m=$_SESSION['m'];
 </tr>
 
 <tr>
-<td>D</td>
+<td>Sample4</td>
 <td>0.40</td>
 <td><?php echo round($data9, 3) ?></td>
 <td><?php echo round(log10($data9), 3) ?></td>
@@ -171,7 +171,7 @@ $m=$_SESSION['m'];
 </tr>
 
 <tr>
-<td>E</td>
+<td>Sample5</td>
 <td>0.50</td>
 <td><?php echo round($data11, 3) ?></td>
 <td><?php echo round(log10($data11), 3) ?></td>

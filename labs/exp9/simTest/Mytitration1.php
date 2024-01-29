@@ -16,7 +16,7 @@ echo $data1,':', $data2,':', $data3,':', $data4;
 ?>
 
 <head>
-  <title>Determination of alkalinity</title>
+  <title>Determination of adsorption of acetic acid by charcoal.</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -52,7 +52,7 @@ echo $data1,':', $data2,':', $data3,':', $data4;
   
   ?>
 
-  <H1>To determine the constituents and amount of alkalinity of the supplied water sample.</H1>
+  <H1>Determination of adsorption of acetic acid by charcoal.</H1>
   <div id="flexbox">
 
   </div>

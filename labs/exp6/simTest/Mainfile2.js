@@ -86,7 +86,7 @@ function preload() {
   bureteImg = loadImage('burette51.png', loaded);
   flaskImgbk = loadImage('backflask.png', loaded);
   flaskImg = loadImage('frontflask.png', loaded);
-  bottomImg = loadImage('water.png', loaded);
+  bottomImg = loadImage('waterF.png', loaded);
 //   gifImage = createImg('bubbler1.gif', loaded);
 nextimg = loadImage('Forward.png');
   backgroundImage = loadImage('bg.png', loaded);

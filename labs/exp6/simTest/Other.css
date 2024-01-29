@@ -70,7 +70,7 @@ body {
     overflow: hidden; 
   }
   .box::before {
-    content: "Determination of alkalinity";
+    content: "Determination of the Partition Coefficient  ";
     display: block;
     font-size: 18px;
     color: white;
