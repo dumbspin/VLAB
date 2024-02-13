@@ -73,7 +73,7 @@
             <input type="range" class="slider" id="Normality_titrate" min=".1" max=".9" value=".6" step=".2">
           </div>
           <div class="slider-box"><label for="Volume_titrate">Volume of titrant: <span class="slider-value"
-                id="Volume">1
+                id="Volume">10
                 ml<span></span></label>
             <input type="range" class="slider" id="Volume_titrate" min="1" max="15" value="10" step="1">
           </div>
@@ -113,7 +113,7 @@
       currentIndex = (currentIndex + 1) % textArray.length;
       displayText.textContent = textArray[currentIndex];
       if (currentIndex == textArray.length - 1) {
-        box.style.display = 'none';
+        box.style.display = 'block';
       }
     }
     function showHelp() {

@@ -475,7 +475,7 @@ function nextpressed() {
   // console.log('Hi');
 
   // Prepare the query parameters
-  const queryParams = `&data3=${encodeURIComponent(volume_titrant)}&data4=${encodeURIComponent(normality_titrant)}`;
+  const queryParams = `&data1=${encodeURIComponent(slider3.value())}&data2=${encodeURIComponent(slider2.value()/2)}&data3=${encodeURIComponent(volume_titrant)}&data4=${encodeURIComponent(normality_titrant)}`;
 
   // Using the Fetch API to send a GET request
   fetch(`send.php?${queryParams}`, {

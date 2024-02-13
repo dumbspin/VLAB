@@ -5,9 +5,10 @@
 session_start();
 
 // Access the value stored in the session variable from page1.php
-
-$data3 = $_SESSION['Vadded'];
-$data4 = $_SESSION['Result1'];
+$data1 = floatval($_SESSION['V1']); // Convert to float
+$data2 = floatval($_SESSION['N2']); // Convert to float
+$data3 = floatval($_SESSION['Vadded']); // Convert to float
+$data4 = floatval($_SESSION['Result1']); // Convert to float
 
 
 
@@ -74,32 +75,36 @@ $data4 = $_SESSION['Result1'];
         <!-- <p>Congratulations on completing the titration process!</p> -->
         
     </div>
-    <h2>Determination of Chloride content Test Results</h2>
+    <h2>Determination of Chloride Content</h2>
+    <h3>Observation Table</h3>
 
   <table>
     <thead>
       <tr>
-        <th>Sample In</th>
-        <th>Volume Needed</th>
-        <th>Normality Result</th>
+      <th>Volume Taken for Sample(V1)</th>
+        <th>Volume Consumed(V2)</th>
+        <th>Normality Set For Titrant(N2)</th>
+        <th>Normality Result(N1V1 = N2V2)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Reading</td>
-      
-        <td><?php echo round($data3, 2); ?></td>
-        <td><?php echo round($data4, 2); ?></td>
+
+      <td><?php echo round($data1, 2); ?> ml</td>
+        <td><?php echo round($data3, 2); ?> ml</td>
+        <td><?php echo round($data2, 2); ?> N</td>
+        <td><?php echo round($data4, 2); ?> N</td>
       </tr>
 
-      <!-- <tr>
-        <td>3</td>
-        <td>Colorless (pH &lt; 8.2)</td>
-        <td>Red (pH &lt; 3.1)</td>
-      </tr> -->
-      <!-- Add more rows as needed -->
+
     </tbody>
   </table>
+  <h3>Calculations</h3>
+  Choloride content = (N1 * 35.5)g/l
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<?php echo round($data4 *35.5, 2); ?> g/l
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=<?php echo round($data4 *35.5*1000, 2); ?> g/l
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<?php echo round($data4 *35.5*1000, 2); ?> ppm
+
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>
 

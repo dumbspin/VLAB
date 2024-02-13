@@ -22,6 +22,30 @@
     .slider-container {
       margin: 0 0 0 5px;
     }
+    .instructions-container{
+      position: fixed;  
+      top:20vh;    
+      z-index: 1000;
+      display: none;
+      background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+    text-align: center;
+    }
+    .instructions {
+  position: relative;
+  width: 50vw; /* Adjust as needed */
+  height: 60vh; /* Adjust as needed */
+  margin: auto; /* Center the image horizontally */
+}
+
+.instructions img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 100%; /* Ensure the image fits within the container */
+}
   </style>
 
 </head>
@@ -32,18 +56,25 @@
   </h1>
 
   <div id="center">
+    <div id="inst"class="instructions-container">
+      <button style="position: relative;left: 40% " onclick="changeText()"><i class="fa-solid fa-xmark"></i></button>
+      <div  class="instructions">
+        <img src="instruction exp8.gif" alt="Instructions are not loaded correctly.">
+        
+      </div>
+    </div>
   <div id="container" class="box">
     <button class="reset-button" onclick="location.reload()"><i class="fa-solid fa-rotate-right fa-xl"></i></button>
     <button class="help-button" onclick="showHelp()"><i class="fa-solid fa-circle-info fa-xl"></i></button>
     <button class="btn btn-primary btn-sm" id="runsetup" onclick="toggleFullScreen()"><i
         class=" fa-solid fa-xl fa-maximize" style="color: #9ec1a3;"></i></button>
   </div>
-  <div id="container1">
+  <!-- <div id="container1">
     <div id='textbox' class="rectangle">
       <span id="displayText">Add few drops of Erichrome Black T to conical flask.</span>
       <button onclick="changeText()"><i class="fa-solid fa-forward fa-xl"></i></button>
 
-    </div>
+    </div> -->
 
 
 
@@ -52,18 +83,13 @@
 </div>
 
   <script>
-    const textArray = ["Add few drops of Erichrome Black T  to conical flask.", "The colour of solution turns wine red.", ""]; // Add more texts as needed
+    
     let currentIndex = 0;
     const displayText = document.getElementById("displayText");
-    const box = document.getElementById('textbox');
+    const box = document.getElementById('inst');
     function changeText() {
 
-
-      currentIndex = (currentIndex + 1) % textArray.length;
-      displayText.textContent = textArray[currentIndex];
-      if (currentIndex == textArray.length - 1) {
-        box.style.display = 'none';
-      }
+      box.style.display = 'none';
     }
     function showHelp() {
       box.style.display = 'block';
