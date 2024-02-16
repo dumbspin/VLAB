@@ -42,10 +42,10 @@ ol.breadcrumb{
 .skin-blue, .sidebar-form{
 
 }
-#aim:hover, #theory:hover, #pretest:hover, #procedure:hover, #simulation:hover, #result:hover, #posttest:hover, #references:hover{
+#aim:hover, #theory:hover, #pretest:hover, #procedure:hover, #simulation:hover, #result:hover, #posttest:hover, #references:hover, #cred:hover{
     background-color: #9ec1a3 !important; 
 }
-a#aim, a#theory, a#pretest, a#procedure, a#simulation, a#result, a#posttest, a#references{
+a#aim, a#theory, a#pretest, a#procedure, a#simulation, a#result, a#posttest, a#references, a#cred{
     background-color: #70a9a1;
     /* border-bottom: 1px solid #40798c !important; */
     /* box-shadow: 2px 2px #40798c;
@@ -106,4 +106,43 @@ box-shadow: 2px 2px #1f363d;
 
 .main-sidebar a{
     text-align: left;
+}
+#developers-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.developer {
+    background-color: #fff;
+    border-radius: 8px;
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.developer::before {
+    /* content: "\2192"; Unicode arrow right character */
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #333;
+}
+.developer:hover {
+    transform: scale(1.05);
+}
+#faculty-coordinator {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
 }

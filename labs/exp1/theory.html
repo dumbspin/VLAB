@@ -17,9 +17,9 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
   <link href="style.css" rel="stylesheet" type="text/css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <script>
     window.onload = function () {
       document.getElementById("theory").className = "active treeview";
@@ -29,9 +29,10 @@
     #toggle_nav:hover {
       background-color: #1261A0;
     }
-    a#theory{
-    background-color: #40798c !important;
-}
+
+    a#theory {
+      background-color: #40798c !important;
+    }
   </style>
 
   <!-- Mathjs library -->
@@ -100,7 +101,7 @@
         <ul class="sidebar-menu" style="background-color:#70a9a1;">
           <li class="treeview" id="aim">
             <a href="index.html" id="aim">
-              <i class="fa-solid fa-crosshairs"style="color:white;"></i> <span style="color:white;">Aim</span>
+              <i class="fa-solid fa-crosshairs" style="color:white;"></i> <span style="color:white;">Aim</span>
               <!--  This is our section aim-->
 
             </a>
@@ -141,7 +142,7 @@
           </li>
           <li class="treeview" id="simulation">
             <a href="simulation.html" style="color:white;" id="simulation">
-              <i class="fa-solid fa-gears"style="color:white;"></i>
+              <i class="fa-solid fa-gears" style="color:white;"></i>
               <span>Simulation</span>
               <span class="pull-right-container">
               </span>
@@ -152,7 +153,7 @@
 
           <li class="treeview" id="posttest">
             <a href=" posttest.html" style="color:white;" id="posttest">
-              <i class="fa-solid fa-file-circle-question"style="color:white;">
+              <i class="fa-solid fa-file-circle-question" style="color:white;">
               </i>
               <span>Post Test</span>
               <span class="pull-right-container">
@@ -161,7 +162,7 @@
           </li>
           <li class="treeview" id="ref">
             <a href="references.html" style="color:white;" id="references">
-              <i class="fa-solid fa-book"style="color:white;"></i>
+              <i class="fa-solid fa-book" style="color:white;"></i>
               <span>References</span>
               <span class="pull-right-container">
               </span>
@@ -169,7 +170,7 @@
           </li>
           <li class="treeview" id="ref">
             <a href="credentials.html" style="color:white;" id="references">
-              <i class="fa-solid fa-book"style="color:white;"></i>
+              <i class="fa-solid fa-book" style="color:white;"></i>
               <span>Credentials</span>
               <span class="pull-right-container">
               </span>
@@ -193,106 +194,143 @@
         <h2><b>Introduction </b></h2>
 
         <p style="font-size:130%; margin-top:1%; text-align: justify">
-          Mohr's method is a titrimetric technique used to determine the chloride ion concentration in a solution. The method is based on the reaction between chloride ions and silver ions in a slightly acidic medium. The reaction can be represented as follows:   
-          Ag<sup>+</sup> + Cl<sup>-</sup> <=> AgCl<br>
+          <br>Generally water contains chloride ions (Cl<sup>–</sup>) in the form of NaCl, KCl, CaCl<sub>2</sub> and
+          MgCl<sub>2</sub>. The concentration of
+          chloride ion in water >250 ppm, is not desirable for drinking purpose. The total chloride ion can be
+          determined by argentometric method (Mohr’s Method). In this method Cl<sup>–</sup> ion solution is directly
+          titrated
+          against AgNO3 using potassium chromate (K<sub>2</sub>CrO<sub>4</sub>) as an indicator. The reaction involved
+          in the titration is
+          given below:</br>
+          <br>AgNO<sub>3</sub> + NaCl (aq.) → AgCl (white ppt)↓+ NaNO<sub>3</sub> -------- Eqn. (1)</br>
+          <br>2AgNO<sub>3</sub>+ K<sub>2</sub>CrO<sub>4</sub>→ Ag<sub>2</sub>CrO<sub>4</sub> (Reddish brown ppt)↓+
+          2KNO<sub>3</sub> -------- Eqn. (2)</br>
+
         </p>
 
         <h3><b>Chloride Ion Significance and Impact on Water Quality and Infrastructure</b></h3>
 
 
         <p style="font-size:130%; margin-top:1%; text-align: justify; font-style:'Nunito sans', sans-serif;">
-          The silver ions are provided by the addition of silver nitrate AgNO3 to the sample containing chloride ions. The titration is performed with a standard solution of potassium chromate K<sub>2</sub>CrO<sub>4</sub> which acts as an indicator. The endpoint of the titration is marked by the formation of a red-brown precipitate of silver chromate (Ag<sub>2</sub>CrO<sub>4</sub>) indicating the complete reaction of chloride ions. The reaction involved in the endpoint is:2Ag++CrO<sub>4</sub><sup>2-</sup> <=> Ag<sub>2</sub>Cr<sub>4</sub> The appearance of this red-brown color signifies the completion of the titration. 
+          According to the above mentioned reactions, when all the Cl<sup>–</sup> ions are removed as AgCl, at the same point
+          yellow color of chromate ions changes to reddish brown color, and at the end point no further change is
+          observed in color of solution.
         </p>
 
-        <center><img src="images/indicator.jpg" alt="structure" height="400" width="700" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+        <center><img src="images/indicator.jpg" alt="structure" height="400" width="700"
+            style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
         <center><b style="font-size:18px;">Fig.1 Indicator analyte </b></center><br>
 
-        <center><img src="images/ppt tit.jpg" alt="symbol" height="320" width="600" style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
+        <center><img src="images/ppt tit.jpg" alt="symbol" height="320" width="600"
+            style="mix-blend-mode: darken; -webkit-filter:contrast(220%);"></center>
         <center><b style="font-size:18px;">Fig.2 Precipitation titration</b></center>
 
         <p style="font-size:130%; margin-top:1%; text-align: justify">
-          Chloride, existing in the form of chloride ions (Cl<sup>-</sup>) in water and wastewater, is a significant inorganic anion. Its concentration is generally higher in wastewater compared to raw water due to the presence of sodium chloride in diets, contributing an estimated 6 g of chlorides per person per day. Human consumption further adds about 15 mg/L of chloride to wastewater. Coastal areas may experience elevated chloride levels due to saltwater leakage into sewage systems, and industrial processes can also contribute. In potable water, the salty taste associated with chloride varies based on water composition. Waters with 250 mg/L Cl<sup>-</sup> may taste salty if sodium is present, while those with up to 1000 mg/L may lack a salty taste when calcium and magnesium are predominant cations. High chloride content can adversely affect metallic pipes, structures, and plant growth.
+          
         </p>
 
         <h3><b>Significance of Measuring Chloride Ions in Water Analysis</b></h3>
 
-        
-        <center><img src="images/pink solution (1).jpg" alt="circuit" height="537" width="571" style="mix-blend-mode: darken; -webkit-filter:contrast(150%);"></center>
+
+        <center><img src="images/pink solution (1).jpg" alt="circuit" height="537" width="571"
+            style="mix-blend-mode: darken; -webkit-filter:contrast(150%);"></center>
         <center><b style="font-size:18px;">Fig.3 Colour Changing</b></center>
 
 
         <p style="font-size:130%; margin-top:1%; text-align: justify">
-          This experiment delves into the determination of chloride content using Mohr’s Method, an insightful titration technique. Chloride, existing as chloride ions (Cl⁻), is a significant inorganic anion found in water and wastewater. The concentration of chloride tends to be higher in wastewater due to dietary sodium chloride, Additionally, the experiment examines the influence of chloride on the taste of potable water, variations in concentrations, and potential impacts on infrastructure and plant life. The objective is to uncover the versatility and applicability of Mohr’s Method in analyzing chloride levels across diverse water sources, offering valuable insights into environmental and water quality assessments
+ 
 
-          <center><img src="images/agno3.jpg" alt="V-I characteristics" height="420" width="530" style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
-        <center><b style="font-size:18px;">Fig.4 Ion formation </b></center></p>
+          <center><img src="images/agno3.jpg" alt="V-I characteristics" height="420" width="530"
+              style="mix-blend-mode: darken; -webkit-filter:contrast(120%);"></center>
+          <center><b style="font-size:18px;">Fig.4 Ion formation </b></center>
+        </p>
 
 
         <p style="font-size:130%; margin-top:1%; text-align: justify">
 
-          The measured chloride ions play a crucial role in determining the salinity of diverse water sources. Particularly in brackish water, seawater, or industrial brine solutions, chloride concentration serves as a key parameter, offering insights into the desalting requirements of apparatus. Notably, chloride ions can interfere with Chemical Oxygen Demand (COD) determination, necessitating correction based on their presence or the introduction of a complexing agent, such as HgSO4. Additionally, chloride ions find application as tracer ions in column studies, aiding in modeling the fate of various contaminants in both soil and liquid media.
-          
+    
+
 
         </p>
 
-      
+
         <h3><b>Advantages of determining the chloride content in a given sample using Mohr's method.</b></h3>
         <p style="font-size:130%; text-align: justify">
 
-          1. Cost-Effective Analysis: Mohr's method offers a budget-friendly approach for chloride determination, requiring basic equipment and standard reagents.<br><br>
+          1. Cost-Effective Analysis: Mohr's method offers a budget-friendly approach for chloride determination,
+          requiring basic equipment and standard reagents.<br><br>
 
           2. Precision: Mohr's method provides precise results for chloride content determination.<br><br>
-          
+
           3. Speed: Quick turnaround time for obtaining results in a timely manner.<br><br>
-          
+
           4. Visual Endpoint: The use of a visible indicator allows for easy endpoint detection.<br><br>
-          
+
           5. Accessibility: Reagents used are readily available and commonly used in labs.<br><br>
-          
-          6. Rapid Results: Enables quick analysis, making it suitable for high-throughput scenarios or situations requiring timely outcomes.<br><br>
-          
-          7. High Precision and Accuracy: When performed carefully, Mohr's method can yield high precision and accuracy in chloride concentration measurements. The use of a standardized solution for titration enhances the reliability of the results.<br><br>
-          
-          8. Widespread Availability: Reagents for Mohr's method are commonly available, making it a convenient choice for laboratories with diverse resources.<br><br>
-          
+
+          6. Rapid Results: Enables quick analysis, making it suitable for high-throughput scenarios or situations
+          requiring timely outcomes.<br><br>
+
+          7. High Precision and Accuracy: When performed carefully, Mohr's method can yield high precision and accuracy
+          in chloride concentration measurements. The use of a standardized solution for titration enhances the
+          reliability of the results.<br><br>
+
+          8. Widespread Availability: Reagents for Mohr's method are commonly available, making it a convenient choice
+          for laboratories with diverse resources.<br><br>
+
           9. Educational Value: Widely used in educational settings for teaching titration principles.<br><br>
 
-          </p>
+        </p>
 
         <h3><b>Disadvantages of determining the chloride content in a given sample using Mohr's method.</b></h3>
         <p style="font-size:130%; text-align: justify">
-          1. Limited Sensitivity: Mohr's method may lack the sensitivity needed for very low chloride concentrations, making it less suitable for trace-level analyses.<br><br>
+          1. Limited Sensitivity: Mohr's method may lack the sensitivity needed for very low chloride concentrations,
+          making it less suitable for trace-level analyses.<br><br>
 
-2. Interference from Other Ions: Certain ions present in the sample, even after the addition of dilute nitric acid, can interfere with the accuracy of chloride determination.<br><br>
+          2. Interference from Other Ions: Certain ions present in the sample, even after the addition of dilute nitric
+          acid, can interfere with the accuracy of chloride determination.<br><br>
 
-3. Strict pH Control: The accuracy of Mohr's method is sensitive to maintaining a consistent pH, requiring careful control throughout the titration process.<br><br>
+          3. Strict pH Control: The accuracy of Mohr's method is sensitive to maintaining a consistent pH, requiring
+          careful control throughout the titration process.<br><br>
 
-4. Endpoint Ambiguity: Visual detection of the endpoint may be subjective, leading to potential discrepancies in results due to individual interpretation.<br><br>
+          4. Endpoint Ambiguity: Visual detection of the endpoint may be subjective, leading to potential discrepancies
+          in results due to individual interpretation.<br><br>
 
-5. Precipitation Challenges: The formation of silver chloride precipitate may pose challenges, such as co-precipitation of other substances or incomplete precipitation in certain conditions.<br><br>
+          5. Precipitation Challenges: The formation of silver chloride precipitate may pose challenges, such as
+          co-precipitation of other substances or incomplete precipitation in certain conditions.<br><br>
 
-6.Complex Matrices: In the presence of complex matrices or diverse sample compositions, the accuracy of Mohr's method may be compromised, necessitating additional sample preparation steps.
-        
+          6.Complex Matrices: In the presence of complex matrices or diverse sample compositions, the accuracy of Mohr's
+          method may be compromised, necessitating additional sample preparation steps.
+
         </p>
-          
+
         <h3><b>Applications of determining the chloride content in a given sample using Mohr's method.</b></h3>
         <p style="font-size:130%; text-align: justify">
-          1. Water Quality Monitoring: Mohr's method is widely used for the routine analysis of chloride in water samples, providing critical information for assessing water quality and compliance with regulatory standards.<br><br>
+          1. Water Quality Monitoring: Mohr's method is widely used for the routine analysis of chloride in water
+          samples, providing critical information for assessing water quality and compliance with regulatory
+          standards.<br><br>
 
-          2. Environmental Monitoring: It is employed in environmental studies to determine chloride levels in soil and liquid media, aiding in the assessment of contamination and the fate of contaminants.<br><br>
-          
-          3. Industrial Processes: Mohr's method finds application in industries where chloride content is a critical parameter, such as in the production of chemicals, pharmaceuticals, and food processing.<br><br>
-          
-          4. Desalination Processes: In desalination plants, the method is used to monitor chloride levels in brackish water and industrial brine solutions, helping optimize the desalting process.<br><br>
-          
-          5.Corrosion Control:Monitoring chloride levels is crucial in industries like construction and infrastructure, where high chloride concentrations can lead to corrosion of metallic structures. Mohr's method helps assess the potential risk of corrosion.</p>
+          2. Environmental Monitoring: It is employed in environmental studies to determine chloride levels in soil and
+          liquid media, aiding in the assessment of contamination and the fate of contaminants.<br><br>
+
+          3. Industrial Processes: Mohr's method finds application in industries where chloride content is a critical
+          parameter, such as in the production of chemicals, pharmaceuticals, and food processing.<br><br>
+
+          4. Desalination Processes: In desalination plants, the method is used to monitor chloride levels in brackish
+          water and industrial brine solutions, helping optimize the desalting process.<br><br>
+
+          5.Corrosion Control:Monitoring chloride levels is crucial in industries like construction and infrastructure,
+          where high chloride concentrations can lead to corrosion of metallic structures. Mohr's method helps assess
+          the potential risk of corrosion.</p>
         <!--Theory of experiment -->
 
       </section>
       <!-- /.content -->
     </div>
     <footer class="main-footer">
-      <h4 align="center">Lab contributed by THDC Institute of Hydro Power Engineering and Technology <!-- Institute Name --> </h4>
+      <h4 align="center">Lab contributed by THDC Institute of Hydro Power Engineering and Technology
+        <!-- Institute Name -->
+      </h4>
     </footer>
   </div>
 
