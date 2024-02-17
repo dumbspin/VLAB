@@ -105,6 +105,13 @@ $data4 = floatval($_SESSION['Result1']); // Convert to float
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=<?php echo round($data4 *35.5*1000/10, 2); ?> mg/l
  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<?php echo round($data4 *35.5*1000/10, 2); ?> ppm
 
+ <br><br>
+  For Detailed Calculation
+  <a style="            text-decoration: none; 
+            color: blue" href="calc.png"> Click here
+        
+    </a>
+    <br>
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>
 

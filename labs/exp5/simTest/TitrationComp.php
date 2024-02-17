@@ -85,9 +85,9 @@ $data4 = $_SESSION['v2'];
         <!-- <th>N1</th> -->
         <th>Volume of Solution in Flask</th>
        
-        <th>Volume Needed</th>
-        <th>Normality( Potassium Dichromate in burette)</th>
-        <th>iron Content In Sample</th>
+        <th>Volume Used of 0.1M K2Cr2o7</th>
+        <th>Molarity of FAS solution</th>
+        <th>Iron Content In Sample</th>
         
         <!-- <th></th> -->
       </tr>
@@ -98,7 +98,7 @@ $data4 = $_SESSION['v2'];
         <td><?php echo round($data4,2) ?> ml</td>
         
         <td><?php echo round($data3,2) ?> ml</td>
-        <td><?php echo round($data2,2) ?> N</td>
+        <td><?php echo round($data2/6,2) ?> M</td>
         <td><?php echo round($data2*55.85,2) ?> g/l</td>
       </tr>
 

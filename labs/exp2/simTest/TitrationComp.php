@@ -99,21 +99,21 @@ $data8=$_SESSION['volume_titrant']
         <td><?php echo round($data2,2) ?></td>
 
         <td><?php echo round($data8,2) ?></td>
-        <td><?php echo round($data4,2) ?></td>
-        <td><?php echo round($data4*50000,2) ?></td>
+        <td><?php echo round($data4/10,3) ?></td>
+        <td><?php echo round($data4*5000,2) ?></td>
       </tr>
       <tr>
         <td>Permanent Hardness</td>
         <td><?php echo round($data7,2) ?></td>
 
         <td><?php echo round($data6,2)?></td>
-        <td><?php echo round($data5,2) ?></td>
-        <td><?php echo round($data5*50000,2) ?></td>
+        <td><?php echo round($data5/10,3) ?></td>
+        <td><?php echo round($data5*5000,2) ?></td>
       </tr>
       <tr>
         <td>Temporary Hardness</td>
         <td colspan="3" style="text-align: center;">Total Hardness- Permanent Hardness</td>
-        <td><?php echo round($data4*50000-$data5*50000,2) ?></td>
+        <td><?php echo round($data4*5000-$data5*5000,2) ?></td>
       </tr>
       <!-- <tr>
         <td>3</td>
@@ -124,6 +124,14 @@ $data8=$_SESSION['volume_titrant']
     </tbody>
     
   </table>
+
+  <br><br>
+  For Detailed Calculation
+  <a style="            text-decoration: none; 
+            color: blue" href="calc.png"> Click here
+        
+    </a>
+    <br>
 
   
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>

@@ -195,6 +195,13 @@ $m=$_SESSION['m'];
 
   <h5>1/n= <?php echo round($m, 3) ?></h5>
   <h5>Log K = <?php echo round($k, 3) ?></h5>
+  <br><br>
+  For Detailed Calculation
+  <a style="            text-decoration: none; 
+            color: blue" href="calc.png"> Click here
+        
+    </a>
+    <br>
 
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>

@@ -445,10 +445,10 @@ function start() {
 
   //
   buretesize = buretesize + 0.1;
-  normality_titrant = (parseFloat(var4)*random(40, 60)/100);
+  normality_titrant = (parseFloat(var4)*random(40, 60)/100);//
   console.log("Normality =",var4, normality_titrant);
   //Calculating the height for change colour
-  volume_titrant = (normality_titrant * volume_titrate) / normality_titrate;
+  volume_titrant = (normality_titrant * volume_titrate) / (normality_titrate*10);
   console.log("Volume Required", volume_titrant);
   bureteTouched = !bureteTouched;
 

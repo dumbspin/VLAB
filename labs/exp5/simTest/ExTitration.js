@@ -6,7 +6,7 @@ let size = 7;
 let shownext = false;
 let color1, color2, color3, color4, color5;
 
-let n1=.7,n2,v1,v2=25;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
+let n1=.6,n2,v1,v2=25;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
 
 let dropHeight = 20, showDropHeight = true, increaseDH = true;
 

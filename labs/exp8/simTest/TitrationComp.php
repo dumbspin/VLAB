@@ -88,7 +88,10 @@ $x2=$data4;
         <!-- <th>N1</th> -->
         <th>Sample Used</th>
         <th>Weight of liquid</th>
+        <th>Density</th>
         <th>Number of Drops</th>
+        <th>Surface Tension</th>
+
         <!-- <th></th> -->
       </tr>
     </thead>
@@ -98,7 +101,9 @@ $x2=$data4;
        
         <td>Water Sample</td>
         <td><?php echo round($data1*62,2) ?> grams</td>
+        <td>0.098 gm/cubic cm (known)</td>
         <td><?php echo round((-500/3) * pow($x1, 4) + 250 * pow($x1, 3) - (215/3) * pow($x1, 2) + 33 * $x1 + 35,0) ?> Drops</td>
+        <td>72.8 dynes/cm (known)</td>
       </tr>
       <tr>
         
@@ -106,7 +111,10 @@ $x2=$data4;
        
         <td>Glycerine Solution</td>
         <td><?php echo round($data3*62,2) ?> grams</td>
+        <td><?php echo round(($data3*62*0.098)/($data1*62),3) ?> gm/cubic cm</td>
         <td><?php echo round(((101/11250) * ($x2**3) - (29/250) * ($x2**2) + (371/2250) * $x2 + 34),0) ?> Drops</td>
+        
+        <td><?php echo round((72.8*($data3*62)*round(((101/11250) * ($x2**3) - (29/250) * ($x2**2) + (371/2250) * $x2 + 34),0))/($data1*62*round((-500/3) * pow($x1, 4) + 250 * pow($x1, 3) - (215/3) * pow($x1, 2) + 33 * $x1 + 35,0)),3) ?> dynes/cm</td>
       </tr>
 
       <!-- <tr>
@@ -118,6 +126,13 @@ $x2=$data4;
     </tbody>
     
   </table>
+  <br><br>
+  For Detailed Calculation
+  <a style="            text-decoration: none; 
+            color: blue" href="calc.png"> Click here
+        
+    </a>
+    <br>
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>
   </div>

@@ -529,7 +529,7 @@ function drop(){
 function doubleClicked(){
 
  
-  console.log(dropCounter)
+  // console.log(dropCounter)
   
 }
 
