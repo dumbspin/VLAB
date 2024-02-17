@@ -79,7 +79,7 @@ $data8=$_SESSION['volume_titrant']
         <!-- <p>Congratulations on completing the titration process!</p> -->
         
     </div>
-    <h2>To determine the constituents and amount of alkalinity of the supplied water sample</h2>
+    <h2>To determine the Total, Permanent and Temporary hardness of water sample.</h2>
     <h3>Results</h3>
 
   <table>
@@ -87,22 +87,33 @@ $data8=$_SESSION['volume_titrant']
       <tr>
         <th>Sample In</th>
         <th>Volume Of Solution Taken</th>
-        <th>Normality Result</th>
         <th>Volume Result Used</th>
+        <th>Normality of water sample(N)</th>
+        <th>Hardnes in ppm</th>
+
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Total Hardness</td>
         <td><?php echo round($data2,2) ?></td>
-        <td><?php echo round($data4,2) ?></td>
+
         <td><?php echo round($data8,2) ?></td>
+        <td><?php echo round($data4,2) ?></td>
+        <td><?php echo round($data4*50000,2) ?></td>
       </tr>
       <tr>
         <td>Permanent Hardness</td>
         <td><?php echo round($data7,2) ?></td>
-        <td><?php echo round($data5,2) ?></td>
+
         <td><?php echo round($data6,2)?></td>
+        <td><?php echo round($data5,2) ?></td>
+        <td><?php echo round($data5*50000,2) ?></td>
+      </tr>
+      <tr>
+        <td>Temporary Hardness</td>
+        <td colspan="3" style="text-align: center;">Total Hardness- Permanent Hardness</td>
+        <td><?php echo round($data4*50000-$data5*50000,2) ?></td>
       </tr>
       <!-- <tr>
         <td>3</td>
@@ -113,6 +124,8 @@ $data8=$_SESSION['volume_titrant']
     </tbody>
     
   </table>
+
+  
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>
   </div>

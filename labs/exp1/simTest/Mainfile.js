@@ -424,7 +424,7 @@ function funflasktouched() {
 function start() {
 
   // Get the location of the canvas
-  normality_titrate = slider2.value() / 2;
+  normality_titrate = slider2.value() ;
   volume_titrate = slider3.value();
   if (turnslideractive == true) {
     cropHeight = flaskheight - volume_titrate * 0.8 * size;
@@ -434,10 +434,10 @@ function start() {
 
   //
   buretesize = buretesize + 0.1;
-  normality_titrant = random(0.80, .90);
+  normality_titrant = random(0.1, .2);
   console.log("Normality =", normality_titrant);
   //Calculating the height for change colour
-  volume_titrant = (normality_titrant * volume_titrate) / normality_titrate;
+  volume_titrant = ((normality_titrant) * volume_titrate) / (normality_titrate*10);
   console.log("Volume Required", volume_titrant);
   bureteTouched = !bureteTouched;
 
@@ -474,8 +474,8 @@ function drawppt(){
 function nextpressed() {
   // console.log('Hi');
 
-  // Prepare the query parameters
-  const queryParams = `&data1=${encodeURIComponent(slider3.value())}&data2=${encodeURIComponent(slider2.value()/2)}&data3=${encodeURIComponent(volume_titrant)}&data4=${encodeURIComponent(normality_titrant)}`;
+  // Prepare the query parameters normality_titrate
+  const queryParams = `&data1=${encodeURIComponent(volume_titrant)}&data2=${encodeURIComponent(volume_titrate)}&data3=${encodeURIComponent(normality_titrate)}&data4=${encodeURIComponent(normality_titrant)}`;
 
   // Using the Fetch API to send a GET request
   fetch(`send.php?${queryParams}`, {

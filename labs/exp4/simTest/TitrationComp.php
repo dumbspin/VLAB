@@ -86,22 +86,28 @@ $data8 = $_SESSION['Normality_titrant2'];
       <tr>
         <th>Sample In</th>
         <th>Volume Before Titration</th>
-        <th>Normality Result</th>
         <th>Volume used</th>
+        <th>Normality Result</th>
+        <th>Alkalinity in ppm</th>
+
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Phenolphthalein</td>
-        <td><?php echo round($data2,2) ?></td>
-        <td><?php echo round($data4,2) ?></td>
-        <td><?php echo round($data3,2)?></td>
+        <td><?php echo round($data2,2) ?> ml</td>
+
+        <td><?php echo round($data3,2)?> ml</td>
+        <td><?php echo round($data4,2) ?> N</td>
+        <td><?php echo round($data4*50000,2) ?> ppm</td>
       </tr>
       <tr>
         <td>Methylorange</td>
-        <td><?php echo round($data6,2)?></td>
-        <td><?php echo round($data8,2)?></td>
-        <td><?php echo round($data7,2) ?></td>
+        <td><?php echo round($data6,2)?> ml</td>
+
+        <td><?php echo round($data7,2) ?> ml</td>
+        <td><?php echo round($data8,2)?> N</td>
+        <td><?php echo round($data8*50000,2)?> ppm</td>
       </tr>
       <!-- <tr>
         <td>3</td>
@@ -112,9 +118,19 @@ $data8 = $_SESSION['Normality_titrant2'];
     </tbody>
     
   </table>
+  <br><br>
+  For Detailed Calculation
+  <a style="            text-decoration: none; 
+            color: blue" href="calc.png"> Click here
+        
+    </a>
+    <br>
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
+  
 </button></a>
   </div>
+
+  
 
 </body>
 </html>

@@ -179,7 +179,7 @@ function preload() {
   // Load your images
   image1 = loadImage('PotasiumChromate.png');
   image1bck = loadImage('PotasiumChromatebck.png');
-  rod = loadImage('glass rod.png');
+  rod = loadImage('glass rod3.png');
   bgImg = loadImage('bg.png');
   image3 = loadImage('droper.png');
   frontflask = loadImage('frontflask.png');
@@ -240,9 +240,9 @@ function setup() {
   waterDroplet = new WaterDroplet(500, 490);
 
 
-  startPoint = createVector(140, 385);
+  startPoint = createVector(165, 385);
   endPoint = createVector(250, 150);
-  endPoint2 = createVector(650, 420);
+  endPoint2 = createVector(650, 380);
   endPoint3 = createVector(80, 100);
   endPoint4 = createVector(100, 490);
   
@@ -372,7 +372,7 @@ function draw() {
 
   waterDroplet.display();
   if (process1 === 0) {
-    image(rod, currentPoint.x, currentPoint.y, 60, 140);
+    image(rod, currentPoint.x, currentPoint.y, 40, 140);
   }
   else if (process1 === 1) {
     // Moving to point B or C
@@ -384,7 +384,7 @@ function draw() {
   }
   else if(process1===3){
     showCir=false;
-    image(rod, currentPoint.x, currentPoint.y, 60, 140);
+    image(rod, currentPoint.x, currentPoint.y, 40, 140);
     
 
     if (changeColor & touch==1 ){  
@@ -422,10 +422,10 @@ function draw() {
     moveToPoint(endPoint4);
   }
   else if(process1===6){
-  image(rod, startPoint.x, startPoint.y, 60, 140);
+  image(rod, startPoint.x, startPoint.y, 40, 140);
   }
   else {
-    image(rod, currentPoint.x, currentPoint.y, 60, 140);
+    image(rod, currentPoint.x, currentPoint.y, 40, 140);
   }
 
   // pop();
@@ -520,7 +520,7 @@ function draw() {
   if (mouseX > buretteX - size * 28.57 / 8 + 140 && mouseX < buretteX + size * 28.57 / 6 + 140 && mouseY > buretteY - size * 5 + 280 && mouseY < buretteY + size * 5 + 280) {
     cursor('pointer');
   }
-  else if ((mouseX > currentPoint.x - 20 + 50 && mouseX < currentPoint.x + 20 + 50 && mouseY > currentPoint.y - 40 + 50 && mouseY < currentPoint.y + 40 + 50)) {
+  else if ((mouseX > currentPoint.x - 20+15 && mouseX < currentPoint.x + 20+15  && mouseY > currentPoint.y - 60 + 50 && mouseY < currentPoint.y + 60 + 50)) {
     cursor('pointer');
   }
   //For droper
@@ -544,7 +544,7 @@ function mousePressed() {
   if (mouseX > buretteX - size * 28.57 / 8 + 140 && mouseX < buretteX + size * 28.57 / 6 + 140 && mouseY > buretteY - size * 5 + 280 && mouseY < buretteY + size * 5 + 280) {
     droperpressed();
   }
-  else if (mouseX > currentPoint.x - 20 + 50 && mouseX < currentPoint.x + 20 + 50 && mouseY > currentPoint.y - 40 + 50 && mouseY < currentPoint.y + 40 + 50) {
+  else if ((mouseX > currentPoint.x - 20+15 && mouseX < currentPoint.x + 20+15  && mouseY > currentPoint.y - 60 + 50 && mouseY < currentPoint.y + 60 + 50)) {
     console.log(currentStep);
   process1+=1;
 
@@ -587,7 +587,7 @@ function moveToPoint(targetPoint) {
 
 
 
-  image(rod, currentPoint.x, currentPoint.y, 60, 140);
+  image(rod, currentPoint.x, currentPoint.y, 40, 140);
   // pop();
 
   currentStep++;

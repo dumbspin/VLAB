@@ -90,10 +90,10 @@ $data4 = floatval($_SESSION['Result1']); // Convert to float
     <tbody>
       <tr>
 
-      <td><?php echo round($data1, 2); ?> ml</td>
-        <td><?php echo round($data3, 2); ?> ml</td>
-        <td><?php echo round($data2, 2); ?> N</td>
-        <td><?php echo round($data4, 2); ?> N</td>
+      <td><?php echo round($data2, 2); ?> ml</td>
+        <td><?php echo round($data1, 2); ?> ml</td>
+        <td><?php echo round($data3, 3); ?> N</td>
+        <td><?php echo round($data4/10, 3); ?> N</td>
       </tr>
 
 
@@ -101,9 +101,9 @@ $data4 = floatval($_SESSION['Result1']); // Convert to float
   </table>
   <h3>Calculations</h3>
   Choloride content = (N1 * 35.5)g/l
-  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<?php echo round($data4 *35.5, 2); ?> g/l
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=<?php echo round($data4 *35.5*1000, 2); ?> g/l
- <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<?php echo round($data4 *35.5*1000, 2); ?> ppm
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<?php echo round($data4 *35.5/10, 2); ?> g/l
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=<?php echo round($data4 *35.5*1000/10, 2); ?> mg/l
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<?php echo round($data4 *35.5*1000/10, 2); ?> ppm
 
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>

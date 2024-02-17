@@ -133,7 +133,7 @@ function setup() {
   
   normality_titrate=var1;
   // var n_titrate= 
-  volume_titrate=parseFloat(var2)+parseFloat(var3);
+  volume_titrate=parseFloat(var2);
 
   slider1.removeAttribute('disabled'); // Enable the slider1
   // slider2.removeAttribute('disabled'); // Enable the slider2
@@ -155,8 +155,8 @@ function setup() {
   flasktouchX = 10.5 * size;
   flasktouchY = 19.5 * size;
 
-  changetint = color(255, 160, 5, 200);//Defining the net at starting
-  aftercolour = color(170, 74, 68	, darkness);//Defining the net colour after titration
+  changetint = color(246, 229, 40, 255);//Defining the net at starting
+  aftercolour = color(247, 117, 19	, darkness);//Defining the net colour after titration
   
   //gifImage.hide();
 
@@ -177,7 +177,7 @@ function setup() {
 
 
   vadded = 0;
-  aftercolour = color(228, 88, 114, darkness);//Defining the net colour after titration
+  // aftercolour = color(228, 88, 114, darkness);//Defining the net colour after titration
 
   //pieceHeight = height / numPieces;
 
@@ -445,7 +445,7 @@ function start() {
   normality_titrant = random(0.90, .99);
   console.log("Normality =", normality_titrant,"");
   //Calculating the height for change colour
-  volume_titrant = (normality_titrant * volume_titrate) / normality_titrate;
+  volume_titrant = ((normality_titrant/10)* volume_titrate) / (normality_titrate/10);
   console.log("Normality", normality_titrant," ",normality_titrate," ",volume_titrant," ",volume_titrate);
   bureteTouched = !bureteTouched;
 
@@ -461,22 +461,22 @@ function shake() {
 }
 function drawppt(){
     
-  size_vary = Math.floor(random(0.2152,0.2511)*size);
-  size_vary2 = Math.floor(random(0.2152,0.2511)*size);
-  frameRate(30); 
-  fill(170, 74, 68,255);  // Set the fill color to red
-  noStroke(); 
-  const upperBound = Math.floor(random(1,2)+number*1.25-5) ;
+  // size_vary = Math.floor(random(0.2152,0.2511)*size);
+  // size_vary2 = Math.floor(random(0.2152,0.2511)*size);
+  // frameRate(30); 
+  // fill(170, 74, 68,255);  // Set the fill color to red
+  // noStroke(); 
+  // const upperBound = Math.floor(random(1,2)+number*1.25-5) ;
 
 
 
-  for (let i = 0; i < upperBound*6; i++) {
+  // for (let i = 0; i < upperBound*6; i++) {
 
-    variation = Math.floor(random(-1.4349,1.4349)*size);
-    variation2 = Math.floor(random(0.1793,0.3587)*size);
+  //   variation = Math.floor(random(-1.4349,1.4349)*size);
+  //   variation2 = Math.floor(random(0.1793,0.3587)*size);
 
-    ellipse(flaskX+variation+1.8*size,flaskY+variation2+3.9*size, size_vary/4, size_vary2/4);
-    }
+  //   ellipse(flaskX+variation+1.8*size,flaskY+variation2+3.9*size, size_vary/4, size_vary2/4);
+  //   }
 }
 
 function nextpressed(){

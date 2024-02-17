@@ -83,19 +83,23 @@ $data4 = $_SESSION['v2'];
     <thead>
       <tr>
         <!-- <th>N1</th> -->
-        <th>Normality( Potassium Dichromate in burette)</th>
-        <th>Volume Needed</th>
         <th>Volume of Solution in Flask</th>
+       
+        <th>Volume Needed</th>
+        <th>Normality( Potassium Dichromate in burette)</th>
+        <th>iron Content In Sample</th>
+        
         <!-- <th></th> -->
       </tr>
     </thead>
     <tbody>
       <tr>
         <!-- <td>Total Hardness</td> -->
-       
-        <td><?php echo round($data2,2) ?></td>
-        <td><?php echo round($data3,2) ?></td>
-        <td><?php echo round($data4,2) ?></td>
+        <td><?php echo round($data4,2) ?> ml</td>
+        
+        <td><?php echo round($data3,2) ?> ml</td>
+        <td><?php echo round($data2,2) ?> N</td>
+        <td><?php echo round($data2*55.85,2) ?> g/l</td>
       </tr>
 
       <!-- <tr>
@@ -107,9 +111,17 @@ $data4 = $_SESSION['v2'];
     </tbody>
     
   </table>
+  <br><br>
+  For Detailed Calculation
+  <a style="            text-decoration: none; 
+            color: blue" href="calc.png"> Click here
+        
+    </a>
+    <br>
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>
   </div>
+
 
 </body>
 </html>
