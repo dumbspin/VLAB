@@ -86,13 +86,15 @@ $m=$_SESSION['m'];
       background-color: #f1f1f1;
     }
     .Chart{
+      background-color: white;
+      border-radius: 5px;
       height: 600px;
       width: 1000px;
       display: flex;
       align-items: center;
       justify-items: center;
     }
-    canvas {
+    canvas {background-color: white;
     aspect-ratio: auto !important; /* Reset the aspect ratio */
     max-width: 100%; /* Allow the canvas to resize horizontally */
     family:'poppins',
@@ -263,9 +265,11 @@ $m=$_SESSION['m'];
 
                         reverse: true,
                         beginAtZero: true,
+                        min: -5, // Set the minimum value of the y-axis
+                    max: 5, // Set the maximum value of the y-axis
                         ticks:{
                           maxTicksLimit:15,
-                        stepSize: 0.1 // Set the step size of the y-axis to 0.20
+                        stepSize: 1 // Set the step size of the y-axis to 0.20
                         ,                  font: {
                         family: 'Poppins', // Change the font family to Poppins
 

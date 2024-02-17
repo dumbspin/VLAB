@@ -69,11 +69,11 @@
             <input type="range" class="slider" id="speed_change" min="1" max="5" value="2" step="1">
           </div>
           <div class="slider-box"><label for="Normality_titrate">Normality of titrate: <span class="slider-value"
-                id="Normality">.6 N<span></span></label>
-            <input type="range" class="slider" id="Normality_titrate" min=".1" max=".9" value=".6" step=".2">
+                id="Normality">.016 N<span></span></label>
+            <input type="range" class="slider" id="Normality_titrate" min=".01" max=".02" value=".016" step=".002">
           </div>
           <div class="slider-box"><label for="Volume_titrate">Volume of titrant: <span class="slider-value"
-                id="Volume">1
+                id="Volume">10
                 ml<span></span></label>
             <input type="range" class="slider" id="Volume_titrate" min="1" max="15" value="10" step="1">
           </div>

@@ -105,7 +105,7 @@ $data4 = $_SESSION['Result1'];
         </div> -->
           <div class="result-container">
             <h5>Past Titration Reading: </h5>
-            <div id="OldDisplay" style="margin-left: 10px;" class="result">
+            <div id="OldDisplay" style="margin-left: 10px;" class="result"><?php echo '$data4'?>
             </div>
             <div class="result-container">
               <h5>Volume added(H2SO4): </h5>

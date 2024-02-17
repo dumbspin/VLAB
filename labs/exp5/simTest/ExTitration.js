@@ -5,8 +5,9 @@ let buretteX, buretteY;
 let size = 7;
 let shownext = false;
 let color1, color2, color3, color4, color5;
+let runOnce_2=true;
 
-let n1=.6,n2,v1,v2=25;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
+let n1=.7,n2,v1,v2=25;//Here 1 is for burette and 2 for flask and here we can choose n1,v2 and n2 will be randomly generated and will help to find v1
 
 let dropHeight = 20, showDropHeight = true, increaseDH = true;
 
@@ -51,6 +52,10 @@ let once1=true;
 
 let touch;
 let showCir;
+let rectX = 410, rectY = 370;
+let dragging1 = false,dragging2 = false;   
+let u,v,cleaned=true;
+let runOnce_3;
 
 class Raindrop {
   constructor(x, y) {
@@ -179,7 +184,7 @@ function preload() {
   // Load your images
   image1 = loadImage('PotasiumChromate.png');
   image1bck = loadImage('PotasiumChromatebck.png');
-  rod = loadImage('glass rod3.png');
+  rod = loadImage('glass rod.png');
   bgImg = loadImage('bg.png');
   image3 = loadImage('droper.png');
   frontflask = loadImage('frontflask.png');
@@ -188,6 +193,7 @@ function preload() {
   nextimg = loadImage('Forward.png');
   water = loadImage('water.png');
   dish = loadImage('dish.png');
+  cloth= loadImage('cleaning_cloth.png')
 
   gif1 = createImg('gif1.gif');
   gif2 = createImg('gif1.gif');
@@ -240,10 +246,11 @@ function setup() {
   waterDroplet = new WaterDroplet(500, 490);
 
 
-  startPoint = createVector(165, 385);
+  startPoint = createVector(140, 385);
   endPoint = createVector(250, 150);
-  endPoint2 = createVector(650, 380);
+  endPoint2 = createVector(650, 420);
   endPoint3 = createVector(80, 100);
+  // endPoint5 = createVector(80, 100);
   endPoint4 = createVector(100, 490);
   
 
@@ -270,7 +277,7 @@ function setup() {
 
 function draw() {
   background(bgImg);
-
+console.log(' -->',cleaned)
   speed_=0.02*slider1.value();
   let valueDisplayElement = document.getElementById("valueDisplay");
   valueDisplayElement.innerText = (volAdded.toFixed(1))+ ' ml';
@@ -291,6 +298,7 @@ function draw() {
     console.log('drop used')
     once1=false;
   }
+  
   // console.log(drop_used)
 
   // console.log(changeColor)
@@ -372,10 +380,11 @@ function draw() {
 
   waterDroplet.display();
   if (process1 === 0) {
-    image(rod, currentPoint.x, currentPoint.y, 40, 140);
+    image(rod, currentPoint.x, currentPoint.y, 60, 140);
   }
   else if (process1 === 1) {
     // Moving to point B or C
+    runOnce_3=true;
     moveToPoint(endPoint);
     showCir=true;
   }
@@ -383,11 +392,16 @@ function draw() {
     moveToPoint(endPoint2);
   }
   else if(process1===3){
+    if(runOnce_3){
+    cleaned=false;
+    runOnce_3=false;
+  }
     showCir=false;
-    image(rod, currentPoint.x, currentPoint.y, 40, 140);
+    image(rod, currentPoint.x, currentPoint.y, 60, 140);
     
 
     if (changeColor & touch==1 ){  
+      
       showCir=false;   
       color1 = color(0, 161, 173, 100);
       color2 = color(0, 108, 117, 50);
@@ -414,18 +428,23 @@ function draw() {
       }
     
   }
-  else if(process1===4){
-    moveToPoint(endPoint3);
+  else if(process1===4 && cleaned){
+    moveToPoint(endPoint3); 
     once1=true;
+    runOnce_2=true;
+
+   
   }
+  
   else if(process1===5){
+
     moveToPoint(endPoint4);
   }
   else if(process1===6){
-  image(rod, startPoint.x, startPoint.y, 40, 140);
+  image(rod, startPoint.x, startPoint.y, 60, 140);
   }
   else {
-    image(rod, currentPoint.x, currentPoint.y, 40, 140);
+    image(rod, currentPoint.x, currentPoint.y, 60, 140);
   }
 
   // pop();
@@ -496,6 +515,8 @@ function draw() {
   //To show indicator container
   image(image1, 575, 340, 140, 120);
   
+  //to show cloth
+  image(cloth,rectX,rectY,70,50);
   if(showCir){ 
     // for(let i; i<10;i++)
    {
@@ -505,7 +526,23 @@ function draw() {
     ellipse(currentPoint.x,currentPoint.y+137,6,3 );
     pop();
   }}
+ u=rectanglesIntersect(440,400,100,100,rectX,rectY,70,50);
+v=rectanglesIntersect(currentPoint.x,currentPoint.y,60,140,rectX,rectY,70,50);
+  // let w=rectanglesIntersect(x1,y1,100,100,rectX3,rectY3,100,100);
 
+  if (!dragging1 && u) {
+    // console.log('touched')
+    // process=1;
+    // stop=false;
+    rectX = 390; rectY = 390+100;
+  }
+
+  if (!dragging1 && v) {
+    // console.log('touched rod')
+    // process=1;
+    // stop=false;
+    rectX = 390; rectY = 390+100;
+  }
 
 
 
@@ -520,7 +557,7 @@ function draw() {
   if (mouseX > buretteX - size * 28.57 / 8 + 140 && mouseX < buretteX + size * 28.57 / 6 + 140 && mouseY > buretteY - size * 5 + 280 && mouseY < buretteY + size * 5 + 280) {
     cursor('pointer');
   }
-  else if ((mouseX > currentPoint.x - 20+15 && mouseX < currentPoint.x + 20+15  && mouseY > currentPoint.y - 60 + 50 && mouseY < currentPoint.y + 60 + 50)) {
+  else if ((mouseX > currentPoint.x - 20 + 50 && mouseX < currentPoint.x + 20 + 50 && mouseY > currentPoint.y - 40 + 50 && mouseY < currentPoint.y + 40 + 50)) {
     cursor('pointer');
   }
   //For droper
@@ -535,20 +572,30 @@ function draw() {
     cursor('auto');
   }
 
+
 }
 
 function mousePressed() {
 
+    // Check if the mouse is over the rectangle when pressed
+    if (mouseX > rectX && mouseX < rectX + 100 &&
+      mouseY > rectY && mouseY < rectY + 100) {
+      cursor('drag');
+
+      dragging1 = true;   
+      
+    }
 
   // Check if the mouse is over the Droper image
   if (mouseX > buretteX - size * 28.57 / 8 + 140 && mouseX < buretteX + size * 28.57 / 6 + 140 && mouseY > buretteY - size * 5 + 280 && mouseY < buretteY + size * 5 + 280) {
     droperpressed();
   }
-  else if ((mouseX > currentPoint.x - 20+15 && mouseX < currentPoint.x + 20+15  && mouseY > currentPoint.y - 60 + 50 && mouseY < currentPoint.y + 60 + 50)) {
+  else if (mouseX > currentPoint.x - 20 + 50 && mouseX < currentPoint.x + 20 + 50 && mouseY > currentPoint.y - 40 + 50 && mouseY < currentPoint.y + 40 + 50 && cleaned) {
     console.log(currentStep);
   process1+=1;
-
-
+  }
+  else if (mouseX > currentPoint.x - 20 + 50 && mouseX < currentPoint.x + 20 + 50 && mouseY > currentPoint.y - 40 + 50 && mouseY < currentPoint.y + 40 + 50 && !cleaned) {
+alert('Please clean the rod as well as the dish with using the cloth.')
   }
   else if ((mouseX > currentPoint_2.x - 10 + 15 && mouseX < currentPoint_2.x + 10 + 15 && mouseY > currentPoint_2.y - 80 + 60 && mouseY < currentPoint_2.y + 80 + 60)) {
     
@@ -560,21 +607,51 @@ function mousePressed() {
     nextpressed();
   }
 
-  else if (mouseX > 450 - 40 + 50 && mouseX < 450 + 40 + 50 && mouseY > 440 - 40 + 30 && mouseY < 440 + 40 + 30) {
+  // else if (mouseX > 450 - 40 + 50 && mouseX < 450 + 40 + 50 && mouseY > 440 - 40 + 30 && mouseY < 440 + 40 + 30) {
+  //   color1 = color(96, 196, 59, 100);
+  //   color2 = color(144, 201, 100, 50);
+  //   color3 = color(50, 250, 50, 100);
+  //   color4 = color(100, 155, 100, 50);
+  //   color5 = color(0, 255, 0, 10);
+  //   scaleFactor = 2;
+  //   showDrop = false;
+
+  // }
+
+}
+
+function mouseDragged(){
+  if (dragging1) {
+   // console.log('hii2')
+   rectX = mouseX - 70 / 2;
+   rectY = mouseY - 50 / 2;
+
+ }
+
+
+}
+ function mouseReleased() {
+  scaleFactor = 1;
+  if (dragging1&&u){
     color1 = color(96, 196, 59, 100);
     color2 = color(144, 201, 100, 50);
     color3 = color(50, 250, 50, 100);
     color4 = color(100, 155, 100, 50);
     color5 = color(0, 255, 0, 10);
-    scaleFactor = 2;
+   //  scaleFactor = 2;
     showDrop = false;
+   }
+   if (dragging1&&v){
+    color1 = color(96, 196, 59, 100);
+    color2 = color(144, 201, 100, 50);
+    color3 = color(50, 250, 50, 100);
+    color4 = color(100, 155, 100, 50);
+    color5 = color(0, 255, 0, 10);
 
-  }
-
-}
-function mouseReleased() {
-  scaleFactor = 1;
-}
+cleaned=true;
+   }
+  cursor('auto');
+  dragging1 = false;}
 function moveToPoint(targetPoint) {
   console.log(process1);
   let stepX = (targetPoint.x - currentPoint.x) / steps;
@@ -587,7 +664,7 @@ function moveToPoint(targetPoint) {
 
 
 
-  image(rod, currentPoint.x, currentPoint.y, 40, 140);
+  image(rod, currentPoint.x, currentPoint.y, 60, 140);
   // pop();
 
   currentStep++;

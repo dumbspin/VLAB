@@ -98,16 +98,16 @@ $data8 = $_SESSION['Normality_titrant2'];
         <td><?php echo round($data2,2) ?> ml</td>
 
         <td><?php echo round($data3,2)?> ml</td>
-        <td><?php echo round($data4,2) ?> N</td>
-        <td><?php echo round($data4*50000,2) ?> ppm</td>
+        <td><?php echo round($data4/10,3) ?> N</td>
+        <td><?php echo round($data4*5000,2) ?> ppm</td>
       </tr>
       <tr>
         <td>Methylorange</td>
         <td><?php echo round($data6,2)?> ml</td>
 
         <td><?php echo round($data7,2) ?> ml</td>
-        <td><?php echo round($data8,2)?> N</td>
-        <td><?php echo round($data8*50000,2)?> ppm</td>
+        <td><?php echo round($data8/10,3)?> N</td>
+        <td><?php echo round($data8*5000,2)?> ppm</td>
       </tr>
       <!-- <tr>
         <td>3</td>

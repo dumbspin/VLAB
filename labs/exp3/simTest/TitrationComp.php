@@ -99,21 +99,21 @@ $data8=$_SESSION['volume_titrant']
         <td><?php echo round($data2,2) ?></td>
 
         <td><?php echo round($data8,2) ?></td>
-        <td><?php echo round($data4,2) ?></td>
-        <td><?php echo round($data4*50000,2) ?></td>
+        <td><?php echo round($data4/10,3) ?></td>
+        <td><?php echo round($data4*5000,2) ?></td>
       </tr>
       <tr>
         <td>After passing the ion-exchange coloumn(A)</td>
         <td><?php echo round($data7,2) ?></td>
 
         <td><?php echo round($data6,2)?></td>
-        <td><?php echo round($data5,2) ?></td>
-        <td><?php echo round($data5*50000,2) ?></td>
+        <td><?php echo round($data5/10,3) ?></td>
+        <td><?php echo round($data5*5000,2) ?></td>
       </tr>
       <tr>
         <td>Hardness Reduced</td>
         <td colspan="3" style="text-align: center;">(B-A)</td>
-        <td><?php echo round($data4*50000-$data5*50000,2) ?></td>
+        <td><?php echo round($data4*5000-$data5*5000,2) ?></td>
       </tr>
       <!-- <tr>
         <td>3</td>
