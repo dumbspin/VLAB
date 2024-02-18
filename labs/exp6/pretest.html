@@ -227,84 +227,71 @@
 
         <script>
           var show = false;
-          var questions = [
-            {
-              id: 1,
-              text: "What is the primary goal of using Mohr’s method in this experiment?",
-              options: ["a. Measure sodium concentration", "b. Determine chloride content", "c. Assess water color", "d.Analyse pH levels"],
-              answer: "392"
-            },
+         
 
 
-            {
-              id: 2,
-              text: "Why is chloride concentration generally higher in wastewater compared to raw water?",
-              options: ["a. Due to the presence of sodium chloride in diets", "b. Industrial processes", "c. Seawater leakage", "d. All of the above"],
-              answer: "900"
-            },
-
-
-            {
-              id: 3,
-              text: "What is the role of dilute nitric acid in the experiment?",
-              options: ["a. Increase sample acidity", "b. Enhance color changes", "c.    Neutralize the sample", "d. Accelerate the titration process"],
-              answer: "1584"
-            },
-
-
-            {
-              id: 4,
-              text: "Which solution is commonly used as an indicator in Mohr’s method?",
-              options: ["a. Sodium hydroxide", "b. Silver nitrate", "c. Potassium permanganate", "d. Potassium chromate"],
-              answer: "2475"
-            },
-            {
-              id: 5,
-              text: "What does the formation of a red-brown precipitate indicate in Mohr's method?",
-              options: ["a. Endpoint of the titration", "b. Sample contamination", "c. Acidic conditions", "d. None of the above"],
-              answer: "3492"
-            },
-
-
-            {
-              id: 6,
-              text: "In potable water, what influences the perception of a salty taste due to chloride concentration?",
-              options: ["a. Weather conditions", "b. Sodium cation presence", "c. Chloride levels below 100 mg/L", "d. Calcium and magnesium predominance"],
-              answer: "4802"
-            },
-
-
-            {
-              id: 7,
-              text: "Why might chloride concentrations harm metallic pipes and structures?",
-              options: ["a. Enhance structural integrity", "b. Cause corrosion", "c. Accelerate aging", "d. Improve conductivity"],
-              answer: "6272"
-            },
-
-
-            {
-              id: 8,
-              text: "What is the primary source of chloride in wastewater from human consumption?",
-              options: ["a. Drinking water", "b. Sodium chloride in diets", "c. Atmospheric deposition", "d. Industrial discharge"],
-              answer: "7938"
-            },
-            {
-              id: 9,
-              text: "Which method is used to determine chloride content in this experiment?",
-              options: ["a. Gravimetric analysis", "b. Mohr’s method", "c. Spectrophotometry", "d. Gas chromatography"],
-              answer: "9800"
-            },
-
-
-            {
-              id: 10,
-              text: "How can the chloride concentration in brackish water be described?",
-              options: ["a. High", "b. Low", "c. Variable", "d. Constant"],
-              answer: "11979"
-            }
-
-            // Add similar structures for the other questions (Q2 to Q10)
-          ];
+var questions = [
+  {
+    id: 1,
+    text: "Which of the following best describes immiscible liquids?",
+    options: ["a. Liquids that mix together to form a homogeneous solution", "b. Liquids that separate into distinct layers when mixed together", "c. Liquids that evaporate quickly", "d. Liquids that react vigorously when combined"],
+    answer: "392"
+  },
+  {
+    id: 2,
+    text: "What is the purpose of determining the partition coefficient of a solute in two immiscible liquids?",
+    options: ["a. To determine the solubility of the solute in a single liquid", "b. To calculate the density of the solute", "c. To study the polarity of the solute", "d. To assess the distribution of the solute between two different phases"],
+    answer: "900"
+  },
+  {
+    id: 3,
+    text: "In the partition coefficient formula K = [Concentration of Solute in Phase 1] / [Concentration of Solute in Phase 2], what does a higher K value indicate?",
+    options: ["a. Greater solubility of the solute in Phase 1", "b. Greater solubility of the solute in Phase 2", "c. Equal solubility of the solute in both phases", "d. Insignificant solubility of the solute in either phase"],
+    answer: "1552"
+  },
+  {
+    id: 4,
+    text: "Which analytical technique is commonly used to determine the concentration of a solute in each phase in the partition coefficient experiment?",
+    options: ["a. Titration", "b. Spectroscopy", "c. Chromatography", "d. Gravimetry"],
+    answer: "2475"
+  },
+  {
+    id: 5,
+    text: "What should be done after mixing the two immiscible liquids and allowing them to separate into distinct layers?",
+    options: ["a. Discard the upper layer", "b. Take samples from each layer for analysis", "c. Heat the mixture to accelerate separation", "d. Shake the mixture vigorously again"],
+    answer: "3528"
+  },
+  {
+    id: 6,
+    text: "Which factor could affect the accuracy of the partition coefficient determination?",
+    options: ["a. Temperature of the surroundings", "b. Size of the container used", "c. Color of the solute", "d. pH of the solute solution"],
+    answer: "4753"
+  },
+  {
+    id: 7,
+    text: "How can the partition coefficient experiment be improved for greater accuracy?",
+    options: ["a. Using less accurate measuring equipment", "b. Performing the experiment only once", "c. Taking multiple samples and averaging the results", "d. Increasing the concentration of the solute in both phases"],
+    answer: "6336"
+  },
+  {
+    id: 8,
+    text: "Which property of a solute determines its distribution between two immiscible liquids?",
+    options: ["a. Molecular weight", "b. Density", "c. Polarity", "d. Viscosity"],
+    answer: "8019"
+  },
+  {
+    id: 9,
+    text: "What does it mean if the partition coefficient (K) is close to 1?",
+    options: ["a. The solute has a strong preference for Phase 1", "b. The solute is evenly distributed between the two phases", "c. The solute has a strong preference for Phase 2", "d. The solute does not dissolve in either phase"],
+    answer: "9800"
+  },
+  {
+    id: 10,
+    text: "Which of the following statements is true regarding the concentration of the solute in each phase in the partition coefficient experiment?",
+    options: ["a. The concentration of the solute is always higher in Phase 1.", "b. The concentration of the solute is always higher in Phase 2.", "c. The concentration of the solute can vary depending on its affinity for each phase.", "d. The concentration of the solute is irrelevant for calculating the partition coefficient."],
+    answer: "11978"
+  }
+];
 
           var showScore = document.getElementById('score');
 
