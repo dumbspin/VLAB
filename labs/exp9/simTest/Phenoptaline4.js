@@ -48,7 +48,7 @@ class Drop {
   display() {
     if (this.active) {
       noStroke();
-      fill(251,47,181,200);
+      fill(255,255,255, 150)
       ellipse(this.x, this.y, this.radius * 2, this.radius * 2+2);
     }
   }
@@ -162,7 +162,7 @@ function draw() {console.log("MouseX: " + mouseX + ", MouseY: " + mouseY);
     // Increase the rectangle's height in the y-axis3
     noStroke();
     rect(currentPoint_3.x + 22, currentPoint_3.y + 150, 5, -rectHeight);
-    fill(251,47,181, 150)
+    fill(255,255,255, 150)
 
     // Increment the rectangle's height3
     if (rectHeight != 70 & increase == true) {

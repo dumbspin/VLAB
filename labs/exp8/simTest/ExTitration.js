@@ -415,6 +415,9 @@ let w=rectanglesIntersect(x3,y3,100,100,rectX,rectY,100,100);
   text(`Step: ${currentStep}`, 0, knobRadius + 80);
    pop();
 
+
+
+
   speed = currentStep;
 
 
@@ -504,7 +507,19 @@ push();
   //   cursor('pointer');
 
   // }
+  push();
+  // Display buttons
+  textStyle(BOLD);
+  // Set the text color to green
+  
+  fill(0, 0, 0);
+  textSize(13);
+  textAlign(CENTER, CENTER);
 
+  // text(`Angle: ${markerAngle}`, 0, knobRadius + 80);
+  text(`On/Off`, 345, 510);
+  text ('Tare', 380,510)
+   pop();
 
 
 
