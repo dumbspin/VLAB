@@ -20,6 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <script>
     window.onload = function () {
       document.getElementById("theory").className = "active treeview";
@@ -192,61 +195,86 @@
 
         <p style="font-size: 130%; margin-top: 1%; text-align: justify">
           Pure water is neutral in nature with pH 7. Due to the presence of dissolved minerals in rain water, the pH
-          increases and becomes alkaline. Alkaline nature of water is due to the presence of hydroxide (OH<sup>-</sup>), carbonate
-          (CO<sub>3</sub><sup>2-</sup>) and bicarbonate (HCO<sub>3</sub><sup>-</sup>) ions. The alkalinity contributed in water by these ions is estimated by
+          increases and becomes alkaline. Alkaline nature of water is due to the presence of hydroxide (OH<sup>-</sup>),
+          carbonate
+          (CO<sub>3</sub><sup>2-</sup>) and bicarbonate (HCO<sub>3</sub><sup>-</sup>) ions. The alkalinity contributed
+          in water by these ions is estimated by
           titrating the water sample against a standard acid solution using phenolphthalein and methyl orange indicators
           successively. On reaction with acid hydroxide ions are completely neutralized to water and the end point for
-          this reaction is determined by phenolphthalein indicator (one step neutralization)
-          <br ><span  style="margin-left: 30%;"></span>OH<sup>-</sup> + H<sup>+</sup> -> H<sub>2</sub>O ----------------- Eqn (1)</br>
-          Since neutralization of carbonate ions is a two steps reaction. In the first step, carbonate ions are
-          neutralized to bicarbonate ions and completion of this step is determined by phenolphthalein indicator (pH
-          8.3-10). The bicarbonates thus formed further reacts with acid and neutralized completely to water and carbon
-          dioxide in the second step and for this step end point is determined by methyl orange indicator (pH 3.1-4.4).
-          <br ><span  style="margin-left: 30%;"></span>CO<sub>3</sub><sup>2-</sup> + H<sup>+</sup> -> HCO<sub>3</sub><sup>-</sup> ----------------- Eqn (2)</br>
-          <br><span  style="margin-left: 28%;"></span>&HCO<sub>3</sub><sup>-</sup> + H<sup>+</sup> ->H<sub>2</sub>O + CO<sub>2</sub>↑ ----------------- Eqn (3)</br>
-
-        </p>
+          this reaction is determined by phenolphthalein indicator (one step neutralization)</p>
+        <div class="equation">
+          $$\text{OH}^- + \text{H}^+ \rightarrow \text{H}_2\text{O} \quad \text{Eqn. (1)}$$
+        </div>
+       <p style="font-size: 130%; margin-top: 1%; text-align: justify"> Since neutralization of carbonate ions is a two steps reaction. In the first step, carbonate ions are
+        neutralized to bicarbonate ions and completion of this step is determined by phenolphthalein indicator (pH
+        8.3-10). The bicarbonates thus formed further reacts with acid and neutralized completely to water and carbon
+        dioxide in the second step and for this step end point is determined by methyl orange indicator (pH 3.1-4.4).
+      </p>
+       <div class="equation">
+          $$\text{CO}_3^{2-} + \text{H}^+ \rightarrow \text{HCO}_3^- \quad \text{Eqn. (2)}$$
+        </div>
+        <div class="equation">
+          $$\text{HCO}_3^- + \text{H}^+ \rightarrow \text{H}_2\text{O} + \text{CO}_2 \uparrow \quad \text{Eqn. (3)}$$
+        </div>
+        
 
 
 
         <p style="font-size: 130%; margin-top: 1%; text-align: justify">
           Further the alkalinity due to bicarbonate ions is neutralized completely in a single step and completion of
           this reaction is determined by methyl orange indicator.
-          <br><span  style="margin-left: 27%;"></span>HCO<sub>3</sub><sup>-</sup> + H<sup>+</sup> -> H<sub>2</sub>O + CO<sub>2</sub>↑ ----------------- Eqn (4)</br>
-          These three reactions can be summarized as shown below:
+
+        <div class="equation">
+          $$\text{HCO}_3^- + \text{H}^+ \rightarrow \text{H}_2\text{O} + \text{CO}_2 \uparrow \quad \text{Eqn. (4)}$$
+        </div>
+        <p style="font-size: 130%; margin-top: 1%; text-align: justify">These three reactions can be summarized as shown below:
+        </p>
           <center>
-            <img src="images/reac summary.png" alt="structure" height="150" width="350"
-              style="mix-blend-mode: darken;   -webkit-filter: contrast(120%)" />
-          </center>
+          <img src="images/reac summary.png" alt="structure" height="150" width="350"
+            style="mix-blend-mode: darken;   -webkit-filter: contrast(120%)" />
+        </center>
 
         <p style="font-size: 130%; margin-top: 1%; text-align: justify">
           Here P and M represents alkalinity determined by phenolphthalein and methyl orange indicators, respectively.
           It is important to note that in water hydroxide and bicarbonate ions cannot exist together because both reacts
           with each other according to the following reaction:-
-         <br><span  style="margin-left: 35%;"></span> OH<sup>-</sup> + HCO<sub>3</sub><sup>-</sup> -> H<sub>2</sub>O + CO<sub>3</sub><sup>2-</sup></br>
-          So there exists five different possibilities of alkalinity in water on the basis of concentration of various
-          ions in water as tabulated in the table-
+        <div class="equation">
+          $$\text{OH}^- + \text{HCO}_3^- \rightarrow \text{H}_2\text{O} + \text{CO}_3^{2-}$$
+        </div>
+        <script>
+          MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+              fontCache: 'global'
+            }
+          };
+        </script>
+<p style="font-size: 130%; margin-top: 1%; text-align: justify">
+        So there exists five different possibilities of alkalinity in water on the basis of concentration of various
+        ions in water as tabulated in the table-</p>
 
-          <!-- <center>
+        <!-- <center>
             <b style="font-size: 18px">Fig. 1 Phenolphthalein Indicator</b>
           </center> -->
-          <br />
+        <br />
 
-           <center>
-            <img src="images\table.png" alt="symbol" height="130" width="561"
-              style="mix-blend-mode: darken;   -webkit-filter: contrast(220%)" />
-          </center>
-          <!-- <center><b style="font-size: 18px">Fig. 2 Alkalinity Range</b></center> -->
-          <p style="font-size: 130%; margin-top: 1%; text-align: justify">
-            <br>Here P = alkalinity measured by phenolphthalein end point</br>
-            <br>M = alkalinity measured by methyl orange end point</br>
-            </p>
-
-        
+        <center>
+          <img src="images\table.png" alt="symbol" height="130" width="561"
+            style="mix-blend-mode: darken;   -webkit-filter: contrast(220%)" />
+        </center>
+        <!-- <center><b style="font-size: 18px">Fig. 2 Alkalinity Range</b></center> -->
+        <p >
+          <br>Here P = alkalinity measured by phenolphthalein end point</br>
+          <br>M = alkalinity measured by methyl orange end point</br>
+        </p>
 
 
 
-          <!-- <center>
+
+
+        <!-- <center>
           <img src="images/Alkalinity in water.webp" alt="circuit" height="480" width="436"
             style="mix-blend-mode: darken; -webkit-filter: contrast(150%)" />
         </center>
@@ -266,7 +294,7 @@
 
 
 
-          <!-- <b> <br>
+        <!-- <b> <br>
           <h3><b>Advantages of Analysis of Alkalinity in Supplied Water Sample:</b></h3>
         </b>
         </h3>

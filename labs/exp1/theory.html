@@ -20,6 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <script>
     window.onload = function () {
       document.getElementById("theory").className = "active treeview";
@@ -206,9 +209,24 @@
           against AgNO3 using potassium chromate (K<sub>2</sub>CrO<sub>4</sub>) as an indicator. The reaction involved
           in the titration is
           given below:</br>
-          <br><span  style="margin-left: 25%;"></span>AgNO<sub>3</sub> + NaCl (aq.) → AgCl (white ppt)↓+ NaNO<sub>3</sub> -------- Eqn. (1)</br>
-          <br><span  style="margin-left: 23%;"></span>2AgNO<sub>3</sub>+ K<sub>2</sub>CrO<sub>4</sub>→ Ag<sub>2</sub>CrO<sub>4</sub> (Reddish brown ppt)↓+
-          2KNO<sub>3</sub> -------- Eqn. (2)</br>
+          <div class="equation">
+            $$\text{AgNO}_3 + \text{NaCl} \rightarrow \text{AgCl} \text{(white ppt)} \downarrow + \text{NaNO}_3 \quad \text{Eqn. (1)}$$
+        </div>
+    
+        <div class="equation">
+            $$2\text{AgNO}_3 + \text{K}_2\text{CrO}_4 \rightarrow \text{Ag}_2\text{CrO}_4 \text{(Reddish brown ppt)} \downarrow + 2\text{KNO}_3 \quad \text{Eqn. (2)}$$
+        </div>
+    
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+        </script>
 
         </p>
 
