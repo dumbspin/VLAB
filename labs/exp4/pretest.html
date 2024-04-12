@@ -336,7 +336,7 @@
               const question = questions[i];
               const questionHTML = `
             <fieldset class='questions'>
-              <legend class='questions_le'>${question.text}</legend>
+              <legend class='questions_le'>${i + 1}) ${question.text}</legend>
               ${question.options.map(option => `
                 <label class='options'>
                   <input type="radio" name="q${question.id}"  value="${option[0]}">

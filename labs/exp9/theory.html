@@ -20,6 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <script>
     window.onload = function () {
       document.getElementById("theory").className = "active treeview";
@@ -212,11 +215,24 @@
 
 
         <p style="font-size: 130%; margin-top: 1%; text-align: justify">
-       <br> <span  style="margin-left: 35%;"></span>x/m=kc<sup>1/n</sup>..........Eq(1)</br>
-        <br>On taking log on both sides</br>
-        <br><span  style="margin-left: 33%;"></span>logx/m=logk+1/n logc...........Eq(2)</br>
+       <br> <div class="tex">
+       $$ \frac{x}{m} = \frac{kc_1}{n} \quad \text{(Eq. 1)}$$
 
+       </div></br>
+        <br>On taking log on both sides</br>
+        <br><div class="tex"></br>
+       $$\log\left(\frac{x}{m}\right) = \log(k) + \frac{1}{n} \log(c) \quad \text{(Eq. 2)}       $$
        <br> Where,</br> <br>x = weight of adsorbent</br>
+       <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
 	<br>m = mass of the adsorbent</br> 
 	<br>k = proportionality constant representing the capacity of the adsorbent</br> 
 	<br>c = equilibrium concentration of the solution</br>

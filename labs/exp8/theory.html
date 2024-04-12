@@ -20,6 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <script>
     window.onload = function () {
       document.getElementById("theory").className = "active treeview";
@@ -217,13 +220,28 @@
               font-style: 'Nunito sans', sans-serif;
             ">
           For liquids
-          <br><span  style="margin-left: 30%;"></span>γ1/γ2 = m1/m2=v1d1/v2d2=d1n2/d2n1
+          <br>    <div class="tex">
+            $$ \frac{\gamma_1}{\gamma_2} = \frac{m_1}{m_2} = \frac{v_1d_1}{v_2d_2} = \frac{d_1n_2}{d_2n_1} $$
+        </div>
+
           <br><br>Since volume is fixed and n1 and n2 is the number of drops formed by volume v of the two liquids, then their
           surface tensions are related as
-          γ1/γ2 = d1n2/d2n1
+          <div class="tex">
+            $$\frac{\gamma_1}{\gamma_2} = \frac{d_1n_2}{d_2n_1}$$
+
+          </div>
 
         </p>
-
+        <script>
+          MathJax = {
+              tex: {
+                  inlineMath: [['$', '$'], ['\\(', '\\)']]
+              },
+              svg: {
+                  fontCache: 'global'
+              }
+          };
+      </script>
         <center>
           <img src="images/capillary grey.jpg" alt="structure" height="203" width="249"
             style="mix-blend-mode: darken;   border-radius: 10px;box-shadow: 2px 2px rgb(73, 160, 120);-webkit-filter: contrast(150%)" />
@@ -378,6 +396,7 @@
     </footer>
   </div>
 </body>
+
 
 </html>
 <script>
