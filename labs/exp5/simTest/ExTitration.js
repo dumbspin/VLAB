@@ -430,6 +430,7 @@ console.log(' -->',cleaned)
   }
   else if(process1===4 && cleaned){
     moveToPoint(endPoint3); 
+    
     once1=true;
     runOnce_2=true;
 
@@ -493,6 +494,11 @@ console.log(' -->',cleaned)
       drops.push(drop);
       
     } runOnce=false;process2+=1;touch=0;
+    color1 = color(96, 196, 59, 100);
+    color2 = color(144, 201, 100, 50);
+    color3 = color(50, 250, 50, 100);
+    color4 = color(100, 155, 100, 50);
+    color5 = color(0, 255, 0, 10);
   }
     
   }
@@ -649,6 +655,7 @@ function mouseDragged(){
     color5 = color(0, 255, 0, 10);
 
 cleaned=true;
+
    }
   cursor('auto');
   dragging1 = false;}

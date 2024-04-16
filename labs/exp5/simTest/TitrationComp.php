@@ -112,11 +112,11 @@ $data4 = $_SESSION['v2'];
     
   </table>
   <br><br>
-  <!-- For Detailed Calculation
+  For Detailed Calculation
   <a style="            text-decoration: none; 
             color: blue" href="calc.png"> Click here
         
-    </a> -->
+    </a>
     <br>
   <a href="../simTest/"><button class="mybutton">Replay <span style="font-weight:bolder; font-size:18px">&#8634;</span>
 </button></a>
